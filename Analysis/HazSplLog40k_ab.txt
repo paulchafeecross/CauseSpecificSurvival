@@ -1,0 +1,37 @@
+model
+{
+    gamma0 ~ dnorm(0.00000E+00, 1.00000E-06)
+    sigmab ~ dunif(0.00000E+00, 3)
+    taub <- pow(sigmab, -2)
+    for (l in 1:num.knots) {
+        b[l] ~ dnorm(0.00000E+00, taub)
+    }
+    for (i in 1:D) {
+        Haz_b[i] <- exp(gamma0 + mre110[i] + mre1120[i] + mre2130[i] + 
+            mre3140[i])
+        mre110[i] <- b[1] * Z[i, 1] + b[2] * Z[i, 2] + b[3] * 
+            Z[i, 3] + b[4] * Z[i, 4] + b[5] * Z[i, 5] + b[6] * 
+            Z[i, 6] + b[7] * Z[i, 7] + b[8] * Z[i, 8] + b[9] * 
+            Z[i, 9] + b[10] * Z[i, 10]
+        mre1120[i] <- b[11] * Z[i, 11] + b[12] * Z[i, 12] + b[13] * 
+            Z[i, 13] + b[14] * Z[i, 14] + b[15] * Z[i, 15] + 
+            b[16] * Z[i, 16] + b[17] * Z[i, 17] + b[18] * Z[i, 
+            18] + b[19] * Z[i, 19] + b[20] * Z[i, 20]
+        mre2130[i] <- b[21] * Z[i, 21] + b[22] * Z[i, 22] + b[23] * 
+            Z[i, 23] + b[24] * Z[i, 24] + b[25] * Z[i, 25] + 
+            b[26] * Z[i, 26] + b[27] * Z[i, 27] + b[28] * Z[i, 
+            28] + b[29] * Z[i, 29] + b[30] * Z[i, 30]
+        mre3140[i] <- b[31] * Z[i, 31] + b[32] * Z[i, 32] + b[33] * 
+            Z[i, 33] + b[34] * Z[i, 34] + b[35] * Z[i, 35] + 
+            b[36] * Z[i, 36] + b[37] * Z[i, 37] + b[38] * Z[i, 
+            38] + b[39] * Z[i, 39] + b[40] * Z[i, 40]
+    }
+    for (j in 1:records) {
+        for (k in left[j]:(right[j] - 1)) {
+            UCH[j, k] <- exp(gamma0 + mre110[k] + mre1120[k] + 
+                mre2130[k] + mre3140[k])
+        }
+        SLR[j] <- exp(-sum(UCH[j, left[j]:(right[j] - 1)]))
+        noevent[j] ~ dbern(SLR[j])
+    }
+}

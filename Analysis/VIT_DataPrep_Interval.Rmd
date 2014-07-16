@@ -1,0 +1,251 @@
+Analysis of elk abortions
+========================================================
+
+Data preparation and exploration
+--------------------------------------------------------
+First load in the data and do some initial formating. 
+```{r setup}
+opts_chunk$set(dev = c('png', 'pdf'), dpi = 96, fig.height = 6, fig.width = 6)
+# Change the dpi to 96 if only going the html
+# Change the dpi to >400 if going to a docx or pdf
+```
+
+```{r data-formatting}
+setwd("~/BitBucket/VIT/Analysis")
+rm(list = ls())
+source('VITplot_interval2.r')
+library(lubridate)
+
+Data <- read.table("VIT_Data2013.txt", sep="", header=T) #load in data
+# reformat some of the dates
+Data$CaptureDate <- mdy(as.character(Data$CaptureDate))
+Data$Start_Interval <- mdy(as.character(Data$Start_Interval))
+Data$Stop_Interval <- mdy(as.character(Data$Stop_Interval))
+                       
+# insert death dates on mothers that died
+Data$Stop_Interval[Data$VIT_Status == "Died"] <- Data$Start_Interval[Data$VIT_Status == "Died"]
+
+# make the dates an integer for indexing purposes. 
+Data$CapDOY <- yday(Data$CaptureDate) # day of the capture (1-365)
+Data$StartDOY <- yday(Data$Start_Interval) # day when the VIT is first possibly out
+Data$EndDOY <- yday(Data$Stop_Interval) # last day the event (birth or abortion) could have happened
+
+Data$interval1 <- Data$StartDOY - Data$CapDOY # days from capture to the time when the VIT is first possibly out of the animal
+Data$interval2 <- Data$EndDOY - Data$StartDOY # first to last day that the event could have happened. 
+Data$TrustRating <- as.factor(Data$TrustRating)
+head(Data)
+summary(Data)
+```
+
+**MetaData**  
+One row for each elk with a Vaginal Implant Transmitter (VIT).  
+CaptureDate = Day the VIT was implanted  
+Start_Interval = beginning of the interval over which the VIT was expelled.  
+Stop_Interval = end of the interval over which the VIT was expelled.  
+VIT_Status = abortion, parturition, unknown (based on site characteristics), 
+  died = mother died, open = not pregnant.  
+PET = flag for whether the VIT data on when it was expelled is usable.    
+CowSero = brucellosis status of the mother  
+DOY  = 1-365 day of the year  
+VIT_Bruc = whether or not brucella was able to be cultured from the VIT or birth site. 
+
+**TrustRating** or Data Quality flag  
+1. Exact date of event known: reliable PET,direct observation or GPS-VIT utm intersection in GIS  
+2. Interval reliable based on PET/flights/retrieval/GPS-VIT utm intersection in GIS  
+4. Long Interval: dates based mostly on flights, deployment and recovery; not able to shorten b/c either no GPS data  
+5. Interval goes from VIT deployment to retrieval with no means to shorten  
+6. Unique issues, see comments. 
+7. All the elk that the VIT malfunctioned, was never found, elk died, or elk wasn't pregnant  
+ 
+The total number of elk in the initial dataset = `r nrow(Data)`.  
+  
+Construct some cross-tabulations of the data
+```{r tabluations}
+summary(Data$VIT_Status)
+table(year(Data$CaptureDate))
+# Table of effort per year
+table(year(Data$CaptureDate), Data$VIT_Status)
+# Table of data quality by year
+table(year(Data$CaptureDate), Data$TrustRating)
+# Table of event types by trust rating
+table(Data$VIT_Status, Data$TrustRating)
+# Look at the Unknowns
+Data[Data$VIT_Status == "Unknown",]
+```
+
+Remove the lost and unknown vits, non-pregnant animals.  
+```{r initial-subset}
+Data <- subset(Data, Data$VIT_Status != "Open" ) # remove non-pregnants
+Data <- subset(Data, Data$VIT_Status != "Unknown" ) # remove unknowns
+Data <- subset(Data, is.na(Data$StartDOY) != T )
+
+Data$VIT_Status <- as.factor(as.character(Data$VIT_Status)) #relevel the factor
+summary(Data$VIT_Status)
+table(year(Data$CaptureDate))
+summary(Data)
+```
+
+Plot each individual's timeline.  Grey lines are from the capture date to the start of the interval when the VIT was expelled.  Colored lines are the interval over which the VIT was expelled.  The colors indicate the type of event. 
+```{r vitplot-all}
+source('VITplot_interval2.r')
+par(mfrow = c(1,1))
+VITplot_interval2(Data, 1.5) 
+```
+
+Now just plot the positives.
+```{r vitplot-pos-only}
+tmp <- Data[Data$CowSero == "POS", ]
+VITplot_interval2(tmp, 1.5)
+rm(tmp)
+```
+
+Prepare the data for BUGS models
+-------------------------------------------------------------------------------
+Create two different datasets:  
+1. Type--Dataset of only the events and what type they are.  I use this to partition the hazard of an event between abortions and live births  
+2. Data--Dataset that includes a row for each non-event (capture to start date), and a row for each event
+
+```{r}
+Data$event <- 1  # does an event (abortion or birth) occur in this time interval?
+Data$event[Data$VIT_Status == "Died"] <- 0 # rows that are censored by mom's death 
+
+#### Taking out the outlier abortion to check the model
+#row <- which(Data$VIT_Status == "Abortion" & Data$EndDOY >180)
+#Data <- Data[-row, ]
+
+n <- dim(Data)[1] # number of elk
+Data <- Data[order(Data$Elk_ID, Data$CapDOY),] # sort it
+
+OldData <- Data # prior to adding in stuff, save this.
+# add in non-event rows for each event
+j <- 1
+for(i in 1:n){
+  if(Data$event[i] == 1){
+    # add in a row at the end
+    Data[(n+j),] <- Data[i,]
+    Data$event[(n+j)] <- 0        # nothing happens in this new record
+    j <- j+1
+  }
+}
+
+Data$left <- NA
+Data$right <- NA
+
+# for the rows where an event happens the interval is from Start to Stop
+Data$left[Data$event == 1] <- Data$StartDOY[Data$event == 1] 
+Data$right[Data$event == 1] <- Data$EndDOY[Data$event == 1] # ending date is one day before the event 
+
+# for the rows where an event doesn't happen the interval is from capture to start.
+Data$left[Data$event == 0] <- Data$CapDOY[Data$event == 0] 
+Data$right[Data$event == 0] <- Data$StartDOY[Data$event == 0]# ending date is one day before the event 
+
+#recode left and right to be 1 to max, so that it can be used as an index in BUGS
+Data$right <- Data$right - min(Data$left) + 1
+Data$left  <- Data$left - min(Data$left) + 1
+Data$interval <- Data$right - Data$left
+
+# remove rows where nothing happens between capture and start interval
+Data <- subset(Data, Data$interval1 != 0) 
+
+# subset of the data where events occur
+Type <- subset(Data, Data$event == 1) # This dataset has a row per elk w/ an event
+# abortions coded as a one, everything else is live birth
+Type$b.type <- 0
+Type$b.type[Type$VIT_Status == "Abortion"]  <- 1 
+```
+
+Declare the variables for the BUGS models 
+```{r}
+records <- dim(Data)[1]   # number of records
+b.type <- Type$b.type     # 0 = birth, 1 = abortion
+n.events <- sum(Data$event)
+left  <- Data$left
+right <- Data$right
+event <- Data$event
+noevent <- rep(NA,records)
+noevent[event == 1] <- 0
+noevent[event == 0] <- 1
+event.day <- Type$right # the day that events occurred for 1:n.events rather than 1: records
+D <- max(Data$right)      # number of days in the dataset
+```
+
+Save the RData file for the BUGs models
+```{r}
+rm(i,j,tmp)
+save.image(file = 'VIT_Data2013_Full.RData')
+```
+
+Also save an RData file for dataset that is Positives only. 
+```{r}
+DataPOS <- subset(Data, Data$CowSero == "POS")
+TypePOS <- subset(Type, Type$CowSero == "POS") 
+# re-save these for the positive only dataset
+records <- dim(DataPOS)[1]   # number of records
+b.type <- TypePOS$b.type
+#entry <- TypePOS$left - min(Type$left) + 1
+n.events <- sum(DataPOS$event)
+left  <- DataPOS$left
+right <- DataPOS$right
+event <- DataPOS$event
+noevent <- rep(NA,records)
+noevent[event == 1] <- 0
+noevent[event == 0] <- 1
+event.day <- TypePOS$right # the day that events occurred for 1:n.events rather than 1: records
+D <- max(DataPOS$right)      # number of days in the dataset
+
+save.image(file = 'VIT_Data2013_Full_POS.RData')
+```
+Subset to abortions and censored birth events
+-------------------------------------------------------------------------------
+```{r 3rd-subset}
+Data <- OldData  # restore the old data
+Data <- subset(Data, Data$CowSero == "POS") # limit it to seropositive only. 
+Data <- Data[order(Data$Elk_ID, Data$CapDOY),] # sort it
+n <- dim(Data)[1] # number of elk
+
+# add in non-event rows for each event
+j <- 1
+for(i in 1:n){
+  if(Data$event[i] == 1){
+    # add in a row at the end
+    Data[(n+j),] <- Data[i,]
+    Data$event[(n+j)] <- 0        # nothing happens in this new record
+    j <- j+1
+  }
+}
+
+Data$left <- NA
+Data$right <- NA
+# for the rows where an event happens the interval is from Start to Stop
+Data$left[Data$event == 1] <- Data$StartDOY[Data$event == 1] 
+Data$right[Data$event == 1] <- Data$EndDOY[Data$event == 1] # ending date is one day before the event 
+
+# for the rows where an event doesn't happen the interval is from capture to start.
+Data$left[Data$event == 0] <- Data$CapDOY[Data$event == 0] 
+Data$right[Data$event == 0] <- Data$StartDOY[Data$event == 0]# ending date is one day before the event 
+Data$interval <- Data$right - Data$left
+
+# remove rows where nothing happens on an interval == 0
+Data <- subset(Data, Data$interval != 0) 
+
+# remove rows where births occur (these are censored in this subset)
+tmp <- which(Data$event == 1 & Data$VIT_Status == "Parturition") 
+Data <- Data[-tmp,]
+
+#recode left and right to be 1 to max
+Data$right <- Data$right - min(Data$left) + 1
+Data$left  <- Data$left - min(Data$left) + 1
+
+records <- dim(Data)[1]   # number of records
+n.events <- sum(Data$event)
+left  <- Data$left
+right <- Data$right
+event <- Data$event
+noevent <- rep(NA,records)
+noevent[event == 1] <- 0
+noevent[event == 0] <- 1
+event.day <- Type$right # the day that events occurred for 1:n.events rather than 1: records
+D <- max(Data$right)      # number of days in the dataset
+
+save.image(file = 'VIT_Data2013_BirthsCensored.RData')
+```

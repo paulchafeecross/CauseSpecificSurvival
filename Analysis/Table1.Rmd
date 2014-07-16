@@ -1,0 +1,78 @@
+**Table 1**. Comparison of elk abortion timing across models with different smoothing functions for the total hazard of a reproductive event. In all cases, the sub-model of the probability of an abortion relative to a live birth was a logistic regression.        
+
+```{r Table1-comp, results='asis', echo = FALSE}
+setwd("~/BitBucket/VIT/Analysis")
+load('Result_icar1.RData')
+load('Result_mod10k1.RData')
+load('Result_mod40k1.RData')
+load('VIT_Data2013_Full_POS.RData')
+library(knitr)
+library(lubridate)
+source('ft_calc_fxn.R')
+start.offset <- min(Data$CapDOY)
+
+# Calculating summary statistics on the abortion event density for different models. 
+ft_icar <- ft_calc(icarmod)
+ft_icarcum <- ft_cum_calc(ft_icar$median)
+ft_mod10k <- ft_calc(mod10k)
+ft_mod10kcum <- ft_cum_calc(ft_mod10k$median)
+ft_mod40k <- ft_calc(mod40k)
+ft_mod40kcum <- ft_cum_calc(ft_mod40k$median)
+ft_mod10k_5 <- start.offset + ft_mod10kcum$row5 
+ft_mod40k_5 <- start.offset + ft_mod40kcum$row5 
+ft_icar_5 <- start.offset + ft_icarcum$row5 
+ft_mod10k_25 <- start.offset + ft_mod10kcum$row25 
+ft_mod40k_25 <- start.offset + ft_mod40kcum$row25 
+ft_icar_25 <- start.offset + ft_icarcum$row25 
+ft_mod10k_75 <- start.offset + ft_mod10kcum$row75 
+ft_mod40k_75 <- start.offset + ft_mod40kcum$row75 
+ft_icar_75 <- start.offset + ft_icarcum$row75 
+ft_mod10k_95 <- start.offset + ft_mod10kcum$row95 
+ft_mod40k_95 <- start.offset + ft_mod40kcum$row95 
+ft_icar_95 <- start.offset + ft_icarcum$row95 
+
+# model summaries
+tab1 <- round(matrix(data = c(mod10k$BUGSoutput$DIC, mod40k$BUGSoutput$DIC, icarmod$BUGSoutput$DIC, 
+                        mod10k$BUGSoutput$pD, mod40k$BUGSoutput$pD, icarmod$BUGSoutput$pD), 
+               nrow = 3), 1)
+# Density estimates
+tab2 <- matrix(data = c(ft_mod10k_5, ft_mod40k_5, ft_icar_5,  
+               ft_mod10k_25, ft_mod40k_25, ft_icar_25,  
+               ft_mod10k_75, ft_mod40k_75, ft_icar_75,  
+               ft_mod10k_95, ft_mod40k_95, ft_icar_95), nrow = 3)
+tab3 <- as.data.frame(cbind(rbind("10 knots", "40 knots", "CAR model"), tab1, tab2))
+
+#convert numeric day to Date
+tab3[,4] <- as.Date("01/01/2013", "%m/%d/%Y") + as.numeric(as.character(tab3[,4]))
+tab3[,5] <- as.Date("01/01/2013", "%m/%d/%Y") + as.numeric(as.character(tab3[,5]))
+tab3[,6] <- as.Date("01/01/2013", "%m/%d/%Y") + as.numeric(as.character(tab3[,6]))
+tab3[,7] <- as.Date("01/01/2013", "%m/%d/%Y") + as.numeric(as.character(tab3[,7]))
+
+# Convert these to text day of year
+tab3[,4] <- paste(mday(tab3[,4]), month(tab3[,4], label = T), sep = "-")
+tab3[,5] <- paste(mday(tab3[,5]), month(tab3[,5], label = T), sep = "-")
+tab3[,6] <- paste(mday(tab3[,6]), month(tab3[,6], label = T), sep = "-")
+tab3[,7] <- paste(mday(tab3[,7]), month(tab3[,7], label = T), sep = "-")
+
+names(tab3) <- c("Model", "DIC", "pD", "5%", "25%", "75%", "95%")
+
+kable(tab3, format = 'markdown')
+```
+  
+$^1$ DIC: Deviance information criteria  
+$^2$ pD: Estimate of model complexity  
+$^3$ 5-95%: Estimated day of the year when $x$% of the abortions have occurred.  
+
+```{r abortions-per-month, echo=FALSE, message=FALSE}
+# Calculate the probability of abortion per month
+start.offset <- min(Data$CapDOY)
+Day <- seq.Date(as.Date('2013/01/01') + start.offset, 
+                as.Date('2013/01/01') + start.offset + D-1, by = 1)
+Mo <- month(Day)
+temp <- as.data.frame(cbind(Mo, ft_mod40k$mean))
+names(temp) <- c("Mo", "ab.pr")
+# expected abortion probability per month per seropositive elk
+x <- aggregate(temp$ab.pr, by = list (Mo), FUN = "sum")
+x[,2] <- round(x[,2],3)
+
+```

@@ -1,0 +1,1 @@
+In this project we are using vaginal implant transmitters in elk to determine the timing of abortion events for brucella positive and negative elk. The analyses will be run in JAGS or OpenBUGS called from R.

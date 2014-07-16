@@ -1,0 +1,336 @@
+Supplementary Information:
+=====================================================
+
+```{r setupSupInfo, echo = FALSE}
+opts_chunk$set(dpi = 600, echo = FALSE, message = FALSE)
+```
+
+**Table S1**. Raw data on the presumed pregnant elk captured from 2006 through 2013. Start and stop dates refer to the dates when the reproductive events occurred. Brucella status was determined from serological tests interpreted according the USDA methods and rules for cervids.  
+
+```{r rawdata, echo = FALSE, results='asis'}
+library(knitr)
+library(lubridate)
+setwd("~/BitBucket/VIT/Analysis")
+RawData <- read.table("VIT_Data2013.txt", sep="", header=T) #load in data
+RawData <- RawData[order(RawData$CaptureDate), c(1,2,5,6,7,9,11)]
+names(RawData) <- c("ElkID", "Feedground", "Capture", "Event.Start", "Event.End", "Status", "Brucella")
+
+#recode some of the elk lingo
+levels(RawData$Status) <- c("Abortion", "Death", "NotPregnant", "Birth", "*")
+
+#reformat the dates
+RawData[,3] <- as.character(mdy(RawData[,3]))
+RawData[,4] <- as.character(mdy(RawData[,4]))
+RawData[,5] <- as.character(mdy(RawData[,5]))
+RawData[,7] <- as.character(RawData[,7])
+RawData <- RawData[order(RawData$ElkID),]
+
+#Fill in the NAs for knitr
+tmp <- which(is.na(RawData[,4]) == T)
+RawData[tmp, 4] <- "*"
+tmp <- which(is.na(RawData[,5]) == T)
+RawData[tmp, 5] <- "*"
+tmp <- which(is.na(RawData[,7]) == T)
+RawData[tmp, 7] <- "*"
+row.names(RawData) <- 1:nrow(RawData)
+kable(RawData, format='markdown', row.names = NA)
+```
+  
+\newpage   
+```{r FigS1, fig.height = 6, fig.width = 6, echo = FALSE, fig.cap= "", fig.lp=""}
+rm(list = ls())
+setwd("~/BitBucket/VIT/Analysis")
+library(lubridate)
+load('VIT_Data2013_Full.RData')
+source('VITplot_interval2.R')
+start.offset <- min(Data$CapDOY)
+par(mfrow = c(1,1), mar = c(2,3,1,1), cex = 1.5, mgp = c(2,.5,0), family = "sans", font = 1)
+VITplot_interval2(Data, 2)
+```
+  
+**Figure S1**. Raw data on the reproductive events of all pregnant elk in the study. Grey lines extend from the capture date to the time interval of the reproductive event. Red and blue lines indicate time intervals when VITs were expelled due to abortions or normal birth events, respectively.   
+
+\newpage   
+  
+```{r FigS2, fig.height = 6, fig.width = 6, echo = FALSE, fig.cap= "", fig.lp=""}
+setwd("~/BitBucket/VIT/Analysis")
+load('Result_mod10k1.RData')
+load('Result_mod40k1.RData')
+load('Result_icar1.RData')
+load('VIT_Data2013_Full_POS.RData')
+source('plot_VITresults_fxns.R')
+start.offset <- min(Data$CapDOY)
+
+par(mfrow = c(2,3), mar = c(2,3,1,1), cex = 1, mgp = c(2,.5,0), family = "sans", font = 1)
+plot_abort_ft(mod10k, "", start.offset, 2, Ylim = c(0, 0.008),
+              Xlim = as.Date(c('2013/02/01', '2013/07/01')), legendflag=FALSE, 
+<<<<<<< HEAD
+              Ylab = "Abortion density (events / day)", FmoTixs = T)
+text(as.Date("2013/01/26"), 0.008, "A) 10 knots", pos = 4, cex = 1)
+=======
+              Ylab = "Abortion event density", FmoTixs = T)
+text(as.Date("2013/01/22"), 0.008, "A) 10 knots", pos = 4, cex = 1)
+
+par(mar = c(3,2,1,1))
+>>>>>>> Changing from miscarriage to abortion
+plot_abort_ft(mod40k, "", start.offset, 2, Ylim = c(0, 0.008),
+              Xlim = as.Date(c('2013/02/01', '2013/07/01')), legendflag=FALSE, 
+              Ylab = "", FmoTixs = T)
+text(as.Date("2013/01/26"), 0.008, "B) 40 knots", pos = 4, cex = 1)
+plot_abort_ft(icarmod, "", start.offset, 2,  Ylim = c(0, 0.008),
+              Xlim = as.Date(c('2013/02/01', '2013/07/01')), legendflag=FALSE, 
+              Ylab = "", FmoTixs = T)
+text(as.Date("2013/01/26"), 0.008, "C) CAR model", pos = 4, cex = 1)
+
+plot_birth_ft(mod10k, "", start.offset, 2,   Ylim = c(0, 0.05),
+              Xlim = as.Date(c('2013/02/01', '2013/07/01')), legendflag=FALSE, 
+              Ylab = "Birth density (events / day)", FmoTixs = T)
+text(as.Date("2013/01/26"), 0.05, "D) 10 knots", pos = 4, cex = 1)
+
+plot_birth_ft(mod40k, "", start.offset, 2,   Ylim = c(0, 0.05),
+              Xlim = as.Date(c('2013/02/01', '2013/07/01')), legendflag=FALSE, 
+              Ylab = "", FmoTixs = T)
+text(as.Date("2013/01/26"), 0.05, "E) 40 knots", pos = 4, cex = 1)
+
+plot_birth_ft(icarmod, "", start.offset, 2,  Ylim = c(0, 0.05),
+              Xlim = as.Date(c('2013/02/01', '2013/07/01')), legendflag=FALSE, 
+              Ylab = "", FmoTixs = T)
+text(as.Date("2013/01/26"), 0.05, "F) CAR model", pos = 4, cex = 1)
+```
+
+  
+**Figure S2**. Comparison of reproductive event densities using different smoothing functions and only seropositive elk. Grey and black solid lines are the predicted posterior mean and medians. Dotted lines are the predicted posterior 95% credible intervals. 
+  
+\newpage
+    
+```{r FigS3, fig.height = 6, fig.width = 6, echo = FALSE, fig.cap= "", fig.lp=""}
+load('Result_mod10k0.RData')
+source('plot_VITresults_fxns.R')
+start.offset <- min(Data$CapDOY)
+
+par(mfrow = c(2,2), mar = c(2,3,1,1), cex = 1, mgp = c(2,.5,0), family = "sans", font = 1)
+#Top row
+<<<<<<< HEAD
+plot_hazAb(mod10k, "", start.offset, 2, Ylim = c(0, 0.004), 
+           Ylab = "Abortion hazard (events per elk / day)",
+           Xlim = as.Date(c('2013/02/01', '2013/07/01')), 
+           legendflag=FALSE, FmoTixs = T)
+text(as.Date("2013/01/26"), 0.004, "A)", pos = 4, cex = 1)
+
+plot_abort_ft(mod10k, "", start.offset, 2, Ylim = c(0, 0.004), 
+              Ylab = "Abortion density (events / day)",
+              Xlim = as.Date(c('2013/02/01', '2013/07/01')), 
+=======
+plot_hazAb(mod10k, "", start.offset, 2, Ylim = c(0, 0.004), Ylab = "Abortion hazard",
+           Xlim = as.Date(c('2013/02/01', '2013/07/01')), 
+           legendflag=FALSE, FmoTixs = T)
+plot_abort_ft(mod10k, "", start.offset, 2, Ylim = c(0, 0.004), Ylab = "Abortion event density",
+           Xlim = as.Date(c('2013/02/01', '2013/07/01')), 
+>>>>>>> Changing from miscarriage to abortion
+              legendflag=FALSE, FmoTixs = T)
+text(as.Date("2013/01/26"), 0.004, "B)", pos = 4, cex = 1)
+
+#Bottom row
+plot_hazLB(mod10k, "", start.offset, 2, Ylim = c(0, 0.15),   
+           Xlim = as.Date(c('2013/02/01', '2013/07/01')), 
+           Ylab = "Birth hazard (events per elk / day)",
+           legendflag=FALSE, FmoTixs = T)
+text(as.Date("2013/01/26"), 0.15, "C)", pos = 4, cex = 1)
+
+plot_birth_ft(mod10k, "", start.offset, 2, Ylim = c(0, 0.04),  
+           Xlim = as.Date(c('2013/02/01', '2013/07/01')), 
+           Ylab = "Birth density (events / day)",
+              legendflag=FALSE, FmoTixs = T)
+text(as.Date("2013/01/26"), 0.04, "D)", pos = 4, cex = 1)
+
+```
+  
+**Figure S3**. Results using seropositive and seronegative elk and the 10 knot spline model. Grey and black solid lines are the predicted posterior mean and medians. Dotted lines are the predicted posterior 95% credible intervals.
+
+\newpage
+
+**Table S2**. Comparison of elk abortion timing across models when using all pregnant elk (n = `r length(unique(Data$Elk_ID))`). Models had different smoothing functions for the total hazard of a reproductive event, but the sub-model of the probability of an abortion relative to a live birth was a logistic regression in all cases.        
+  
+```{r SupInfoCTable, echo = FALSE, results = 'asis'}
+rm(list = ls())
+load('Result_icar0.RData')
+load('Result_mod40k0.RData')
+load('Result_mod10k0.RData')
+load('VIT_Data2013_Full.RData')
+library(knitr)
+library(lubridate)
+source('ft_calc_fxn.R')
+start.offset <- min(Data$CapDOY)
+
+# Calculating summary statistics on the abortion event density for different models. 
+ft_icar <- ft_calc(icarmod)
+ft_icarcum <- ft_cum_calc(ft_icar$median)
+ft_mod10k <- ft_calc(mod10k)
+ft_mod10kcum <- ft_cum_calc(ft_mod10k$median)
+ft_mod40k <- ft_calc(mod40k)
+ft_mod40kcum <- ft_cum_calc(ft_mod40k$median)
+ft_mod10k_5 <- start.offset + ft_mod10kcum$row5 
+ft_mod40k_5 <- start.offset + ft_mod40kcum$row5 
+ft_icar_5 <- start.offset + ft_icarcum$row5 
+ft_mod10k_25 <- start.offset + ft_mod10kcum$row25 
+ft_mod40k_25 <- start.offset + ft_mod40kcum$row25 
+ft_icar_25 <- start.offset + ft_icarcum$row25 
+ft_mod10k_75 <- start.offset + ft_mod10kcum$row75 
+ft_mod40k_75 <- start.offset + ft_mod40kcum$row75 
+ft_icar_75 <- start.offset + ft_icarcum$row75 
+ft_mod10k_95 <- start.offset + ft_mod10kcum$row95 
+ft_mod40k_95 <- start.offset + ft_mod40kcum$row95 
+ft_icar_95 <- start.offset + ft_icarcum$row95 
+
+tab1 <- round(matrix(data = c(mod10k$BUGSoutput$DIC, mod40k$BUGSoutput$DIC, icarmod$BUGSoutput$DIC, mod10k$BUGSoutput$pD, mod40k$BUGSoutput$pD, icarmod$BUGSoutput$pD), 
+               nrow = 3), 1)
+tab2 <- matrix(data = c(ft_mod10k_5, ft_mod40k_5, ft_icar_5,  
+               ft_mod10k_25, ft_mod40k_25, ft_icar_25,  
+               ft_mod10k_75, ft_mod40k_75, ft_icar_75,  
+               ft_mod10k_95, ft_mod40k_95, ft_icar_95), nrow = 3)
+tab3 <- as.data.frame(cbind( rbind("10 knots", "40 knots", "CAR model"), tab1, tab2))
+
+#convert numeric day to Date
+tab3[,4] <- as.Date("01/01/2013", "%m/%d/%Y") + as.numeric(as.character(tab3[,4]))
+tab3[,5] <- as.Date("01/01/2013", "%m/%d/%Y") + as.numeric(as.character(tab3[,5]))
+tab3[,6] <- as.Date("01/01/2013", "%m/%d/%Y") + as.numeric(as.character(tab3[,6]))
+tab3[,7] <- as.Date("01/01/2013", "%m/%d/%Y") + as.numeric(as.character(tab3[,7]))
+
+# Convert these to text day of year
+tab3[,4] <- paste(mday(tab3[,4]), month(tab3[,4], label = T), sep = "-")
+tab3[,5] <- paste(mday(tab3[,5]), month(tab3[,5], label = T), sep = "-")
+tab3[,6] <- paste(mday(tab3[,6]), month(tab3[,6], label = T), sep = "-")
+tab3[,7] <- paste(mday(tab3[,7]), month(tab3[,7], label = T), sep = "-")
+
+names(tab3) <- c("Model", "DIC", "pD", "5%", "25%", "75%", "95%")
+
+kable(tab3, format = 'markdown')
+```
+      
+DIC: Deviance information criteria  
+pD: Estimate of model complexity  
+5-95%: Estimated day of the year when *X*% of the abortions have occurred.  
+
+\newpage  
+
+**Appendix S1:** Model code.  
+Hazard spline model that is not partitioned by event type (10knots)
+-----------------------------------------------------
+  
+```
+  # Priors
+  gamma0  ~ dnorm(0, 1.0E-6)
+  sigmab ~ dunif(0,3)
+  taub <- pow(sigmab, -2)
+  for (l in 1:num.knots){b[l]  ~ dnorm(0,taub)}
+    
+  # Likelihood for the total hazard
+  for (j in 1:records) {
+    for (k in left[j]:(right[j]-1)) {
+      # unit cumulative hazard
+      UCH[j,k] <- exp(gamma0 + mre110[k])
+    }   	
+    
+    SLR[j] <- exp(-sum(UCH[j,left[j]:(right[j]-1)])) # total prob of not having an event 
+    
+    # Bernoulli draw for "surviving"
+    noevent[j] ~ dbern(SLR[j])      
+  }
+
+# Calculate the baseline hazard
+  for (i in 1:D) {
+    Haz_b[i] <- exp(gamma0 + mre110[i]) # baseline hazard
+    # Spline part
+    mre110[i] <- b[1]*Z[i,1]+b[2]*Z[i,2]+b[3]*Z[i,3]+b[4]*Z[i,4]+b[5]*Z[i,5]+
+      b[6]*Z[i,6]+b[7]*Z[i,7]+b[8]*Z[i,8]+b[9]*Z[i,9]+b[10]*Z[i,10]
+  }               
+```
+  
+Hazard spline model that is partitioned by event type (10knots)
+-----------------------------------------------------
+ 
+```
+ # Priors
+  sigmab ~ dunif(0,3)
+  taub <- pow(sigmab, -2)
+  gamma0  ~ dnorm(0, 1.0E-6)
+  beta    ~ dunif(-10,0) # slope for the probability of an abortion
+  alpha   ~ dunif(1, 400) # offset, halfway = -alpha/beta for the probability of an abortion
+  for (l in 1:num.knots){b[l]  ~ dnorm(0,taub)}
+  
+   # Likelihood for the total hazard
+  for (j in 1:records) {
+    for (k in left[j]:(right[j]-1)) {
+      # unit cumulative hazard
+      UCH[j,k] <- exp(gamma0 + mre110[k])
+    }   	
+    SLR[j] <- exp(-sum(UCH[j,left[j]:(right[j]-1)])) # total prob of not having an event 
+    #Bernoulli draw on "survival"
+    noevent[j] ~ dbern(SLR[j])      
+  }
+  
+  # Likelihood on partitioning the event types
+  for (m in 1:n.events) {
+    b.type[m] ~ dbern(p.a[m])
+    logit(p.a[m]) <- alpha + beta*event.day[m]
+  }  
+  
+  # Calculate the baseline and cause-specific hazards
+  for (i in 1:D) {
+    Haz_b[i] <- exp(gamma0 + mre110[i]) # baseline hazard
+    prob.ab[i] <- 1 / (1+exp(-(alpha + beta*i))) # probability of abortion 
+    Haz_a[i] <- prob.ab[i] * Haz_b[i]     # abortion hazard
+    Haz_l[i] <- (1-prob.ab[i]) * Haz_b[i] # live birth hazard
+    # Spline part
+    mre110[i] <- b[1]*Z[i,1]+b[2]*Z[i,2]+b[3]*Z[i,3]+b[4]*Z[i,4]+b[5]*Z[i,5]+
+      b[6]*Z[i,6]+b[7]*Z[i,7]+b[8]*Z[i,8]+b[9]*Z[i,9]+b[10]*Z[i,10]
+  }               
+```
+  
+Estimating the design matrix *Z* for the splines was done in R as follows:   
+  
+```
+Z_K<-(abs(outer(covariate,knots,"-")))^3  
+OMEGA_all<-(abs(outer(knots,knots,"-")))^3  
+svd.OMEGA_all<-svd(OMEGA_all)  
+sqrt.OMEGA_all<-t(svd.OMEGA_all$v %*%  
+(t(svd.OMEGA_all$u)*sqrt(svd.OMEGA_all$d)))  
+Z<-t(solve(sqrt.OMEGA_all,t(Z_K)))  
+```
+  
+Conditional autoregressive model with event-type partitioning
+-----------------------------------------------------
+```
+  # Priors
+  gamma0  ~ dnorm(0, 1.0E-6)
+  beta    ~ dunif(-10,0) # slope for the probability of an abortion
+  alpha   ~ dunif(1, 400) # offset, halfway = -alpha/beta for the probability of an abortion
+  sd.rho ~ dunif(0,10)  # hyperprior
+  tau.rho <- pow(sd.rho, -2)  
+  rho[1] ~ dnorm(0, 1.0E-6)
+  for (i in 2:D) {rho[i]~dnorm(rho[i-1],tau.rho)}
+  
+  
+  # Likelihood
+  for (j in 1:records) {
+    for (k in left[j]:(right[j]-1)) {
+      UCH[j,k] <- exp(gamma0 + rho[k]) # unit hazard over the interval
+    }     
+    SLR[j] <- exp(-sum(UCH[j,left[j]:(right[j]-1)]))# total prob of not having an event 
+    noevent[j] ~ dbern(SLR[j])      
+  }
+  
+  # Likelihood on partitioning the event types
+  for (m in 1:n.events) {
+    b.type[m] ~ dbern(p.a[m])
+    logit(p.a[m]) <- alpha + beta*event.day[m]
+  }  
+  
+  #Derived quantities
+  for (i in 1:D) {
+    Haz_b[i] <- exp(gamma0 + rho[i]) # overall baseline
+    prob.ab[i] <- exp(alpha + beta*i) / (1+exp(alpha + beta*i)) # probability of abortion 
+    Haz_a[i] <- prob.ab[i] * Haz_b[i]     # abortion hazard
+    Haz_l[i] <- (1-prob.ab[i]) * Haz_b[i] # live birth hazard
+  }   	
+```

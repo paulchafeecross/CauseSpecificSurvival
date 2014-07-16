@@ -1,0 +1,20 @@
+model
+{
+    gamma0 ~ dnorm(0.00000E+00, 1.00000E-06)
+    sd.rho ~ dunif(0.00000E+00, 10)
+    tau.rho <- pow(sd.rho, -2)
+    rho[1] ~ dnorm(0.00000E+00, 1.00000E-06)
+    for (i in 2:D) {
+        rho[i] ~ dnorm(rho[i - 1], tau.rho)
+    }
+    for (j in 1:records) {
+        for (k in left[j]:(right[j] - 1)) {
+            UCH[j, k] <- exp(gamma0 + rho[k])
+        }
+        SLR[j] <- exp(-sum(UCH[j, left[j]:(right[j] - 1)]))
+        noevent[j] ~ dbern(SLR[j])
+    }
+    for (i in 1:D) {
+        Haz_b[i] <- exp(gamma0 + rho[i])
+    }
+}

@@ -1,0 +1,80 @@
+Logistic regressions on probability of abortion vs. birth
+========================================================
+Doing some initial *easier* models of the probability of abortion vs. birth.  Doing this so that I don't have to do a ton of different MCMC models. 
+
+```{r setup, echo = FALSE}
+opts_chunk$set(dev = c('png', 'pdf'), dpi = 500, fig.height = 4, fig.width = 6, echo = FALSE)
+# Change the dpi to 96 if only going the html
+# Change the dpi to >400 if going to a docx or pdf
+
+```
+
+```{r load-data}
+setwd("~/BitBucket/VIT/Analysis")
+rm(list = ls())
+load('VIT_Data2013_Full.RData')
+
+Type$abort <- 1
+Type$abort[Type$VIT_Status == "Parturition"]<- 0
+summary(Type)
+table(Type$CowSero, Type$VIT_Status)
+Type <- subset(Type, is.na(Type$CowSero) == F)
+```
+
+For simplicity we'll just assume that all events occur at the end of the interval
+```{r models}
+model0 <- glm(abort ~ right, data = Type, family = "binomial")
+summary(model0)
+
+model1 <- glm(abort ~ right + CowSero, data = Type, family = "binomial")
+summary(model1)
+
+model2 <- glm(abort ~ right + CowSero + right*CowSero, data = Type, family = "binomial")
+summary(model2)
+
+model3 <- glm(abort ~ CowSero, data = Type, family = "binomial")
+summary(model3)
+
+AIC(model0, model1, model2, model3)
+```
+This is interesting.  Seropositives are more likely to abort, but once you account for the timing, you may not need that variable. 
+
+```{r plot-model1}
+Type$pr <- predict(model1, type = "response")
+# make fxn to plot the results
+plot_logit_rug <- function(data){
+  par(mfrow = c(1,1))
+  plot(data$right[data$CowSero == "POS"], data$pr[data$CowSero == "POS"], col = 'red', 
+       xlab = "Day", ylab = "prob of abortion")
+  points(data$right[data$CowSero == "NEG"], data$pr[Type$CowSero == "NEG"], col =  'blue')
+  rug(data$right[data$CowSero == "NEG" & data$abort == 0], side = 1, col = 'blue')
+  rug(data$right[data$CowSero == "NEG" & data$abort == 1], side = 3, col = 'blue')
+  rug(data$right[data$CowSero == "POS" & data$abort == 1], side = 3, col = 'red')
+  rug(data$right[data$CowSero == "POS" & data$abort == 0], side = 1, col = 'red')
+}
+
+plot_logit_rug(Type)
+```
+
+```{r plot-model0}
+Type$pr <- predict(model0, type = "response")
+plot_logit_rug(Type)
+```
+
+But if you don't have the data on when the event occurred. Then Seropositive status is important: 
+```{r model3}
+model3 <- glm(abort ~ CowSero, data = Type, family = "binomial")
+summary(model3)
+tmp <- as.data.frame(predict(model3, type = "response", se.fit = T))[1:2, ]
+```
+So the probability ofa seropositive aborting is `r round(tmp$fit[2], 2)` plus or minus a SE of `r round(tmp$se.fit[2],2)`. Compared to a seronegative: `r round(tmp$fit[1], 2)` plus or minus a SE of `r round(tmp$se.fit[1],2)`. 
+
+This would be on the order of reducing an 80% birth rate to 74% if the overall prevalence is 30%.  (so not too big). 
+
+Any evidence of a feedground effect?
+```{r model4}
+model4 <- glm(abort ~ CowSero + Feedground, data = Type, family = "binomial")
+summary(model4)
+anova(model4)
+```
+Not really. 

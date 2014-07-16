@@ -1,0 +1,8 @@
+
+```{r include=FALSE}
+library(knitr)#Joined file 
+out <- c(knit_child('WriteUp.Rmd'), knit_child('Table1.Rmd'), 
+         knit_child('Figures.Rmd'), knit_child('SupInfo.Rmd'))
+```
+`r paste(out, collapse='\n')`
+

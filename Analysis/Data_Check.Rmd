@@ -1,0 +1,58 @@
+Double check on some calculations
+========================================================
+
+```{r load-data, echo = F}
+setwd("~/BitBucket/VIT/Analysis")
+rm(list = ls())
+library(lubridate)
+Data <- read.table("VIT_Data2013.txt", sep="", header=T) #load in data
+
+# reformat some of the dates
+Data$CaptureDate<- mdy(as.character(Data$CaptureDate))
+Data$Start_Interval <- mdy(as.character(Data$Start_Interval))
+Data$Stop_Interval <- mdy(as.character(Data$Stop_Interval))
+                       
+# insert death dates on mothers that died
+Data$Stop_Interval[Data$VIT_Status == "Died"] <- Data$Start_Interval[Data$VIT_Status == "Died"]
+Data$CapDOY <- yday(Data$CaptureDate) # day of the capture (1-365)
+Data$StartDOY <- yday(Data$Start_Interval) # day when the VIT is first possibly out
+Data$EndDOY <- yday(Data$Stop_Interval) # last day the event (birth or abortion) could have happened
+
+ # first remove the individuals that were not pregnant or were unknown events. 
+Data <- subset(Data, Data$VIT_Status != "Open" )
+Data <- subset(Data, Data$VIT_Status != "Unknown" )
+Data <- subset(Data, Data$TrustRating != 6) # 1 abortion with weak supporting information
+Data$VIT_Status <- as.factor(as.character(Data$VIT_Status)) #relevel the factor
+
+DataPOS <- Data[Data$CowSero == "POS", ]
+
+days <- seq(min(Data$CapDOY), max(Data$EndDOY))
+
+# calculate the # online per day
+N <- rep(NA, length(days))
+for (i in 1:length(days)){
+  d <- days[i]
+  tmp <- subset(Data, Data$CapDOY <= d & Data$EndDOY > d)
+  if(is.null(tmp) == T){N[i] <- 0}
+  if(is.null(tmp) == F){N[i] <- dim(tmp)[1]}
+}
+Npos <- rep(NA, length(days))
+for (i in 1:length(days)){
+  d <- days[i]
+  tmp <- subset(DataPOS, DataPOS$CapDOY <= d & DataPOS$EndDOY > d)
+  if(is.null(tmp) == T){Npos[i] <- 0}
+  if(is.null(tmp) == F){Npos[i] <- dim(tmp)[1]}
+}
+
+ab_all <- subset(Data, Data$VIT_Status == "Abortion")
+ab_pos <- subset(DataPOS, DataPOS$VIT_Status == "Abortion")
+t <- as.Date('01/01/2013', '%d/%m/%Y') + days 
+  
+plot(t, N, type = 'l', xlab = '')
+lines(t, Npos, type = 'l', col = 'red')
+points(as.Date('01/01/2013', '%d/%m/%Y') + yday(ab_all$Stop_Interval), 
+       rep(400, dim(ab_all)[1]))
+points(as.Date('01/01/2013', '%d/%m/%Y') + yday(ab_pos$Stop_Interval), 
+       rep(0, dim(ab_pos)[1]))
+```
+
