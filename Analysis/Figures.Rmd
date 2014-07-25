@@ -1,6 +1,7 @@
 Figure Legends
 =====================================================
 ```{r setup, echo = FALSE}
+library(knitr)
 opts_chunk$set(dev=c('png'), dpi = 600, echo = FALSE, message = FALSE, cache = F, fig.cap= "", fig.lp="")
 ```
 
@@ -8,7 +9,7 @@ opts_chunk$set(dev=c('png'), dpi = 600, echo = FALSE, message = FALSE, cache = F
     
 **Figure 2**. Timelines of brucellosis seropositive elk reproductive events from the vaginal implant transmitters (VITs, A) and a histogram of fetuses opportunistically recovered from feedgrounds during 1968 to 2014 (B). In A, grey lines extend from the capture date to the time interval of the reproductive event. Red and blue lines indicate time intervals when VITs were expelled due to abortions or normal birth events, respectively. 
 
-**Figure 3**. Daily probability of an abortion for female elk exposed to *Brucella abortus* during the year using the 40-knot spline model. Live births were either censored (A) or included in the full model where the total hazard was partitioned between two cause-specific event types (B, abortions and live births). Grey and black solid lines are the posterior mean and medians, respectively. Dotted lines are the posterior 95% credible intervals.   
+**Figure 3**. Daily hazard of an abortion for female elk exposed to *Brucella abortus* given she is still pregnant using the 40-knot spline model. Live births were either censored (A) or included in the full model where the total hazard was partitioned between two cause-specific event types (B, abortions and live births). Grey and black solid lines are the posterior mean and medians, respectively. Dotted lines are the posterior 95% credible intervals.   
     
 **Figure 4**. The probability that a reproductive event was an abortion using the full 40-knot spline model. Grey and black solid lines are the posterior mean and medians, respectively. Dotted lines are the posterior 95% credible intervals. 
 
@@ -25,7 +26,7 @@ Figures
 \newpage
 
 ```{r Fig2, fig.width = 4, fig.height = 5}
-setwd("~/BitBucket/VIT/Analysis")
+setwd("~/BitBucket/VIT2014/Analysis")
 rm(list = ls())
 library(lubridate)
 load('VIT_Data2013_Full_POS.RData')
@@ -61,22 +62,22 @@ load('VIT_Data2013_BirthsCensored.RData')
 #Part A
 start.offset <- min(Data$CapDOY)
 par(mfrow = c(2,1), mar = c(2,3,1,1), mgp = c(1.5,.25,0))
-plot_total_ft(mod40k_bcen, MainLab = " ", start.offset, 2, Ylim = c(0,0.008), 
+plot_baseline(mod40k_bcen, MainLab = " ", start.offset, 2, Ylim = c(0,0.008), 
             Xlim = as.Date(c('2013/01/15', '2013/07/01')), 
             legendflag=FALSE, FmoTix = T, 
-            Ylab = expression(paste("Abortion density  ", italic(f)(italic(t)))))
+            Ylab = expression(paste("Abortion hazard  ", italic(f)(italic(t)))))
 text(as.Date("2013/01/11"), 0.008, "A) Censoring births", pos = 4, cex = 1)
 
 load('Result_mod40k1.RData')
 #Part B
-plot_abort_ft(mod40k, MainLab = " ", start.offset, 2,  Ylim = c(0,0.008), 
+plot_hazAb(mod40k, MainLab = " ", start.offset, 2,  Ylim = c(0,0.008), 
            Xlim = as.Date(c('2013/01/15', '2013/07/01')), legendflag=FALSE,
-           Ylab = expression(paste("Abortion density  ", italic(f)[c==1](italic(t)))),
+           Ylab = expression(paste("Abortion hazard  ", italic(f)[c==1](italic(t)))),
            FmoTixs = T)
 text(as.Date("2013/01/11"), 0.008, "B) Full model", pos = 4, cex = 1)
 ```
 
-**Figure 3**. Probability of an abortion per elk per day for the 40-knot spline model using the method where abortions are the only event type and pregnant females are censored when live births occur (A), compared to the full model and dataset with both event types included (B). Grey and black solid lines are the posterior mean and medians. Dotted lines are the posterior 95% credible intervals.    
+**Figure 3**. Daily hazard of an abortion for female elk exposed to *Brucella abortus* given she is still pregnant using the 40-knot spline model. Live births were either censored (A) or included in the full model where the total hazard was partitioned between two cause-specific event types (B, abortions and live births). Grey and black solid lines are the posterior mean and medians, respectively. Dotted lines are the posterior 95% credible intervals.      
 
 \newpage  
 

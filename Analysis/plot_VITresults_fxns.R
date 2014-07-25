@@ -2,7 +2,7 @@
 # using the BUGS output
 
 # Plot the baseline hazard 
-plot_baseline <- function(model, MainLab, offset, LWD, Ylim, Xlim, legendflag, Ylab){
+plot_baseline <- function(model, MainLab, offset, LWD, Ylim, Xlim, legendflag, Ylab, FmoTixs){
  
   if(missing(MainLab)) {MainLab <- " "}
   if(missing(LWD)) {LWD <- 1}
@@ -21,12 +21,6 @@ plot_baseline <- function(model, MainLab, offset, LWD, Ylim, Xlim, legendflag, Y
   
   if(missing(Ylim)) {Ylim <- c(0, max(bstats[4,]))}
   
-  # axis labels
-  m <- as.Date(c('01/01/2013', '01/02/2013', "01/03/2013", "01/04/2013","01/05/2013",
-                 "01/06/2013", "01/07/2013"), '%d/%m/%Y')
-  labs <- c("Jan 1", "Feb 1", "Mar 1", "Apr 1", "May 1", "Jun 1", "Jul 1")
- 
-  
   bmean <-  model$BUGSoutput$mean$Haz_b
   maxb <- max(bstats)
   plot(t, bmean, xlab = '', xaxt = "n", ylab = Ylab, bty = "n",
@@ -34,7 +28,17 @@ plot_baseline <- function(model, MainLab, offset, LWD, Ylim, Xlim, legendflag, Y
   lines(t, bstats[3,], col = "black", lwd = LWD)#median
   lines(t, bstats[1,], col = "grey", lwd = LWD, lty = 2)
   lines(t, bstats[5,], col = "grey", lwd = LWD, lty = 2)
-  axis(1, at = m, labels = labs, tck = 0.02)
+  # axis labels
+  if(missing(FmoTixs)) {axis(1, tck = 0.02)}
+  else {
+    if(FmoTixs == TRUE){
+      labs <- c("Jan 1", "Feb 1", "Mar 1", "Apr 1", "May 1", "Jun 1", "Jul 1")
+      m <- as.Date(c('01/01/2013', '01/02/2013', "01/03/2013", "01/04/2013","01/05/2013",
+                     "01/06/2013", "01/07/2013"), '%d/%m/%Y')
+      axis(1, at = m, labels = labs, tck = 0.02)
+    }
+    if(FmoTixs == FALSE){axis(1, tck = 0.02)}
+  }
   
 
   if(legendflag == TRUE) {
