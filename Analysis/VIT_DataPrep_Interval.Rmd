@@ -1,22 +1,23 @@
-Analysis of elk abortions
+Analysis of elk abortions 2014
 ========================================================
 
 Data preparation and exploration
 --------------------------------------------------------
 First load in the data and do some initial formating. 
 ```{r setup}
+library(knitr)
 opts_chunk$set(dev = c('png', 'pdf'), dpi = 96, fig.height = 6, fig.width = 6)
 # Change the dpi to 96 if only going the html
 # Change the dpi to >400 if going to a docx or pdf
 ```
 
 ```{r data-formatting}
-setwd("~/BitBucket/VIT/Analysis")
+setwd("~/BitBucket/VIT2014/Analysis")
 rm(list = ls())
 source('VITplot_interval2.r')
 library(lubridate)
 
-Data <- read.table("VIT_Data2013.txt", sep="", header=T) #load in data
+Data <- read.table("VIT_Data2014.txt", sep="", header=T) #load in data
 # reformat some of the dates
 Data$CaptureDate <- mdy(as.character(Data$CaptureDate))
 Data$Start_Interval <- mdy(as.character(Data$Start_Interval))
@@ -62,15 +63,13 @@ The total number of elk in the initial dataset = `r nrow(Data)`.
 Construct some cross-tabulations of the data
 ```{r tabluations}
 summary(Data$VIT_Status)
-table(year(Data$CaptureDate))
 # Table of effort per year
-table(year(Data$CaptureDate), Data$VIT_Status)
-# Table of data quality by year
-table(year(Data$CaptureDate), Data$TrustRating)
+table(year(Data$CaptureDate))
+table(year(Data$CaptureDate), Data$VIT_Status) # most of the unknowns happened early on. 
 # Table of event types by trust rating
 table(Data$VIT_Status, Data$TrustRating)
 # Look at the Unknowns
-Data[Data$VIT_Status == "Unknown",]
+Data[Data$VIT_Status == "Unknown", c(1:5, 11)]
 ```
 
 Remove the lost and unknown vits, non-pregnant animals.  
@@ -95,7 +94,7 @@ VITplot_interval2(Data, 1.5)
 Now just plot the positives.
 ```{r vitplot-pos-only}
 tmp <- Data[Data$CowSero == "POS", ]
-VITplot_interval2(tmp, 1.5)
+VITplot_interval2(tmp, 2)
 rm(tmp)
 ```
 
@@ -172,7 +171,7 @@ D <- max(Data$right)      # number of days in the dataset
 Save the RData file for the BUGs models
 ```{r}
 rm(i,j,tmp)
-save.image(file = 'VIT_Data2013_Full.RData')
+save.image(file = 'VIT_Data2014_Full.RData')
 ```
 
 Also save an RData file for dataset that is Positives only. 
@@ -193,7 +192,7 @@ noevent[event == 0] <- 1
 event.day <- TypePOS$right # the day that events occurred for 1:n.events rather than 1: records
 D <- max(DataPOS$right)      # number of days in the dataset
 
-save.image(file = 'VIT_Data2013_Full_POS.RData')
+save.image(file = 'VIT_Data2014_Full_POS.RData')
 ```
 Subset to abortions and censored birth events
 -------------------------------------------------------------------------------
@@ -247,5 +246,5 @@ noevent[event == 0] <- 1
 event.day <- Type$right # the day that events occurred for 1:n.events rather than 1: records
 D <- max(Data$right)      # number of days in the dataset
 
-save.image(file = 'VIT_Data2013_BirthsCensored.RData')
+save.image(file = 'VIT_Data2014_BirthsCensored.RData')
 ```

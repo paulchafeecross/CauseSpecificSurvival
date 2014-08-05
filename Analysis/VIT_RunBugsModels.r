@@ -1,6 +1,5 @@
 # Code to run the vit hazard spline models
-setwd("~/BitBucket/VIT/Analysis")
-#setwd("~/Dropbox/Brucella/Analysis/VIT")
+setwd("~/BitBucket/VIT2014/Analysis")
 rm(list = ls())
 library(R2WinBUGS)
 library(R2jags)
@@ -9,8 +8,8 @@ source("plot_VITresults_fxns.r") # fxns for plotting model results
 source("Write_VITSplineInterval.r") # code for the BUGS models
 
 seroyes <- 0
-if(seroyes == 1){load('VIT_Data2013_Full_POS.RData')}
-if(seroyes != 1){load('VIT_Data2013_Full.RData')}
+if(seroyes == 1){load('VIT_Data2014_Full_POS.RData')}
+if(seroyes != 1){load('VIT_Data2014_Full.RData')}
 
 #*******************************************************************************
 # RUN STATISTICAL MODELS

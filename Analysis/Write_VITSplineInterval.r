@@ -1,6 +1,6 @@
 # Write the bugs models for VIT hazard
 library(R2WinBUGS)
-setwd("~/BitBucket/VIT/Analysis/")
+setwd("~/BitBucket/VIT2014/Analysis/")
 
 #*******************************************************************************
 # Hazard Spline model with not partitioned by event type (10knots)
