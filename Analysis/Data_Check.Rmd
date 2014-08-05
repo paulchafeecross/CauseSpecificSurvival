@@ -1,11 +1,12 @@
-Double check on some calculations
+Double check some data and calculate some summaries for the text
 ========================================================
-
-```{r load-data, echo = F}
-setwd("~/BitBucket/VIT/Analysis")
+First load in the data.   
+```{r load-data}
+setwd("~/BitBucket/VIT2014/Analysis")
 rm(list = ls())
+library(knitr)
 library(lubridate)
-Data <- read.table("VIT_Data2013.txt", sep="", header=T) #load in data
+Data <- read.table("VIT_Data2014.txt", sep="", header=T) #load in data
 
 # reformat some of the dates
 Data$CaptureDate<- mdy(as.character(Data$CaptureDate))
@@ -17,17 +18,54 @@ Data$Stop_Interval[Data$VIT_Status == "Died"] <- Data$Start_Interval[Data$VIT_St
 Data$CapDOY <- yday(Data$CaptureDate) # day of the capture (1-365)
 Data$StartDOY <- yday(Data$Start_Interval) # day when the VIT is first possibly out
 Data$EndDOY <- yday(Data$Stop_Interval) # last day the event (birth or abortion) could have happened
+```
 
- # first remove the individuals that were not pregnant or were unknown events. 
+Total # of elk in the original dataset = `r dim(Data)[1]`. 
+  
+```{r subset}
+# first remove the individuals that were not pregnant or were unknown events. 
 Data <- subset(Data, Data$VIT_Status != "Open" )
 Data <- subset(Data, Data$VIT_Status != "Unknown" )
-Data <- subset(Data, Data$TrustRating != 6) # 1 abortion with weak supporting information
 Data$VIT_Status <- as.factor(as.character(Data$VIT_Status)) #relevel the factor
 
 DataPOS <- Data[Data$CowSero == "POS", ]
 
 days <- seq(min(Data$CapDOY), max(Data$EndDOY))
+```
 
+Total # of elk in the analyzed dataset = `r dim(Data)[1]`.  
+Total # of seropositive elk in the analyzed dataset = `r dim(DataPOS)[1]`. 
+  
+Table of Abortions by mothers status:  
+```{r table1, echo=FALSE}
+(table1 <- table(Data$CowSero, Data$VIT_Status))
+```
+  
+The chance of aborting, given survival and seronegative =   
+```{r binom-neg}
+binom.test(table1[1,1], sum(table1[1,c(1,3)]))
+```
+  
+And for the seropositives: 
+```{r binom-pos}
+binom.test(table1[2,1], sum(table1[2,c(1,3)]))
+```
+  
+The first abortion was between 
+```{r 1st-abort, echo=FALSE}
+first_ab_beg <- Data$Start_Interval[Data$VIT_Status == "Abortion"]
+last_ab_beg <- sort(yday(first_ab_beg), decreasing = T)[1]
+first_ab_beg <- sort(yday(first_ab_beg))[1]
+
+first_ab_end <- Data$Stop_Interval[Data$VIT_Status == "Abortion"]
+last_ab_end <- sort(yday(first_ab_end), decreasing = T)[1]
+first_ab_end <- sort(yday(first_ab_end))[1]
+```
+`r as.Date("2013/01/01")+first_ab_beg` and `r as.Date("2013/01/01")+first_ab_end`, and the last abortion was between `r as.Date("2013/01/01")+last_ab_beg` and `r as.Date("2013/01/01")+ last_ab_end`. Note: ignore the year here, just use the day of the year. 
+
+  
+Plot the sampling intensity over day of year.  
+```{r plot-intensity, echo = F}
 # calculate the # online per day
 N <- rep(NA, length(days))
 for (i in 1:length(days)){
