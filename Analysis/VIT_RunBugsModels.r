@@ -7,7 +7,7 @@ source("Z_foo.r") # fxn for calculating Z on the splines
 source("plot_VITresults_fxns.r") # fxns for plotting model results
 source("Write_VITSplineInterval.r") # code for the BUGS models
 
-seroyes <- 0
+seroyes <- 1
 if(seroyes == 1){load('VIT_Data2014_Full_POS.RData')}
 if(seroyes != 1){load('VIT_Data2014_Full.RData')}
 
@@ -17,7 +17,7 @@ if(seroyes != 1){load('VIT_Data2014_Full.RData')}
 #*******************************************************************************
 # Partitioned HAZARD MODEL w/ logistic
 #*******************************************************************************
-niter <- 500000
+niter <- 500
 num.knots <- 10
 Z <- Z_foo(num.knots, min(left), max(right))
 data <- list('left', 'right', 'noevent', 'D', 'Z', 'num.knots', 'records', 'b.type', 
@@ -55,7 +55,6 @@ icarmod <- jags(data, inits = NULL, params, icar_partjag, n.chains=3, n.iter=nit
 save(icarmod, file = paste('Result_icar', seroyes, '.RData', sep = ''))
 model <- icarmod 
 plot(model)
-plot_VITmodel(model)
 #*******************************************************************************
 
 #*******************************************************************************

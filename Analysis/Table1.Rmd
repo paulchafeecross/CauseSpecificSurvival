@@ -1,11 +1,14 @@
+---
+output: pdf_document
+---
 **Table 1**. Comparison of elk abortion timing across models with different smoothing functions for the total hazard of a reproductive event. In all cases, the sub-model of the probability of an abortion relative to a live birth was a logistic regression.        
 
-```{r Table1-comp, results='asis', echo = FALSE}
-setwd("~/BitBucket/VIT/Analysis")
+```{r Table1-comp, echo = FALSE}
+setwd("~/BitBucket/VIT2014/Analysis")
 load('Result_icar1.RData')
 load('Result_mod10k1.RData')
 load('Result_mod40k1.RData')
-load('VIT_Data2013_Full_POS.RData')
+load('VIT_Data2014_Full_POS.RData')
 library(knitr)
 library(lubridate)
 source('ft_calc_fxn.R')
@@ -13,11 +16,11 @@ start.offset <- min(Data$CapDOY)
 
 # Calculating summary statistics on the abortion event density for different models. 
 ft_icar <- ft_calc(icarmod)
-ft_icarcum <- ft_cum_calc(ft_icar$median)
+ft_icarcum <- ft_cum_calc(ft_icar$mean)
 ft_mod10k <- ft_calc(mod10k)
-ft_mod10kcum <- ft_cum_calc(ft_mod10k$median)
+ft_mod10kcum <- ft_cum_calc(ft_mod10k$mean)
 ft_mod40k <- ft_calc(mod40k)
-ft_mod40kcum <- ft_cum_calc(ft_mod40k$median)
+ft_mod40kcum <- ft_cum_calc(ft_mod40k$mean)
 ft_mod10k_5 <- start.offset + ft_mod10kcum$row5 
 ft_mod40k_5 <- start.offset + ft_mod40kcum$row5 
 ft_icar_5 <- start.offset + ft_icarcum$row5 
@@ -32,14 +35,17 @@ ft_mod40k_95 <- start.offset + ft_mod40kcum$row95
 ft_icar_95 <- start.offset + ft_icarcum$row95 
 
 # model summaries
-tab1 <- round(matrix(data = c(mod10k$BUGSoutput$DIC, mod40k$BUGSoutput$DIC, icarmod$BUGSoutput$DIC, 
-                        mod10k$BUGSoutput$pD, mod40k$BUGSoutput$pD, icarmod$BUGSoutput$pD), 
+tab1 <- round(matrix(data = c(mod10k$BUGSoutput$DIC, mod40k$BUGSoutput$DIC, 
+                              icarmod$BUGSoutput$DIC, mod10k$BUGSoutput$pD,
+                              mod40k$BUGSoutput$pD, icarmod$BUGSoutput$pD), 
                nrow = 3), 1)
 # Density estimates
 tab2 <- matrix(data = c(ft_mod10k_5, ft_mod40k_5, ft_icar_5,  
                ft_mod10k_25, ft_mod40k_25, ft_icar_25,  
                ft_mod10k_75, ft_mod40k_75, ft_icar_75,  
                ft_mod10k_95, ft_mod40k_95, ft_icar_95), nrow = 3)
+
+# Model names combined with tab1 and tab2
 tab3 <- as.data.frame(cbind(rbind("10 knots", "40 knots", "CAR model"), tab1, tab2))
 
 #convert numeric day to Date
@@ -56,12 +62,14 @@ tab3[,7] <- paste(mday(tab3[,7]), month(tab3[,7], label = T), sep = "-")
 
 names(tab3) <- c("Model", "DIC", "pD", "5%", "25%", "75%", "95%")
 
-kable(tab3, format = 'markdown')
+kable(tab3)
 ```
   
 $^1$ DIC: Deviance information criteria  
 $^2$ pD: Estimate of model complexity  
 $^3$ 5-95%: Estimated day of the year when $x$% of the abortions have occurred.  
+
+**Table 2**. Expected number of abortions per month for 100 seropositive elk using different model structures. Numbers inside the brackets are the 95% credible interval. 
 
 ```{r abortions-per-month, echo=FALSE, message=FALSE}
 # Calculate the probability of abortion per month
@@ -69,10 +77,31 @@ start.offset <- min(Data$CapDOY)
 Day <- seq.Date(as.Date('2013/01/01') + start.offset, 
                 as.Date('2013/01/01') + start.offset + D-1, by = 1)
 Mo <- month(Day)
-temp <- as.data.frame(cbind(Mo, ft_mod40k$mean))
-names(temp) <- c("Mo", "ab.pr")
-# expected abortion probability per month per seropositive elk
-x <- aggregate(temp$ab.pr, by = list (Mo), FUN = "sum")
-x[,2] <- round(x[,2],3)
 
+Abortion_density <- as.data.frame(cbind(Mo, t(ft_mod10k$stats[c(1,4), ]*100),
+                                        ft_mod10k$mean*100,
+                                        t(ft_mod40k$stats[c(1,4), ]*100), 
+                                        ft_mod40k$mean*100,
+                                        t(ft_icar$stats[c(1,4), ]*100),
+                                        ft_icar$mean*100))
+
+names(Abortion_density) <- c("Mo", "10k_vlo", "10k_vhi", "10k_mean",
+                             "40k_vlo",  "40k_vhi", "40k_mean",
+                             "icar_vlo", "icar_vhi", "icar_mean")
+
+# expected abortion probability per month per seropositive elk
+Abortion_density_mo <- aggregate(Abortion_density[,2:10], by = list (Mo), 
+                                 FUN = "sum")
+
+Table2 <- as.data.frame(round(t(as.matrix(Abortion_density_mo)), 1)[2:10,2:7])
+names(Table2) <- c("Feb", "Mar", "Apr", "May", "Jun", "Jul")
+
+Table2$Model <- row.names(Table2)
+row.names(Table2) <- seq(1, dim(Table2)[1],1)
+Table2 <- Table2[,c(7,1:6)]
+kable(Table2)
 ```
+
+Note: this table will need to be reformatted a little for the final version. 
+vhi  = 97.5th percentile
+vlo = 2.5th percentile
