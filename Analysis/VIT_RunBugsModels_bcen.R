@@ -1,5 +1,5 @@
 # Code to run the vit hazard spline models
-setwd("~/BitBucket/VIT/Analysis")
+setwd("~/BitBucket/VIT2014/Analysis")
 #setwd("~/Dropbox/Brucella/Analysis/VIT")
 rm(list = ls())
 library(R2WinBUGS)
