@@ -1,3 +1,6 @@
+---
+output: pdf_document
+---
 Figure Legends
 =====================================================
 ```{r setup, echo = FALSE}
@@ -35,7 +38,7 @@ source('VITplot_interval2.R')
 par(mfrow = c(2,1), mar = c(2,3,1,1), cex = 1, mgp = c(1.5,.25,0))
 #Figure 2A
 VITplot_interval2(DataPOS, 2) 
-text(as.Date("2013/01/01"), 115, "A)", pos = 4, cex = 1)
+text(as.Date("2013/01/01"), 130, "A)", pos = 4, cex = 1)
 
 #Figure 2B: Fetus recovery data
 Fetus <- read.table('FetusRecoveryField.txt', header = T) #read in data
@@ -50,6 +53,7 @@ axis(1, at = c( 1, 32, 60, 91, 121, 152, 182),
      labels = c("Jan 1", "Feb 1", "Mar 1", "Apr 1", "May 1", "Jun 1", "Jul 1"), tck = 0.02)
 text(1, 13, "B)", pos = 4, cex = 1)
 ```
+    
 **Figure 2**. Raw data of brucellosis seropositive elk reproductive events from the vaginal implant transmitters (VITs, A) and a histogram of fetuses opportunistically recovered from feedgrounds during 1968 to 2014 (B). In A, grey lines extend from the capture date to the time interval of the reproductive event. Red and blue lines indicate time intervals when VITs were expelled due to abortions or normal birth events, respectively. 
 
 \newpage  

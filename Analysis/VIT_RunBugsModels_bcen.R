@@ -9,7 +9,7 @@ source("plot_VITresults_fxns.r") # fxns for plotting model results
 source("Write_VITSplineInterval.r") # code for the BUGS models
 
 seroyes <- 1
-load('VIT_Data2013_BirthsCensored.RData')
+load('VIT_Data2014_BirthsCensored.RData')
 niter <- 300000
 
 #*******************************************************************************

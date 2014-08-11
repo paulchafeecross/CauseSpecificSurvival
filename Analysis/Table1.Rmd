@@ -1,5 +1,5 @@
 ---
-output: pdf_document
+output: html_document
 ---
 **Table 1**. Comparison of elk abortion timing across models with different smoothing functions for the total hazard of a reproductive event. In all cases, the sub-model of the probability of an abortion relative to a live birth was a logistic regression.        
 
@@ -100,6 +100,7 @@ Table2$Model <- row.names(Table2)
 row.names(Table2) <- seq(1, dim(Table2)[1],1)
 Table2 <- Table2[,c(7,1:6)]
 kable(Table2)
+write.csv(Table2, "table2.csv")
 ```
 
 Note: this table will need to be reformatted a little for the final version. 

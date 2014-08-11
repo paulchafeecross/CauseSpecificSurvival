@@ -1,14 +1,14 @@
 # script to plot some of the VIT statistical results
 rm(list = ls())
 library(R2jags)
-setwd("~/BitBucket/VIT/Analysis")
+setwd("~/BitBucket/VIT2014/Analysis")
 seroYes <- 1 # flag for the use of seropos only
 
 if (seroYes == 1){
   load('Result_mod10k1.RData')
   #load('Result_mod20k1.RData')
   load('Result_mod40k1.RData')
-  load('VIT_Data2013_Full_POS.RData')
+  load('VIT_Data2014_Full_POS.RData')
 }
 
 if(seroYes !=1){
@@ -16,7 +16,7 @@ if(seroYes !=1){
   load('Result_mod20k0.RData')
   load('Result_mod40k0.RData')
   load('Result_icar0.RData')
-  load('VIT_Data2013_Full.RData')
+  load('VIT_Data2014_Full.RData')
 }
 
 #Compare the DIC and pDs
