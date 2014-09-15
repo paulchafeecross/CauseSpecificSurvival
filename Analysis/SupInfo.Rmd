@@ -3,17 +3,17 @@ Supplementary Information:
 
 ```{r setupSupInfo, echo = FALSE}
 library(knitr)
-opts_chunk$set(dev = "png", dpi = 600, echo = FALSE, message = FALSE)
+opts_chunk$set(dev = "png", dpi = 400, echo = FALSE, message = FALSE)
 ```
 
-```{r FigS1, fig.height = 6, fig.width = 6, echo = FALSE, fig.cap= "", fig.lp=""}
+```{r FigS1, fig.height = 7, fig.width = 5, echo = FALSE, fig.cap= "", fig.lp=""}
 rm(list = ls())
 setwd("~/BitBucket/VIT2014/Analysis")
 library(lubridate)
 load('VIT_Data2014_Full.RData')
 source('VITplot_interval2.R')
 start.offset <- min(Data$CapDOY)
-par(mfrow = c(1,1), mar = c(2,3,1,1), cex = 1.5, mgp = c(2,.5,0), family = "sans", font = 1)
+par(mfrow = c(1,1), mar = c(2,3,.25,.25), cex = 1.5, mgp = c(2,.5,0), family = "sans", font = 1)
 VITplot_interval2(Data, 2)
 ```
   
@@ -21,7 +21,7 @@ VITplot_interval2(Data, 2)
 
 \newpage   
   
-```{r FigS2, fig.height = 6, fig.width = 6, echo = FALSE, fig.cap= "", fig.lp=""}
+```{r FigS2, fig.height = 6, fig.width = 7, echo = FALSE, fig.cap= "", fig.lp=""}
 load('Result_mod10k1.RData')
 load('Result_mod40k1.RData')
 load('Result_icar1.RData')
@@ -29,7 +29,7 @@ load('VIT_Data2014_Full_POS.RData')
 source('plot_VITresults_fxns.R')
 start.offset <- min(Data$CapDOY)
 
-par(mfrow = c(2,3), mar = c(2,3,1,1), cex = 1, mgp = c(2,.5,0), family = "sans", 
+par(mfrow = c(2,3), mar = c(2,3,0.5,.25), cex = 1, mgp = c(2,.5,0), family = "sans", 
     font = 1)
 plot_abort_ft(mod10k, "", start.offset, 2, Ylim = c(0, 0.008),
               Xlim = as.Date(c('2013/01/15', '2013/07/01')), legendflag=FALSE, 

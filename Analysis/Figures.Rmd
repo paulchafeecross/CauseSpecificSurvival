@@ -5,7 +5,7 @@ Figure Legends
 =====================================================
 ```{r setup, echo = FALSE}
 library(knitr)
-opts_chunk$set(dev=c('png'), dpi = 600, echo = FALSE, message = FALSE, cache = F, fig.cap= "", fig.lp="")
+opts_chunk$set(dev=c('png'), dpi = 400, echo = FALSE, message = FALSE, cache = F, fig.cap= "", fig.lp="")
 ```
 
 **Figure 1.** Female elk captures and reproductive event locations from the study area in the southern region of the Greater Yellowstone Ecosystem. 
@@ -28,14 +28,14 @@ Figures
 
 \newpage
 
-```{r Fig2, fig.width = 4, fig.height = 5}
+```{r Fig2, fig.width = 3.34, fig.height = 5}
 setwd("~/BitBucket/VIT2014/Analysis")
 rm(list = ls())
 library(lubridate)
 load('VIT_Data2014_Full_POS.RData')
 source('VITplot_interval2.R')
 
-par(mfrow = c(2,1), mar = c(2,3,1,1), cex = 1, mgp = c(1.5,.25,0))
+par(mfrow = c(2,1), mar = c(2,3,0.25,0.25), cex = 1, mgp = c(1.5,.25,0))
 #Figure 2A
 VITplot_interval2(DataPOS, 2) 
 text(as.Date("2013/01/01"), 130, "A)", pos = 4, cex = 1)
@@ -46,6 +46,7 @@ Fetus$Date2 <- mdy(Fetus$Date) # reformat dates
 Fetus$DOY <- yday(Fetus$Date2) # reformat dates
 Fetus <- Fetus[order(Fetus$DOY),] # sort by doy
 Fetus <- subset(Fetus, is.na(Fetus$Date2) == F) # remove the NAs
+
 # PLOT
 hist(Fetus$DOY, breaks = 10, ylim = c(0,14), xlim = c(1, max(DataPOS$EndDOY)), main = '', xlab = "", xaxt = "n", col = 'grey', 
      ylab = "Number of fetuses", tck = 0.02)
@@ -58,14 +59,14 @@ text(1, 13, "B)", pos = 4, cex = 1)
 
 \newpage  
 
-```{r Fig3, fig.width = 4, fig.height = 7}
+```{r Fig3, fig.width = 3.34, fig.height = 6}
 source('plot_VITresults_fxns.R')
 load('Result_mod40k_bcen1.RData')
 load('VIT_Data2014_BirthsCensored.RData')
 
 #Part A
 start.offset <- min(Data$CapDOY)
-par(mfrow = c(2,1), mar = c(2,3,1,1), mgp = c(1.5,.25,0))
+par(mfrow = c(2,1), mar = c(2,3,0.5,0.5), mgp = c(1.5,.25,0))
 plot_baseline(mod40k_bcen, MainLab = " ", start.offset, 2, Ylim = c(0,0.008), 
             Xlim = as.Date(c('2013/01/15', '2013/07/01')), 
             legendflag=FALSE, FmoTix = T, 
@@ -85,8 +86,8 @@ text(as.Date("2013/01/11"), 0.008, "B) Full model", pos = 4, cex = 1)
 
 \newpage  
 
-```{r Fig4, fig.width = 4, fig.height = 3}
-par(mfrow = c(1,1), mar = c(2,3,1,1), cex = 1, mgp = c(1.5,.25,0))
+```{r Fig4, fig.width = 3.34, fig.height = 2.5}
+par(mfrow = c(1,1), mar = c(2,3,0.25,0.25), cex = 1, mgp = c(1.5,.25,0))
 plot_Pabort(mod40k, "", start.offset, 2,  Xlim = as.Date(c('2013/01/15', 
                                                            '2013/07/01')),
             legendflag=FALSE)
@@ -96,14 +97,14 @@ plot_Pabort(mod40k, "", start.offset, 2,  Xlim = as.Date(c('2013/01/15',
    
 \newpage  
 
-```{r Fig5, fig.height = 6, fig.width = 6}
+```{r Fig5, fig.height = 8, fig.width = 7.08}
 rm(list = ls())
 source('plot_VITresults_fxns.R')
 load('Result_mod40k1.RData')
 load('VIT_Data2013_Full_POS.RData')
 start.offset <- min(Data$CapDOY)
 
-par(mfrow = c(2,2), mar = c(2,3.5,1,1), cex = 1, mgp = c(2,.5,0))
+par(mfrow = c(2,2), mar = c(2,3.2,1,1), cex = 1, mgp = c(2,.5,0))
 #Top row
 plot_hazAb(mod40k, "", start.offset, 2, Ylim = c(0, 0.008), 
           Ylab = expression(paste("Abortion hazard  ", 
