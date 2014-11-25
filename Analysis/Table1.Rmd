@@ -1,7 +1,7 @@
 ---
 output: html_document
 ---
-**Table 1**. Comparison of elk abortion timing across models with different smoothing functions for the total hazard of a reproductive event. In all cases, the sub-model of the probability of an abortion relative to a live birth was a logistic regression.        
+**Table 1**. Comparison of the timing of elk abortions across models with different smoothing functions for the total hazard of a reproductive event. In all cases, the sub-model of the probability of an abortion relative to a live birth was a logistic regression.        
 
 ```{r Table1-comp, echo = FALSE}
 setwd("~/BitBucket/VIT2014/Analysis")

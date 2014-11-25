@@ -1,581 +1,576 @@
-Elk_ID	Feedground	CollarType	GPSCollar	CaptureDate	Start_Interval	Stop_Interval	TrustRating	VIT_Status	PET	CowSero	VIT_Bruc
-001	Dell	VHF	No	1/18/2008	5/28/2008	5/30/2008	2	Parturition	Bad	NEG	NEG
-002	Dell	VHF	No	1/18/2008	6/9/2008	6/21/2008	2	Parturition	Bad	POS	NEG
-003	Dell	VHF	No	1/18/2008	5/30/2008	6/5/2008	2	Parturition	Bad	POS	NEG
-005	Dell	VHF	No	1/18/2008	5/23/2008	5/24/2008	5	Parturition	Bad	NEG	NEG
-006	Dell	VHF	No	1/18/2008	6/9/2008	6/21/2008	2	Parturition	Bad	NEG	NEG
-007	Dell	GPS	Yes	1/25/2008	5/22/2008	5/23/2008	1	Parturition	Good	POS	NEG
-008	Dell	GPS	Yes	1/25/2008	3/8/2008	3/9/2008	1	Abortion	Bad	POS	POS
-010	Dell	GPS	Yes	1/25/2008	3/16/2008	3/17/2008	1	Abortion	Bad	POS	POS
-017	Bench	GPS	Yes	2/18/2008	5/24/2008	5/25/2008	1	Parturition	Bad	NEG	NEG
-018	Bench	GPS	Yes	2/18/2008	5/27/2008	5/28/2008	1	Parturition	Good	NEG	NEG
-019	Bench	None	No	2/7/2006	5/31/2006	6/5/2006	2	Parturition	Bad	NEG	NA
-019	Bench	GPS	Yes	2/18/2008	5/30/2008	6/5/2008	2	Parturition	Bad	NEG	NEG
-020	Bench	GPS	Yes	2/18/2008	5/28/2008	5/29/2008	1	Parturition	Bad	NEG	NEG
-021	Greys	VHF	No	2/19/2008	6/18/2008	6/21/2008	2	Parturition	Bad	NEG	NEG
-022	Greys	VHF	No	2/16/2009	6/6/2009	6/7/2009	1	Parturition	Good	NEG	NEG
-022	Greys	VHF	No	2/19/2008	5/27/2008	5/28/2008	1	Parturition	Bad	NEG	NEG
-024	Greys	GPS	Yes	2/19/2008	6/1/2008	6/2/2008	1	Parturition	Good	NEG	NEG
-025	Greys	VHF	No	2/19/2008	6/16/2008	6/17/2008	1	Parturition	Good	POS	NEG
-026	Greys	GPS	Yes	1/21/2010	6/1/2010	6/2/2010	1	Parturition	Good	POS	NEG
-026	Greys	GPS	Yes	2/19/2008	5/25/2008	5/26/2008	1	Parturition	Bad	POS	NEG
-027	Greys	GPS	Yes	2/19/2008	6/13/2008	6/14/2008	1	Parturition	Bad	NEG	NEG
-028	Greys	GPS	Yes	2/19/2008	5/11/2008	5/13/2008	2	Parturition	Bad	POS	NEG
-029	Soda	None	No	3/5/2007	NA	NA	7	Unknown	NA	NEG	NA
-029	Soda	VHF	No	3/13/2011	6/5/2011	6/6/2011	1	Parturition	Good	NEG	NA
-029	Soda	None	No	2/28/2006	6/20/2006	6/21/2006	5	Parturition	Bad	NEG	NA
-029	Soda	VHF	No	2/20/2008	5/30/2008	6/6/2008	2	Parturition	Bad	NEG	NEG
-030	Soda	GPS	Yes	2/20/2008	5/29/2008	5/30/2008	1	Parturition	Good	NEG	NEG
-031	Soda	None	No	2/28/2006	6/15/2006	6/23/2006	5	Parturition	Bad	NEG	NEG
-031	Soda	GPS	Yes	2/20/2008	NA	NA	7	Open	NA	NEG	NA
-031	Soda	None	No	1/19/2007	6/25/2007	6/26/2007	1	Parturition	Good	NEG	NA
-032	Soda	None	No	3/9/2006	6/15/2006	6/19/2006	5	Parturition	Bad	NEG	POS
-032	Soda	GPS	Yes	2/20/2008	5/28/2008	5/29/2008	1	Parturition	Bad	POS	NEG
-033	Soda	None	No	2/21/2006	5/21/2006	5/22/2006	5	Parturition	Bad	NEG	NEG
-033	Soda	None	No	1/19/2007	5/12/2007	5/13/2007	5	Abortion	Bad	NEG	NA
-041	Scab	None	No	3/1/2007	5/29/2007	5/30/2007	5	Parturition	Bad	NEG	NEG
-041	Scab	None	No	2/12/2006	5/25/2006	5/31/2006	2	Parturition	Bad	NEG	NA
-041	Scab	VHF	No	2/23/2008	5/25/2008	5/27/2008	5	Parturition	Bad	NEG	NEG
-042	Greys	VHF	No	2/25/2008	NA	NA	7	Unknown	NA	POS	NA
-043	Greys	GPS	Yes	2/25/2008	3/27/2008	3/28/2008	2	Abortion	Bad	POS	POS
-043	Greys	Prox	No	2/16/2009	7/24/2009	8/2/2009	2	Parturition	Bad	POS	NEG
-044	Greys	VHF	No	2/25/2008	5/26/2008	5/27/2008	1	Parturition	Good	NEG	NEG
-050	Soda	None	No	2/28/2006	6/16/2006	6/17/2006	5	Parturition	Bad	NEG	NEG
-050	Soda	None	No	1/19/2007	5/26/2007	5/27/2007	5	Parturition	Bad	NEG	NEG
-051	Soda	None	No	1/19/2007	5/19/2007	5/20/2007	1	Parturition	Good	NEG	NA
-051	Soda	None	No	2/21/2006	5/27/2006	5/28/2006	5	Parturition	Bad	NEG	NEG
-052	Soda	None	No	1/15/2007	5/27/2007	5/28/2007	1	Parturition	Good	POS	NEG
-052	Soda	None	No	3/9/2006	4/2/2006	6/7/2006	5	Parturition	Bad	POS	NEG
-053	Bench	GPS	Yes	2/18/2007	NA	NA	7	Unknown	NA	NEG	NA
-054	Bench	GPS	Yes	2/18/2007	3/7/2007	3/15/2007	2	Abortion	Bad	POS	NA
-057	Scab	GPS	Yes	2/14/2007	NA	NA	7	Unknown	NA	NEG	NA
-059	Soda	GPS	Yes	2/19/2007	NA	NA	7	Unknown	NA	POS	NA
-060	Soda	GPS	Yes	2/19/2007	NA	NA	7	Unknown	NA	NEG	NA
-060	Soda	None	No	3/9/2006	5/31/2006	6/8/6006	5	Parturition	Bad	NEG	NA
-061	Bench	None	No	3/7/2007	5/31/2007	6/2/2007	2	Parturition	Bad	NA	NEG
-061	Bench	None	No	2/14/2006	5/10/2006	5/31/2006	2	Parturition	Bad	POS	NEG
-068	Soda	VHF	No	3/13/2011	5/27/2011	6/4/2011	2	Parturition	Bad	NEG	NA
-075	Soda	None	No	2/11/2007	NA	NA	7	Unknown	NA	POS	NA
-075	Soda	VHF	No	1/22/2011	6/4/2011	6/10/2011	2	Parturition	Bad	POS	NEG
-075	Soda	Prox	No	2/28/2006	3/3/2006	3/4/2006	2	Abortion	Bad	POS	NA
-085	Soda	GPS	Yes	3/13/2011	5/27/2011	6/4/2011	2	Parturition	Bad	POS	NA
-085	Soda	None	No	3/9/2006	5/31/2006	6/13/2006	5	Parturition	Bad	NEG	POS
-085	Soda	GPS	Yes	1/15/2009	5/11/2009	5/26/2009	2	Parturition	Bad	POS	NEG
-088	Soda	None	No	3/9/2006	NA	NA	7	Open	NA	NEG	NA
-088	Soda	GPS	Yes	1/12/2009	NA	NA	7	Open	NA	NEG	NA
-089	Soda	None	No	2/21/2006	5/31/2006	6/8/2006	5	Parturition	Bad	NEG	NA
-089	Soda	GPS	Yes	1/12/2009	6/14/2009	6/15/2009	1	Parturition	Good	NEG	NEG
-090	Soda	VHF	No	1/20/2011	6/28/2011	7/12/2011	5	Parturition	Bad	POS	NA
-090	Soda	GPS	Yes	1/12/2009	5/11/2009	5/26/2009	2	Parturition	Bad	POS	NEG
-091	Dell	VHF	No	1/22/2009	NA	NA	7	Unknown	NA	POS	NA
-091	Dell	VHF	No	1/21/2011	5/27/2011	6/21/2011	2	Parturition	Bad	POS	POS
-092	Dell	GPS	Yes	1/14/2009	5/23/2009	5/24/2009	1	Parturition	Good	NEG	NEG
-093	Dell	VHF	No	1/15/2011	5/14/2011	5/15/2011	1	Parturition	Good	POS	NEG
-093	Dell	VHF	No	2/23/2010	5/28/2010	5/29/2010	1	Parturition	Good	POS	NEG
-093	Dell	VHF	No	1/14/2009	5/26/2009	6/2/2009	2	Parturition	Bad	POS	NEG
-094	Dell	GPS	Yes	1/14/2009	5/26/2009	6/2/2009	2	Parturition	Bad	NEG	NEG
-096	Dell	VHF	No	2/7/2012	NA	NA	7	Open	NA	POS	NA
-096	Dell	GPS	Yes	1/14/2009	5/26/2009	6/2/2009	2	Parturition	Bad	NEG	NEG
-097	Dell	VHF	No	1/14/2009	5/11/2009	5/26/2009	2	Parturition	Bad	NEG	NEG
-098	Finnegan	GPS	Yes	1/9/2009	5/11/2009	5/26/2009	2	Parturition	Bad	NEG	NEG
-099	Finnegan	GPS	Yes	1/9/2009	5/11/2009	5/26/2009	2	Parturition	Bad	NEG	NEG
-100	Finnegan	GPS	Yes	1/9/2009	5/11/2009	5/31/2009	2	Parturition	Bad	POS	NEG
-101	Finnegan	GPS	Yes	1/9/2009	6/9/2009	6/17/2009	2	Parturition	Bad	NEG	NEG
-102	Finnegan	GPS	Yes	1/9/2009	5/11/2009	5/26/2009	2	Parturition	Bad	NEG	NEG
-103	Finnegan	GPS	Yes	1/9/2009	5/11/2009	6/1/2009	2	Parturition	Bad	NEG	NEG
-106	Finnegan	GPS	Yes	1/9/2009	5/11/2009	5/26/2009	2	Parturition	Bad	NEG	NEG
-107	Dog	GPS	Yes	2/4/2010	5/30/2010	6/14/2010	2	Parturition	Bad	NEG	NA
-112	Greys	GPS	Yes	2/6/2009	5/30/2009	5/31/2009	1	Parturition	Good	POS	NEG
-112	Greys	GPS	Yes	1/21/2010	6/5/2010	6/6/2010	1	Parturition	Good	POS	NEG
-119	Greys	GPS	Yes	2/6/2009	6/11/2009	6/12/2009	1	Parturition	Good	POS	NEG
-121	Greys	GPS	Yes	2/6/2009	5/11/2009	5/26/2009	2	Parturition	Bad	NEG	NEG
-128	Greys	GPS	Yes	1/21/2010	2/2/2010	NA	7	Died	NA	POS	NA
-129	Greys	GPS	Yes	1/21/2010	5/9/2010	5/10/2010	1	Abortion	Good	POS	NEG
-133	Greys	GPS	Yes	2/25/2010	5/30/2010	6/9/2010	2	Parturition	Bad	NEG	NEG
-136	Fall	GPS	Yes	1/28/2009	5/26/2009	6/11/2009	2	Parturition	Bad	NEG	NEG
-137	Fall	GPS	Yes	1/28/2009	5/26/2009	6/9/2009	2	Parturition	Bad	NEG	NEG
-138	Fall	GPS	Yes	1/28/2009	5/26/2009	6/10/2009	2	Parturition	Bad	NEG	NEG
-139	Fall	GPS	Yes	1/28/2009	5/26/2009	6/17/2009	2	Parturition	Bad	NEG	NEG
-141	Muddy	GPS	Yes	1/29/2009	5/11/2009	5/26/2009	2	Parturition	Bad	NEG	NEG
-142	Muddy	GPS	Yes	1/29/2009	6/8/2009	6/9/2009	1	Parturition	Good	NEG	NEG
-143	Muddy	GPS	Yes	1/29/2009	5/16/2009	5/17/2009	1	Parturition	Good	NEG	NEG
-144	South	GPS	Yes	2/3/2009	5/11/2009	6/1/2009	2	Parturition	Bad	POS	NEG
-145	South	GPS	Yes	2/3/2009	6/3/2009	6/5/2009	2	Parturition	Bad	NEG	NEG
-145	South	GPS	Yes	2/17/2010	5/7/2010	5/30/2010	2	Parturition	Bad	NEG	NEG
-146	South	GPS	Yes	2/3/2009	6/1/2009	6/2/2009	1	Parturition	Bad	NEG	NEG
-147	South	GPS	Yes	2/3/2009	6/1/2009	6/2/2009	1	Parturition	Bad	POS	NEG
-148	UG	GPS	Yes	2/19/2009	5/26/2009	6/7/2009	2	Parturition	Bad	NEG	NEG
-149	UG	GPS	Yes	2/19/2009	5/26/2009	6/9/2009	2	Parturition	Bad	NEG	NA
-150	UG	GPS	Yes	2/19/2009	5/26/2009	6/16/2009	2	Parturition	Bad	NEG	NEG
-151	UG	GPS	Yes	2/19/2009	5/29/2009	5/30/2009	1	Parturition	Good	POS	NEG
-152	Franz	GPS	Yes	3/11/2009	6/9/2009	6/23/2009	2	Parturition	Bad	NEG	NEG
-153	Franz	GPS	Yes	3/11/2009	7/6/2009	7/9/2009	2	Abortion	Bad	POS	NEG
-154	Franz	GPS	Yes	3/11/2009	5/11/2009	5/26/2009	2	Parturition	Bad	NEG	NEG
-155	Soda	None	No	2/21/2006	5/25/2006	5/26/2006	5	Parturition	Bad	NEG	NEG
-156	Soda	None	No	2/21/2006	5/24/2006	5/25/2006	5	Parturition	Bad	NEG	POS
-157	Soda	None	No	2/21/2006	5/25/2006	5/26/2006	5	Parturition	Bad	NEG	NA
-158	Soda	None	No	2/28/2006	5/24/2006	5/25/2006	5	Parturition	Bad	NEG	NA
-159	Soda	None	No	2/28/2006	5/28/2006	5/29/2006	5	Parturition	Bad	NEG	NEG
-160	Soda	None	No	2/28/2006	5/21/2006	5/22/2006	5	Parturition	Bad	NEG	NA
-161	Soda	None	No	2/28/2006	5/29/2006	5/30/2006	5	Parturition	Bad	NEG	NEG
-162	Bench	None	No	3/4/2007	5/31/2007	6/2/2007	2	Parturition	Bad	NEG	NEG
-163	Soda	None	No	3/9/2006	5/25/2006	5/26/2006	5	Parturition	Bad	NEG	NA
-164	Soda	None	No	3/9/2006	5/25/2006	5/26/2006	5	Parturition	Bad	POS	NA
-165	Soda	None	No	2/22/2007	NA	NA	7	Unknown	NA	NEG	NEG
-165	Soda	None	No	3/9/2006	5/31/2006	6/8/2006	5	Parturition	Bad	NEG	NA
-166	Soda	None	No	3/10/2006	5/31/2006	6/7/2006	5	Parturition	Bad	NEG	NA
-167	Soda	None	No	3/10/2006	5/31/2006	6/10/2006	5	Parturition	Bad	NEG	NA
-168	Greys	VHF	No	1/21/2010	5/30/2010	6/10/2010	2	Parturition	Bad	POS	NEG
-169	Greys	VHF	No	1/21/2010	6/4/2010	6/9/2010	2	Parturition	Bad	POS	NEG
-170	Greys	GPS	Yes	1/21/2010	6/21/2010	6/29/2010	2	Parturition	Bad	NEG	NA
-171	Muddy	GPS	Yes	1/25/2010	5/31/2010	6/1/2010	1	Parturition	Good	NEG	NEG
-172	Muddy	GPS	Yes	1/25/2010	6/10/2010	6/11/2010	1	Parturition	Good	NEG	NA
-173	Muddy	GPS	Yes	1/25/2010	6/10/2010	6/11/2010	1	Parturition	Good	NEG	NA
-174	Muddy	VHF	No	2/21/2011	5/27/2011	6/4/2011	2	Parturition	Bad	NEG	NA
-174	Muddy	GPS	Yes	1/25/2010	5/19/2010	5/20/2010	1	Parturition	Good	NEG	NEG
-176	Dell	VHF	No	2/16/2010	NA	NA	7	Open	NA	NEG	NA
-177	Dell	VHF	No	2/16/2010	5/27/2010	5/28/2010	5	Parturition	Bad	NEG	NEG
-178	Dell	VHF	No	2/16/2010	NA	NA	7	Open	NA	POS	NA
-179	Dell	VHF	No	2/16/2010	4/3/2010	4/4/2010	1	Abortion	Good	POS	POS
-180	Dell	VHF	No	2/16/2010	5/16/2010	5/17/2010	1	Parturition	Good	NEG	NA
-181	Dell	VHF	No	2/16/2010	5/24/2010	5/25/2010	1	Parturition	Good	NEG	NA
-182	Dell	VHF	No	2/16/2010	NA	NA	7	Open	NA	POS	NA
-182	Dell	VHF	No	1/21/2011	5/27/2011	5/31/2011	2	Parturition	Bad	POS	NEG
-183	Jewett	GPS	Yes	2/9/2010	5/24/2010	5/25/2010	1	Parturition	Good	NEG	NEG
-184	Jewett	GPS	Yes	2/9/2010	6/3/2010	6/14/2010	2	Parturition	Bad	NEG	NA
-186	Jewett	GPS	Yes	2/9/2010	5/25/2010	5/26/2010	1	Parturition	Bad	NEG	NEG
-188	Franz	GPS	Yes	2/9/2010	5/29/2010	5/30/2010	1	Parturition	Bad	POS	NEG
-189	Franz	GPS	Yes	2/9/2010	6/3/2010	6/4/2010	1	Parturition	Good	POS	NEG
-190	Franz	GPS	Yes	2/9/2010	5/19/2010	5/20/2010	1	Parturition	Good	NEG	NEG
-191	South	GPS	Yes	2/17/2010	5/31/2010	6/1/2010	1	Parturition	Good	POS	NEG
-192	South	GPS	Yes	2/17/2010	5/26/2010	5/27/2010	1	Parturition	Good	NEG	NEG
-193	South	GPS	Yes	2/17/2010	5/7/2010	5/30/2010	2	Parturition	Bad	POS	NEG
-194	South	GPS	Yes	2/17/2010	5/30/2010	6/3/2010	2	Parturition	Bad	NEG	NA
-195	HA99	GPS	Yes	3/15/2011	6/2/2011	6/3/2011	1	Parturition	Bad	NEG	NA
-195	HA99	GPS	Yes	1/27/2010	5/23/2010	5/24/2010	1	Parturition	Bad	NEG	NA
-197	Spring	GPS	Yes	1/28/2010	5/30/2010	6/1/2010	2	Parturition	Bad	NEG	NA
-198	HA99	GPS	Yes	1/27/2010	5/25/2010	5/30/2010	2	Parturition	Bad	NEG	NA
-199	UGNWR	GPS	Yes	1/26/2010	NA	NA	7	Unknown	NA	NEG	NA
-200	UGNWR	GPS	Yes	1/26/2010	5/30/2010	5/31/2010	1	Parturition	Good	NEG	NA
-201	UGNWR	GPS	Yes	1/26/2010	6/9/2010	6/21/2010	2	Parturition	Bad	NEG	NA
-202	HA99	GPS	Yes	1/27/2010	5/30/2010	5/31/2010	1	Parturition	Good	POS	NEG
-203	Spring	GPS	Yes	1/28/2010	5/25/2010	5/26/2010	1	Parturition	Good	NEG	NEG
-204	Spring	GPS	Yes	1/28/2010	6/8/2010	6/9/2010	1	Parturition	Good	NEG	NA
-205	Spring	GPS	Yes	1/28/2010	5/30/2010	5/31/2010	1	Parturition	Good	NEG	NA
-206	UGNWR	GPS	Yes	1/26/2010	5/28/2010	5/29/2010	1	Parturition	Good	NEG	NEG
-206	UG	GPS	Yes	2/25/2011	6/21/2011	6/28/2011	2	Parturition	Bad	NEG	NA
-207	UGNWR	GPS	Yes	1/26/2010	5/30/2010	6/10/2010	2	Parturition	Bad	NEG	NA
-208	UGNWR	GPS	Yes	1/26/2010	6/9/2010	6/21/2010	2	Parturition	Bad	NEG	NA
-209	Spring	GPS	Yes	1/28/2010	5/27/2010	5/28/2010	1	Parturition	Good	NEG	NA
-212	HA99	GPS	Yes	1/27/2010	5/7/2010	5/22/2010	2	Parturition	Bad	NEG	NA
-213	HA99	GPS	Yes	3/15/2011	5/31/2011	6/1/2011	1	Parturition	Good	NEG	NA
-213	HA99	GPS	Yes	1/27/2010	5/28/2010	5/29/2010	1	Parturition	Good	NEG	NA
-214	HA99	GPS	Yes	1/27/2010	5/24/2010	5/25/2010	1	Parturition	Good	NEG	NEG
-215	HA99	GPS	Yes	1/26/2010	6/14/2010	6/21/2010	2	Parturition	Bad	NEG	NEG
-216	Spring	GPS	Yes	1/28/2010	5/7/2010	5/25/2010	2	Parturition	Bad	NEG	NEG
-217	HA99	GPS	Yes	3/15/2011	NA	NA	7	Unknown	NA	NEG	NA
-218	HA99	GPS	Yes	1/26/2010	NA	NA	7	Unknown	NA	NEG	NA
-218	HA99	GPS	Yes	3/16/2011	6/21/2011	6/23/2011	2	Parturition	Bad	NEG	NA
-219	Spring	GPS	Yes	1/28/2010	5/7/2010	5/25/2010	2	Parturition	Bad	NEG	NEG
-220	HA99	GPS	Yes	1/27/2010	1/27/2010	5/23/2010	5	Parturition	Bad	NEG	NA
-220	HA99	GPS	Yes	3/15/2011	6/28/2011	7/12/2011	2	Parturition	Bad	NEG	NA
-221	UGNWR	GPS	Yes	1/26/2010	6/7/2010	6/8/2010	1	Parturition	Good	NEG	NA
-222	HA99	GPS	Yes	3/15/2011	NA	NA	7	Open	NA	NEG	NA
-222	HA99	GPS	Yes	1/27/2010	6/7/2010	6/8/2010	1	Parturition	Good	NEG	NA
-223	Spring	GPS	Yes	1/28/2010	6/14/2010	6/21/2010	2	Parturition	Bad	NEG	NA
-224	HA99	GPS	Yes	1/26/2010	5/30/2010	5/31/2010	1	Parturition	Good	NEG	NA
-224	HA99	GPS	Yes	3/16/2011	6/7/2011	6/8/2011	1	Parturition	Good	NEG	NA
-225	HA99	GPS	Yes	1/27/2010	6/5/2010	6/6/2010	1	Parturition	Good	NEG	NA
-226	HA99	GPS	Yes	1/27/2010	5/30/2010	5/31/2010	1	Parturition	Good	NEG	NA
-226	HA99	GPS	Yes	3/15/2011	6/2/2011	6/3/2011	1	Parturition	Bad	NEG	NA
-227	UGNWR	GPS	Yes	1/26/2010	5/26/2010	5/27/2010	1	Parturition	Good	NEG	NEG
-228	Spring	GPS	Yes	1/28/2010	5/29/2010	5/30/2010	1	Parturition	Good	NEG	NA
-229	HA99	GPS	Yes	1/27/2010	5/17/2010	5/21/2010	2	Parturition	Bad	NEG	NEG
-245	Alkali	GPS	Yes	2/14/2012	6/8/2012	6/12/2012	2	Parturition	Bad	NEG	NA
-245	Alkali	GPS	Yes	2/24/2010	6/30/2010	7/10/2010	2	Parturition	Bad	NEG	NEG
-246	Alkali	GPS	Yes	2/24/2010	5/7/2010	5/30/2010	2	Parturition	Bad	NEG	NEG
-248	Alkali	GPS	Yes	2/24/2010	5/28/2010	5/29/2010	1	Parturition	Bad	NEG	NEG
-249	Alkali	GPS	Yes	2/24/2010	6/13/2010	6/14/2010	1	Parturition	Good	POS	NEG
-250	Alkali	GPS	Yes	2/24/2010	5/22/2010	5/25/2010	2	Parturition	Bad	NEG	NA
-251	Dog	GPS	Yes	3/1/2010	5/22/2010	5/24/2010	2	Parturition	Bad	POS	NEG
-254	Franz	GPS	Yes	3/2/2010	6/1/2010	6/2/2010	1	Parturition	Good	POS	POS
-255	Franz	GPS	Yes	3/2/2010	5/27/2010	5/28/2010	5	Parturition	Bad	NEG	NEG
-256	Finnegan	GPS	Yes	3/22/2010	6/1/2010	6/2/2010	1	Parturition	Good	NEG	NEG
-257	Dell	VHF	No	1/21/2011	5/26/2011	5/27/2011	1	Parturition	Good	NEG	NA
-257	Dell	VHF	No	2/23/2010	5/21/2010	5/25/2010	5	Parturition	Bad	NEG	NEG
-258	Dell	VHF	No	2/23/2010	2/23/2010	5/30/2010	5	Parturition	Bad	POS	NEG
-259	Dell	VHF	No	2/23/2010	5/5/2010	5/6/2010	1	Abortion	Good	POS	NEG
-281	Bench	None	No	2/7/2006	5/31/2006	6/8/2006	5	Parturition	Bad	NEG	NA
-282	Scab	None	No	1/16/2007	6/5/2007	6/6/2007	1	Parturition	Good	NEG	NEG
-283	Bench	None	No	2/20/2006	5/27/2006	5/31/2006	2	Parturition	Bad	NEG	NA
-284	Bench	None	No	2/20/2006	5/27/2006	5/28/2006	1	Parturition	Bad	POS	NA
-285	Bench	None	No	2/26/2006	NA	NA	7	Open	NA	NEG	NA
-286	Bench	None	No	2/20/2006	5/28/2006	6/5/2006	2	Parturition	Bad	NEG	NA
-287	Bench	None	No	2/26/2006	6/9/2006	6/23/2006	5	Parturition	Bad	NEG	NA
-288	Bench	None	No	3/14/2006	6/18/2006	6/19/2006	5	Parturition	Bad	POS	NA
-289	Bench	None	No	2/7/2006	5/31/2006	6/1/2006	5	Parturition	Bad	NEG	NA
-290	Bench	None	No	2/14/2006	5/10/2006	6/8/2006	2	Parturition	Bad	NEG	NA
-291	Bench	None	No	2/14/2006	NA	NA	7	Unknown	NA	NEG	NA
-292	Bench	None	No	2/26/2006	NA	NA	7	Unknown	NA	NEG	NA
-293	Bench	None	No	2/20/2006	5/26/2006	5/31/2006	5	Parturition	Bad	NEG	NA
-294	Bench	None	No	3/14/2006	5/10/2006	6/9/2006	2	Parturition	Bad	NEG	NA
-295	Bench	None	No	2/20/2006	6/3/2006	6/4/2006	5	Parturition	Bad	NEG	NA
-296	Bench	None	No	3/14/2006	5/16/2006	5/17/2006	5	Parturition	Bad	NEG	NEG
-297	Bench	None	No	2/7/2006	5/31/2006	6/1/2006	5	Parturition	Bad	NEG	NA
-298	Bench	None	No	2/20/2006	5/10/2006	5/18/2006	2	Parturition	Bad	NEG	NEG
-299	Bench	None	No	2/24/2006	5/23/2006	5/24/2006	5	Parturition	Bad	NEG	NA
-300	Bench	None	No	3/14/2006	5/30/2006	5/31/2006	5	Parturition	Bad	NEG	NA
-301	Bench	None	No	3/14/2006	5/27/2006	5/28/2006	5	Parturition	Bad	NEG	NA
-302	Bench	None	No	3/14/2006	5/27/2006	5/28/2006	5	Parturition	Bad	NEG	NA
-303	Bench	None	No	2/7/2006	2/16/2006	2/17/2006	2	Abortion	Bad	NEG	NA
-304	Bench	None	No	2/26/2006	5/17/2006	5/18/2006	5	Parturition	Bad	NEG	NEG
-305	Bench	None	No	2/26/2006	5/26/2006	5/31/2006	5	Parturition	Bad	NEG	NA
-306	Bench	None	No	2/26/2006	6/1/2006	6/2/2006	5	Parturition	Bad	NEG	NA
-307	Bench	None	No	2/26/2006	6/3/2006	6/4/2006	5	Parturition	Bad	NEG	NA
-308	Bench	None	No	2/26/2006	5/20/2006	5/21/2006	5	Parturition	Bad	NEG	NA
-309	Scab	None	No	2/12/2006	5/31/2006	6/6/2006	2	Parturition	Bad	NEG	NA
-310	Scab	None	No	2/27/2006	6/1/2006	6/2/2006	5	Parturition	Bad	NEG	NA
-311	Scab	None	No	2/27/2006	5/10/2006	5/30/2006	2	Parturition	Bad	NEG	NA
-312	Scab	None	No	2/12/2006	2/12/2006	4/21/2006	6	Unknown	Bad	NEG	NA
-313	Scab	None	No	2/27/2006	5/31/2006	6/6/2006	2	Parturition	Bad	POS	NA
-314	Scab	None	No	2/27/2006	6/15/2006	6/23/2006	2	Parturition	Bad	NEG	NA
-315	Scab	None	No	3/1/2007	5/24/2007	5/29/2007	2	Parturition	Bad	NEG	NEG
-315	Scab	None	No	2/12/2006	2/12/2006	4/21/2006	6	Unknown	Bad	NEG	NA
-316	Scab	None	No	2/27/2006	5/20/2006	6/9/2006	2	Parturition	Bad	NEG	NA
-317	Scab	None	No	2/12/2006	5/31/2006	6/9/2006	2	Parturition	Bad	NEG	NA
-318	Scab	None	No	2/12/2006	5/31/2006	6/15/2006	2	Parturition	Bad	NEG	NA
-319	Scab	None	No	2/27/2006	5/31/2006	6/23/2006	2	Parturition	Bad	NEG	NA
-320	Soda	None	No	2/28/2006	4/25/2006	4/26/2006	4	Abortion	Bad	POS	NEG
-321	Soda	None	No	2/21/2006	NA	NA	7	Unknown	NA	NEG	NA
-322	Soda	None	No	2/28/2006	NA	NA	7	Unknown	NA	NEG	NA
-323	Soda	VHF	No	2/22/2007	NA	NA	7	Unknown	NA	POS	NEG
-323	Soda	VHF	No	3/13/2011	5/21/2011	5/22/2011	1	Parturition	Good	POS	NEG
-323	Soda	None	No	2/28/2006	4/8/2006	5/10/2006	4	Abortion	Bad	POS	NA
-324	Soda	None	No	3/9/2006	NA	NA	7	Open	NA	NEG	NA
-325	Scab	None	No	1/5/2007	NA	NA	7	Unknown	NA	NEG	NA
-326	Scab	None	No	1/5/2007	NA	NA	7	Unknown	NA	NEG	NA
-327	Scab	None	No	1/5/2007	6/6/2007	6/7/2007	1	Parturition	Good	NEG	NEG
-328	Scab	None	No	1/5/2007	5/23/2007	5/24/2007	1	Parturition	Good	POS	NEG
-329	Scab	None	No	1/5/2007	6/8/2007	6/15/2007	2	Parturition	Bad	NEG	NEG
-330	Scab	None	No	1/5/2007	NA	NA	7	Unknown	NA	NEG	NA
-331	Scab	None	No	1/16/2007	5/24/2007	5/25/2007	5	Parturition	Bad	POS	NA
-332	Scab	None	No	1/16/2007	5/23/2007	6/25/2007	2	Parturition	Bad	POS	NEG
-333	Scab	None	No	1/16/2007	6/10/2007	6/11/2007	1	Parturition	Bad	POS	NEG
-334	Scab	None	No	1/23/2007	6/29/2007	6/30/2007	5	Parturition	Bad	NEG	NA
-335	Scab	None	No	1/23/2007	NA	NA	7	Unknown	NA	NEG	NA
-336	Scab	None	No	1/23/2007	5/30/2007	5/31/2007	5	Parturition	Bad	NEG	NEG
-337	Scab	None	No	1/23/2007	6/8/2007	6/26/2007	2	Parturition	Bad	POS	NEG
-338	Scab	None	No	1/23/2007	5/20/2007	5/21/2007	5	Parturition	Bad	NEG	NEG
-339	Scab	None	No	2/14/2007	6/3/2007	6/4/2007	1	Parturition	Good	NEG	NA
-340	Scab	None	No	2/14/2007	6/3/2007	6/4/2007	1	Parturition	Good	NEG	NA
-341	Scab	None	No	2/20/2007	5/27/2007	5/28/2007	1	Parturition	Good	NEG	NA
-342	Scab	None	No	2/20/2007	6/5/2007	6/6/2007	1	Parturition	Good	NEG	NEG
-343	Scab	None	No	2/23/2007	5/30/2007	5/31/2007	1	Parturition	Good	NEG	NEG
-344	Scab	None	No	2/23/2007	NA	NA	7	Unknown	NA	NEG	NA
-345	Scab	None	No	2/26/2007	6/5/2007	6/6/2007	1	Parturition	Good	NEG	NEG
-346	Scab	None	No	2/26/2007	5/23/2007	6/15/2007	2	Parturition	Bad	NEG	NA
-347	Scab	None	No	2/26/2007	5/21/2007	5/22/2007	5	Parturition	Bad	NEG	NA
-348	Scab	None	No	2/26/2007	5/22/2007	NA	7	Died	NA	NEG	NEG
-349	Scab	None	No	3/1/2007	5/31/2007	6/3/2007	2	Parturition	Bad	NEG	NEG
-351	Scab	None	No	3/1/2007	6/10/2007	6/11/2007	1	Parturition	Bad	NEG	NEG
-352	Scab	None	No	3/7/2007	6/15/2007	7/2/2007	2	Parturition	Bad	NEG	NA
-353	Scab	None	No	3/7/2007	5/28/2007	5/29/2007	5	Parturition	Bad	NEG	NEG
-354	Scab	None	No	3/7/2007	5/19/2007	5/20/2007	5	Parturition	Bad	NEG	NEG
-355	Soda	None	No	1/27/2007	6/8/2007	6/14/2007	2	Parturition	Bad	NEG	NA
-356	Soda	None	No	1/27/2007	6/5/2007	6/6/2007	1	Parturition	Good	NEG	NEG
-357	Soda	None	No	1/27/2007	5/29/2007	5/30/2007	1	Parturition	Good	NEG	NEG
-358	Soda	None	No	1/27/2007	2/27/2007	2/28/2007	2	Abortion	Bad	POS	NEG
-359	Soda	None	No	1/27/2007	NA	NA	7	Open	NA	NEG	NA
-360	Soda	None	No	1/27/2007	NA	NA	7	Open	NA	NEG	NA
-361	Soda	None	No	1/27/2007	NA	NA	7	Open	NA	POS	NA
-362	Soda	None	No	1/27/2007	6/7/2007	6/8/2007	1	Parturition	Good	NEG	NEG
-363	Soda	None	No	1/27/2007	6/7/2007	6/8/2007	1	Parturition	Good	NEG	NA
-364	Soda	None	No	1/15/2007	7/5/2007	8/9/2007	5	Parturition	Bad	NEG	NA
-365	Soda	None	No	1/27/2007	5/23/2007	5/26/2007	2	Parturition	Bad	NEG	NEG
-366	Soda	None	No	1/15/2007	5/26/2007	5/27/2007	5	Parturition	Bad	NEG	NEG
-367	Soda	None	No	1/19/2007	5/21/2007	5/22/2007	5	Parturition	Bad	NEG	NEG
-368	Soda	GPS	Yes	3/13/2011	6/7/2011	6/8/2011	1	Parturition	Good	NEG	NA
-368	Soda	None	No	1/19/2007	6/15/2007	6/21/2007	2	Parturition	Bad	POS	NA
-369	Soda	None	No	1/19/2007	5/7/2007	5/8/2007	4	Abortion	Bad	POS	NA
-370	Soda	None	No	2/11/2007	NA	NA	7	Unknown	NA	NEG	NA
-371	Soda	None	No	2/11/2007	5/22/2007	5/23/2007	5	Parturition	Bad	NEG	NEG
-372	Soda	None	No	2/11/2007	5/31/2007	6/3/2007	2	Parturition	Bad	NEG	NEG
-373	Soda	None	No	2/22/2007	NA	NA	7	Unknown	NA	NEG	NA
-374	Soda	None	No	2/11/2007	NA	NA	7	Unknown	NA	NEG	NA
-375	Soda	None	No	2/4/2007	NA	NA	7	Unknown	NA	NEG	NA
-376	Bench	None	No	2/5/2007	NA	NA	7	Unknown	NA	NEG	NA
-377	Bench	None	No	2/5/2007	NA	NA	7	Unknown	NA	NEG	NA
-378	Bench	None	No	2/5/2007	NA	NA	7	Unknown	NA	NEG	NA
-379	Bench	None	No	2/9/2007	4/26/2007	4/27/2007	2	Abortion	Bad	POS	NA
-380	Bench	None	No	2/9/2007	NA	NA	7	Unknown	NA	NEG	NA
-381	Franz	GPS	Yes	3/11/2009	5/30/2009	6/7/2009	2	Parturition	Bad	POS	NEG
-382	Dell	VHF	No	1/15/2011	6/10/2011	6/11/2011	1	Parturition	Good	NEG	NEG
-383	Dell	VHF	No	1/15/2011	6/4/2011	6/10/2011	2	Parturition	Bad	POS	NEG
-384	Dell	VHF	No	1/15/2011	5/19/2011	5/20/2011	1	Parturition	Good	POS	NEG
-385	Dell	VHF	No	1/15/2011	5/22/2011	5/23/2011	5	Parturition	Bad	POS	NEG
-386	Dell	VHF	No	1/15/2011	6/21/2011	6/28/2011	2	Parturition	Bad	NEG	POS
-387	Dell	VHF	No	1/21/2011	5/17/2011	5/18/2011	1	Parturition	Good	POS	NEG
-388	Dell	VHF	No	1/21/2011	4/21/2011	4/22/2011	1	Abortion	Good	POS	POS
-389	Dell	VHF	No	1/21/2011	5/27/2011	5/31/2011	2	Parturition	Bad	POS	NEG
-390	Dell	VHF	No	2/7/2012	5/4/2012	5/5/2012	1	Abortion	Good	POS	NEG
-390	Dell	VHF	No	1/21/2011	4/6/2011	4/7/2011	1	Abortion	Good	POS	POS
-391	Dell	VHF	No	1/21/2011	1/21/2011	4/18/2011	4	Abortion	Bad	NEG	POS
-392	Dell	VHF	No	1/21/2011	5/1/2011	5/2/2011	1	Abortion	Good	POS	POS
-393	McNeel	GPS	Yes	1/30/2011	3/22/2011	3/26/2011	2	Abortion	Bad	POS	NEG
-394	McNeel	GPS	Yes	1/30/2011	5/20/2011	5/21/2011	1	Parturition	Good	POS	NEG
-395	McNeel	GPS	Yes	1/30/2011	5/3/2011	5/4/2011	1	Parturition	Bad	POS	NEG
-396	McNeel	GPS	Yes	1/30/2011	6/20/2011	6/21/2011	1	Parturition	Good	NEG	NEG
-397	Greys	GPS	Yes	2/3/2011	5/31/2011	6/1/2011	1	Parturition	Good	POS	NEG
-398	Greys	VHF	No	2/3/2011	5/24/2011	5/25/2011	1	Abortion	Good	NEG	NEG
-399	Greys	GPS	Yes	2/3/2011	5/27/2011	6/9/2011	2	Parturition	Bad	POS	NEG
-400	Greys	GPS	Yes	2/3/2011	6/5/2011	6/6/2011	1	Parturition	Good	POS	NEG
-401	Greys	GPS	Yes	2/3/2011	7/15/2011	7/16/2011	1	Parturition	Good	POS	NA
-402	Forest	GPS	Yes	2/5/2011	6/3/2011	6/4/2011	1	Parturition	Good	NEG	NA
-403	Forest	GPS	Yes	2/5/2011	5/29/2011	5/30/2011	1	Parturition	Good	POS	NEG
-404	Forest	GPS	Yes	2/5/2011	5/26/2011	5/27/2011	1	Parturition	Good	NEG	NA
-405	Forest	GPS	Yes	2/5/2011	6/21/2011	6/23/2011	2	Parturition	Bad	NEG	NEG
-406	Forest	GPS	Yes	2/5/2011	3/30/2011	3/31/2011	1	Abortion	Good	POS	POS
-407	Muddy	GPS	Yes	2/7/2011	5/24/2011	5/25/2011	1	Parturition	Good	POS	NEG
-408	Muddy	GPS	Yes	2/7/2011	6/2/2011	6/3/2011	1	Parturition	Good	NEG	NA
-409	Muddy	GPS	Yes	2/7/2011	5/24/2011	5/25/2011	1	Parturition	Good	NEG	NA
-410	Muddy	GPS	Yes	2/7/2011	5/27/2011	6/4/2011	2	Parturition	Bad	NEG	NA
-461	HA99	Prox	No	1/29/2011	6/4/2011	6/10/2011	2	Parturition	Bad	NEG	NA
-463	HA99	Prox	No	1/29/2011	6/4/2011	6/10/2011	2	Parturition	Bad	NEG	NA
-480	HA99	GPS	Yes	1/29/2011	6/20/2011	6/21/2011	2	Parturition	Bad	NEG	NA
-486	Fall	GPS	Yes	2/9/2011	5/27/2011	6/9/2011	1	Parturition	Good	NEG	NA
-492	Fall	GPS	Yes	2/9/2011	5/27/2011	6/7/2011	2	Parturition	Bad	NEG	NA
-493	Fall	GPS	Yes	2/9/2011	6/10/2011	6/14/2011	2	Parturition	Bad	NEG	NA
-506	Fall	GPS	Yes	2/9/2011	5/27/2011	6/10/2011	2	Parturition	Bad	NEG	NA
-512	Alkali	GPS	Yes	2/14/2012	2/25/2012	NA	7	Died	NA	POS	NEG
-512	Patrol	GPS	Yes	2/14/2011	5/28/2011	6/10/2011	2	Parturition	Bad	NEG	NA
-513	Patrol	GPS	Yes	2/14/2011	5/28/2011	6/10/2011	2	Parturition	Bad	NEG	NA
-514	Patrol	GPS	Yes	2/14/2011	5/28/2011	6/10/2011	2	Parturition	Bad	NEG	NA
-515	Patrol	GPS	Yes	2/14/2011	5/28/2011	6/10/2011	2	Parturition	Bad	NEG	NA
-516	Horse	GPS	Yes	2/16/2011	NA	NA	7	Open	NA	POS	NA
-517	Horse	GPS	Yes	2/16/2011	5/27/2011	5/28/2011	2	Abortion	Bad	POS	NEG
-518	Horse	GPS	Yes	2/16/2011	NA	NA	7	Unknown	NA	POS	NA
-519	Horse	GPS	Yes	2/16/2011	5/24/2011	5/25/2011	1	Parturition	Bad	NEG	NA
-520	Fall	GPS	Yes	2/19/2011	6/7/2011	6/8/2011	1	Parturition	Good	NEG	NA
-521	Jewett	GPS	Yes	2/24/2011	5/25/2011	5/26/2011	1	Parturition	Bad	NEG	NA
-522	UG	GPS	Yes	2/25/2011	6/4/2011	6/10/2011	2	Parturition	Bad	NEG	NA
-523	UG	GPS	Yes	2/25/2011	6/11/2011	6/28/2011	2	Parturition	Bad	NEG	NA
-524	UG	GPS	Yes	2/25/2011	6/4/2011	6/10/2011	2	Parturition	Bad	NEG	NA
-525	Jewett	GPS	Yes	3/3/2011	6/4/2011	6/20/2011	2	Parturition	Bad	NEG	NA
-526	Franz	GPS	Yes	3/12/2011	6/4/2011	6/6/2011	2	Parturition	Bad	POS	NEG
-527	Franz	GPS	Yes	3/12/2011	3/13/2011	3/14/2011	2	Abortion	Bad	POS	NEG
-530	McNeel	GPS	Yes	3/13/2011	3/27/2011	NA	7	Died	NA	POS	NEG
-531	McNeel	VHF	No	3/13/2011	6/5/2011	6/6/2011	1	Parturition	Good	NEG	NA
-532	McNeel	GPS	Yes	3/13/2011	5/26/2011	5/27/2011	1	Parturition	Good	POS	NEG
-534	HA99	GPS	Yes	3/15/2011	5/22/2011	5/27/2011	2	Parturition	Bad	NEG	NA
-535	HA99	VHF	No	3/16/2011	5/27/2011	6/10/2011	2	Parturition	Bad	NEG	NA
-536	HA99	GPS	Yes	3/16/2011	6/7/2011	6/8/2011	1	Parturition	Good	NEG	NA
-537	HA99	GPS	Yes	3/16/2011	6/28/2011	7/12/2011	2	Parturition	Bad	NEG	NEG
-538	HA99	None	No	3/16/2011	6/12/2011	6/13/2011	1	Parturition	Good	NEG	NA
-539	Soda	None	No	3/5/2007	NA	NA	7	Unknown	NA	POS	NA
-540	Forest	GPS	Yes	2/1/2012	5/13/2012	5/14/2012	1	Parturition	Good	NEG	NA
-541	Forest	GPS	Yes	2/1/2012	6/25/2012	7/2/2012	2	Parturition	Bad	NEG	NA
-542	Forest	GPS	Yes	2/1/2012	NA	NA	7	Unknown	NA	NEG	NA
-543	Forest	GPS	Yes	2/1/2012	6/4/2012	6/20/2012	2	Parturition	Bad	POS	NA
-544	Forest	GPS	Yes	2/1/2012	6/2/2012	6/3/2012	1	Parturition	Good	POS	NA
-545	Buffalo	VHF	No	3/1/2006	3/1/2006	5/23/2006	5	Parturition	Bad	NEG	NA
-546	Buffalo	GPS	Yes	3/1/2006	3/1/2006	6/1/2006	5	Parturition	Bad	NEG	NA
-547	Buffalo	VHF	No	3/1/2006	6/1/2006	6/11/2006	5	Unknown	NA	NEG	NA
-548	Buffalo	VHF	No	3/1/2006	NA	NA	7	Unknown	NA	NEG	NA
-549	Buffalo	VHF	No	3/1/2006	6/1/2006	6/6/2006	5	Parturition	Bad	NEG	NA
-550	Buffalo	VHF	No	3/1/2006	3/1/2006	5/27/2006	5	Parturition	Bad	NEG	NA
-551	Buffalo	GPS	Yes	3/1/2006	3/1/2006	5/24/2006	5	Parturition	Bad	NEG	NA
-552	Buffalo	VHF	No	3/1/2006	3/1/2006	5/22/2006	5	Parturition	Bad	POS	NEG
-553	Buffalo	GPS	Yes	3/1/2006	6/1/2006	6/6/2006	5	Parturition	Bad	NEG	NA
-554	Buffalo	VHF	No	3/1/2006	3/1/2006	6/5/2006	5	Parturition	Bad	NEG	NA
-555	Buffalo	GPS	Yes	3/1/2006	6/1/2006	6/6/2006	5	Parturition	Bad	NEG	NA
-556	Buffalo	VHF	No	3/1/2006	3/1/2006	6/4/2006	5	Parturition	Bad	NEG	NA
-558	Buffalo	VHF	No	3/1/2006	3/1/2006	5/26/2006	5	Parturition	Bad	NEG	NA
-559	Buffalo	VHF	No	3/1/2006	3/1/2006	5/30/2006	7	Unknown	NA	NEG	NA
-560	Buffalo	VHF	No	3/1/2006	3/1/2006	5/17/2006	5	Parturition	Bad	NEG	NEG
-562	Buffalo	GPS	Yes	3/1/2006	3/1/2006	5/22/2006	5	Parturition	Bad	NEG	NA
-563	Buffalo	VHF	No	3/1/2006	3/1/2006	5/22/2006	5	Parturition	Bad	POS	NA
-564	Buffalo	GPS	Yes	3/1/2006	3/1/2006	5/23/2006	5	Parturition	Bad	NEG	NA
-566	Buffalo	GPS	Yes	3/1/2006	NA	NA	7	Unknown	NA	NEG	NA
-567	Buffalo	VHF	No	3/1/2006	NA	NA	7	Unknown	NA	NEG	NA
-568	Buffalo	GPS	Yes	3/1/2006	3/1/2006	6/7/2006	5	Parturition	Bad	POS	NA
-569	Buffalo	GPS	Yes	3/1/2006	3/1/2006	6/3/2006	5	Parturition	Bad	NEG	NA
-570	Buffalo	GPS	Yes	3/1/2006	3/1/2006	5/19/2006	5	Parturition	Bad	NEG	NA
-571	Buffalo	VHF	No	3/1/2006	3/1/2006	6/1/2006	5	Parturition	Bad	NEG	NA
-572	Buffalo	GPS	Yes	3/1/2006	6/1/2006	6/6/2006	5	Parturition	Bad	POS	NA
-573	Buffalo	GPS	Yes	3/1/2006	3/1/2006	5/17/2006	5	Parturition	Bad	POS	NEG
-574	Buffalo	VHF	No	1/17/2007	NA	NA	7	Unknown	NA	NEG	NA
-575	Buffalo	VHF	No	1/17/2007	1/17/2007	5/21/2007	5	Parturition	Bad	NEG	NA
-576	Buffalo	VHF	No	1/16/2007	6/2/2007	6/7/2007	5	Parturition	Bad	NEG	NA
-577	Buffalo	VHF	No	1/16/2007	1/16/2007	5/22/2007	5	Parturition	Bad	NEG	NA
-578	Buffalo	VHF	No	1/17/2007	1/17/2007	5/23/2007	5	Parturition	Bad	NEG	NA
-579	Buffalo	VHF	No	1/16/2007	NA	NA	7	Unknown	NA	NEG	NA
-580	Buffalo	VHF	No	1/17/2007	1/17/2007	5/24/2007	5	Parturition	Bad	NEG	NA
-581	Buffalo	VHF	No	1/17/2007	6/2/2007	6/7/2007	5	Parturition	Bad	NEG	NEG
-582	Buffalo	VHF	No	1/16/2007	1/16/2007	5/22/2007	5	Parturition	Bad	NEG	NA
-583	Buffalo	VHF	No	1/17/2007	NA	NA	7	Unknown	NA	NEG	NEG
-584	Buffalo	VHF	No	1/17/2007	5/23/2007	5/29/2007	5	Parturition	Bad	NEG	NA
-585	Buffalo	VHF	No	1/17/2007	5/23/2007	5/29/2007	5	Parturition	Bad	NEG	NA
-586	Buffalo	GPS	Yes	1/16/2007	5/20/2007	5/29/2007	5	Parturition	Bad	POS	NEG
-587	Buffalo	VHF	No	1/16/2007	1/16/2007	5/27/2007	5	Parturition	Bad	NEG	NA
-588	Buffalo	VHF	No	1/17/2007	1/17/2007	5/22/2007	5	Parturition	Bad	NEG	NA
-589	Buffalo	VHF	No	1/16/2007	6/2/2007	6/7/2007	5	Parturition	Bad	NEG	NA
-590	Buffalo	VHF	No	1/16/2007	3/1/2007	5/27/2007	7	Unknown	NA	NEG	NA
-591	Buffalo	VHF	No	1/17/2007	NA	NA	7	Unknown	NA	NEG	NA
-592	Buffalo	VHF	No	1/16/2007	6/2/2007	6/7/2007	5	Parturition	Bad	NEG	NA
-593	Buffalo	VHF	No	1/17/2007	1/17/2007	5/22/2007	5	Parturition	Bad	NEG	NA
-594	Buffalo	GPS	Yes	1/16/2007	6/12/2007	6/14/2007	5	Parturition	Bad	POS	NA
-595	Buffalo	GPS	Yes	1/16/2007	5/23/2007	6/2/2007	5	Parturition	Bad	POS	NA
-596	Buffalo	VHF	No	1/17/2007	5/23/2007	6/2/2007	5	Parturition	Bad	NEG	NA
-597	Buffalo	VHF	No	1/16/2007	1/16/2007	5/30/2007	5	Parturition	Bad	NEG	NA
-598	Buffalo	VHF	No	1/17/2007	6/12/2007	6/27/2007	5	Parturition	Bad	NEG	NEG
-599	Buffalo	VHF	No	1/17/2007	6/2/2007	6/12/2007	5	Parturition	Bad	NEG	NEG
-600	Buffalo	VHF	No	1/17/2007	1/17/2007	6/1/2007	5	Parturition	Bad	NEG	NA
-603	Greys	VHF	No	2/3/2012	6/4/2012	6/20/2012	2	Parturition	Bad	NEG	NA
-604	Greys	VHF	No	2/3/2012	2/13/2012	2/14/2012	1	Abortion	Good	NEG	NEG
-605	Greys	VHF	No	2/3/2012	6/1/2012	6/2/2012	1	Parturition	Good	POS	NA
-606	Greys	VHF	No	2/3/2012	6/20/2012	6/21/2012	1	Parturition	Good	POS	NA
-607	Greys	VHF	No	2/3/2012	6/8/2012	6/12/2012	2	Parturition	Bad	NEG	NA
-608	Greys	VHF	No	2/3/2012	5/29/2012	6/20/2012	2	Parturition	Bad	NEG	NA
-646	Dell	VHF	No	2/7/2012	5/10/2012	5/23/2012	2	Parturition	Bad	POS	NA
-647	Dell	VHF	No	2/7/2012	6/4/2012	6/11/2012	2	Parturition	Bad	POS	NA
-648	Dell	VHF	No	2/7/2012	6/20/2012	6/25/2012	2	Parturition	Bad	POS	NA
-649	McNeel	GPS	Yes	2/17/2012	NA	NA	7	Open	NA	POS	NA
-650	Dell	VHF	No	2/7/2012	5/25/2012	5/26/2012	1	Parturition	Good	POS	NA
-651	Dell	VHF	No	2/7/2012	6/29/2012	6/30/2012	1	Parturition	Good	POS	NA
-652	McNeel	GPS	Yes	2/17/2012	2/20/2012	NA	7	Died	NA	POS	NA
-653	Dell	VHF	No	2/7/2012	5/26/2012	5/27/2012	1	Parturition	Good	POS	NA
-654	Black	GPS	Yes	2/16/2012	5/23/2012	5/24/2012	1	Parturition	Good	NEG	NA
-657	Black	GPS	Yes	2/16/2012	6/7/2012	6/8/2012	1	Parturition	Good	NEG	NA
-658	Black	GPS	Yes	2/16/2012	5/29/2012	6/4/2012	2	Parturition	Bad	NEG	NA
-659	McNeel	GPS	Yes	2/17/2012	5/27/2012	5/28/2012	1	Parturition	Good	NEG	NA
-660	McNeel	GPS	Yes	2/17/2012	6/20/2012	6/25/2012	2	Parturition	Bad	POS	NA
-661	Alkali	GPS	Yes	2/14/2012	6/4/2012	6/15/2012	2	Parturition	Bad	NEG	NA
-662	Alkali	GPS	Yes	2/14/2012	3/15/2012	3/16/2012	2	Abortion	Bad	POS	NEG
-663	Alkali	GPS	Yes	2/14/2012	6/4/2012	6/11/2012	2	Parturition	Bad	NEG	NEG
-664	Alkali	GPS	Yes	2/14/2012	5/28/2012	6/11/2012	2	Parturition	Bad	NEG	NA
-666	Alkali	GPS	Yes	2/15/2012	6/4/2012	6/11/2012	2	Parturition	Bad	NEG	NA
-667	Alkali	GPS	Yes	2/15/2012	5/23/2012	5/24/2012	1	Parturition	Good	NEG	NA
-668	Alkali	GPS	Yes	2/15/2012	5/28/2012	6/4/2012	2	Parturition	Bad	NEG	NA
-669	Horse	GPS	Yes	2/16/2012	6/20/2012	6/25/2012	2	Parturition	Bad	POS	NA
-670	Horse	GPS	Yes	2/16/2012	6/4/2012	6/20/2012	2	Parturition	Bad	POS	NA
-671	Horse	GPS	Yes	2/16/2012	3/2/2012	NA	7	Died	NA	NEG	NA
-672	Horse	GPS	Yes	2/16/2012	4/22/2012	NA	7	Died	NA	NEG	NEG
-673	Horse	GPS	Yes	2/16/2012	6/4/2012	6/8/2012	2	Parturition	Bad	NEG	NA
-674	McNeel	GPS	Yes	2/22/2012	NA	NA	7	Open	NA	NEG	NA
-675	McNeel	GPS	Yes	2/22/2012	5/23/2012	5/24/2012	1	Parturition	Good	POS	NA
-676	McNeel	GPS	Yes	2/22/2012	6/17/2012	6/18/2012	1	Parturition	Good	NEG	NA
-677	Jewett	GPS	Yes	3/5/2012	6/20/2012	6/25/2012	2	Parturition	Bad	NEG	NA
-678	Jewett	GPS	Yes	3/5/2012	6/11/2012	6/18/2012	2	Parturition	Bad	NEG	NA
-679	Jewett	GPS	Yes	3/5/2012	6/11/2012	6/18/2012	2	Parturition	Bad	NEG	NA
-680	Jewett	GPS	Yes	3/5/2012	5/24/2012	5/25/2012	1	Parturition	Good	NEG	NA
-681	Jewett	GPS	Yes	3/5/2012	6/4/2012	6/25/2012	2	Parturition	Bad	NEG	NA
-682	Jewett	GPS	Yes	3/5/2012	5/26/2012	5/27/2012	1	Parturition	Good	POS	NA
-683	Jewett	GPS	Yes	3/5/2012	5/27/2012	5/28/2012	1	Parturition	Good	POS	NA
-687	Patrol	GPS	Yes	3/13/2012	5/28/2012	7/9/2012	4	Parturition	Bad	POS	NA
-688	Jewett	VHF	No	3/14/2012	5/28/2012	5/29/2012	1	Parturition	Good	NEG	NA
-689	McNeel	GPS	Yes	3/15/2012	6/20/2012	6/25/2012	2	Parturition	Bad	POS	NA
-690	McNeel	GPS	Yes	3/15/2012	6/2/2012	6/3/2012	1	Parturition	Good	POS	NA
-691	McNeel	GPS	Yes	3/15/2012	5/23/2012	5/24/2012	5	Parturition	Bad	POS	NA
-692	McNeel	GPS	Yes	3/15/2012	6/4/2012	6/20/2012	2	Parturition	Bad	NEG	NA
-694	Forest	GPS	Yes	2/9/2013	6/2/2013	6/16/2013	2	Parturition	Bad	NEG	NA
-695	Forest	GPS	Yes	2/9/2013	5/21/2013	5/26/2013	2	Parturition	Bad	NEG	NA
-698	Forest	GPS	Yes	2/15/2013	5/17/2013	5/18/2013	1	Abortion	Good	NEG	POS
-699	Forest	GPS	Yes	2/15/2013	NA	NA	7	Open	NA	NEG	NA
-700	Forest	GPS	Yes	2/15/2013	6/5/2013	6/14/2013	2	Parturition	Bad	NEG	NA
-701	Forest	GPS	Yes	2/15/2013	5/21/2013	6/5/2013	2	Parturition	Bad	POS	NA
-702	Black	GPS	Yes	2/17/2013	NA	NA	7	Unknown	NA	NEG	NA
-703	Black	GPS	Yes	2/17/2013	NA	NA	7	Unknown	NA	NEG	NA
-704	Black	GPS	Yes	2/17/2013	6/11/2013	6/16/2013	2	Parturition	Bad	NEG	NA
-705	Black	GPS	Yes	2/17/2013	5/24/2013	5/25/2013	1	Parturition	Good	NEG	NA
-707	McNeel	VHF	No	2/17/2013	5/31/2013	6/1/2013	1	Parturition	Good	NEG	NEG
-708	McNeel	GPS	Yes	2/17/2013	6/2/2013	6/10/2013	2	Parturition	Bad	POS	NEG
-709	McNeel	GPS	Yes	2/17/2013	6/16/2013	6/25/2013	2	Parturition	Bad	POS	NA
-710	McNeel	GPS	Yes	2/17/2013	6/2/2013	6/11/2013	2	Parturition	Bad	NEG	NA
-713	Jewett	GPS	Yes	2/19/2013	NA	NA	7	Unknown	NA	NEG	NA
-715	Jewett	GPS	Yes	2/19/2013	5/28/2013	5/29/2013	1	Parturition	Good	NEG	NA
-716	Jewett	GPS	Yes	2/19/2013	6/21/2013	6/22/2013	1	Parturition	Good	NEG	NA
-718	Jewett	GPS	Yes	2/19/2013	NA	NA	7	Unknown	NA	POS	NA
-719	Jewett	GPS	Yes	2/19/2013	5/28/2013	5/29/2013	1	Parturition	Good	POS	NEG
-722	Jewett	GPS	Yes	2/19/2013	5/21/2013	6/2/2013	2	Parturition	Bad	NEG	NA
-723	Muddy	GPS	Yes	2/21/2013	6/12/2013	6/13/2013	1	Parturition	Good	NEG	NA
-725	Muddy	GPS	Yes	2/21/2013	6/16/2013	6/25/2013	2	Parturition	Bad	NEG	NA
-726	Muddy	GPS	Yes	2/21/2013	6/13/2013	6/14/2013	1	Parturition	Good	NEG	NA
-729	Muddy	GPS	Yes	2/21/2013	5/21/2013	6/11/2013	2	Parturition	Bad	NEG	NA
-730	Muddy	GPS	Yes	2/21/2013	6/2/2013	6/11/2013	2	Parturition	Bad	NEG	NA
-731	Fall	GPS	Yes	2/24/2013	6/2/2013	6/11/2013	2	Parturition	Bad	NEG	NA
-732	Fall	GPS	Yes	2/24/2013	5/26/2013	6/5/2013	2	Parturition	Bad	NEG	NA
-734	Fall	GPS	Yes	2/24/2013	6/2/2013	6/11/2013	2	Parturition	Bad	NEG	NA
-737	Fall	GPS	Yes	2/24/2013	7/2/2013	7/10/2013	2	Parturition	Bad	NEG	NA
-740	Fall	GPS	Yes	2/24/2013	6/2/2013	6/11/2013	2	Parturition	Bad	NEG	NA
-741	Patrol	GPS	Yes	2/25/2013	5/26/2013	6/2/2013	2	Parturition	Bad	NEG	NA
-742	Patrol	GPS	Yes	2/25/2013	NA	NA	7	Open	NA	POS	NA
-743	Patrol	GPS	Yes	2/25/2013	5/28/2013	5/29/2013	1	Parturition	Good	NEG	NA
-747	Patrol	GPS	Yes	2/25/2013	5/21/2013	5/29/2013	2	Parturition	Bad	POS	POS
-749	Patrol	GPS	Yes	2/25/2013	5/21/2013	6/11/2013	2	Parturition	Bad	NEG	NA
-750	Patrol	GPS	Yes	2/25/2013	6/8/2013	6/9/2013	1	Parturition	Good	NEG	NA
-751	Patrol	GPS	Yes	2/25/2013	6/2/2013	6/11/2013	2	Parturition	Bad	NEG	NA
-752	Patrol	GPS	Yes	2/25/2013	5/24/2013	5/25/2013	1	Parturition	Good	POS	NEG
-755	Camp	GPS	Yes	3/5/2013	6/2/2013	6/16/2013	2	Abortion	Bad	NEG	NEG
-756	Camp	GPS	Yes	3/5/2013	5/21/2013	6/2/2013	2	Parturition	Bad	NEG	NA
-757	Camp	GPS	Yes	3/5/2013	6/16/2013	6/25/2013	2	Parturition	Bad	NEG	NA
-758	Dell	VHF	No	1/31/2013	5/18/2013	5/19/2013	1	Parturition	Good	POS	NEG
-759	Dell	VHF	No	1/31/2013	5/26/2013	6/5/2013	5	Parturition	Bad	POS	NEG
-760	Dell	VHF	No	1/31/2013	5/26/2013	6/5/2013	2	Parturition	Bad	POS	NA
-761	Dell	VHF	No	1/31/2013	5/26/2013	6/5/2013	2	Parturition	Bad	POS	NEG
-762	Dell	VHF	No	1/31/2013	5/24/2013	5/25/2013	1	Parturition	Good	POS	NA
-763	Dell	VHF	No	1/31/2013	5/19/2013	5/20/2013	1	Parturition	Good	POS	NEG
-764	Dell	VHF	No	1/31/2013	6/3/2013	6/4/2013	1	Parturition	Good	POS	POS
-765	Dell	VHF	No	1/31/2013	6/3/2013	6/4/2013	1	Parturition	Good	POS	POS
-766	Greys	VHF	No	2/16/2013	6/5/2013	6/11/2013	2	Parturition	Bad	NEG	NA
-767	Greys	VHF	No	2/16/2013	6/5/2013	6/16/2013	2	Parturition	Bad	NEG	NA
-768	Greys	VHF	No	2/16/2013	6/5/2013	6/16/2013	2	Parturition	Bad	NEG	NA
-769	Greys	VHF	No	2/16/2013	5/21/2013	6/5/2013	2	Parturition	Bad	POS	NA
-119	Greys	GPS	Yes	2/6/2009	6/11/2009	6/12/2009	1	Parturition	Good	POS	NA
-540	Forest	GPS	Yes	2/1/2012	5/13/2012	5/14/2012	1	Parturition	Good	NEG	NA
-658	Black	GPS	Yes	2/16/2012	5/28/2012	6/4/2012	2	Parturition	Bad	NEG	NA
-605	Greys	VHF	No	2/3/2012	6/1/2012	6/2/2012	1	Parturition	Good	POS	NA
-544	Forest	GPS	Yes	2/1/2012	6/2/2012	6/3/2012	1	Parturition	Good	POS	NA
-29	Soda	GPS	Yes	1/31/2014	6/18/2014	6/19/2014	2	Parturition	Excellent	NEG	NA
-770	Soda	GPS	Yes	1/31/2014	5/29/2014	6/2/2014	2	Parturition	Poor	NEG	NA
-756	South	GPS	Yes	2/1/2014	5/16/2014	5/18/2014	2	Parturition	Good	NEG	NA
-771	Franz	GPS	Yes	2/2/2014	6/3/2014	6/8/2014	2	Parturition	Poor	POS	NA
-772	Franz	GPS	Yes	2/2/2014	6/26/2014	7/1/2014	2	Parturition	Poor	POS	NA
-773	Franz	GPS	Yes	2/2/2014	5/29/2014	6/3/2014	NA	Parturition	Poor	NEG	NA
-774	Black	GPS	Yes	2/4/2014	6/2/2014	6/3/2014	1	Parturition	Excellent	NEG	NA
-776	Black	GPS	Yes	2/4/2014	5/24/2014	5/28/2014	2	Parturition	None	NEG	NA
-777	Bench	GPS	Yes	2/9/2014	6/11/2014	6/12/2014	2	Parturition	Excellent	NEG	NA
-779	Bench	GPS	Yes	2/9/2014	5/21/2014	5/24/2014	2	Parturition	NA	NEG	NA
-780	Bench	GPS	Yes	2/11/2014	6/12/2014	6/13/2014	2	Parturition	Excellent	NEG	NA
-781	Bench	GPS	Yes	2/11/2014	5/23/2014	5/24/2014	1	Parturition	Excellent	NEG	NA
-721	Jewett	GPS	Yes	2/12/2014	6/14/2014	6/15/2014	1	Parturition	Excellent	POS	NA
-782	Dog	GPS	Yes	2/13/2014	5/27/2014	5/28/2014	1	Parturition	Excellent	POS	NA
-783	Dog	GPS	Yes	2/13/2014	6/3/2014	6/8/2014	2	Parturition	Poor	POS	NA
-784	Dog	GPS	Yes	2/13/2014	6/9/2014	6/15/2014	2	Parturition	Good	POS	NA
-785	Dog	GPS	Yes	2/13/2014	5/29/2014	6/2/2014	2	Parturition	Poor	NEG	NA
-786	Dog	GPS	Yes	2/13/2014	6/20/2014	6/23/2014	2	Parturition	Fair	POS	NA
-791	Dog	VHF	No	2/16/2014	5/17/2014	5/18/2014	2	Parturition	Good	NEG	NA
-790	Muddy	VHF	No	2/16/2014	NA	NA	7	Open	NA	POS	NA
-789	Muddy	VHF	No	2/16/2014	5/29/2014	6/2/2014	2	Parturition	Fair	NEG	NA
-793	Muddy	VHF	No	2/16/2014	6/9/2014	6/13/2014	2	Parturition	Fair	NEG	NA
-792	Muddy	VHF	No	2/16/2014	NA	NA	7	Unknown	NA	NEG	NA
-794	Camp	GPS	Yes	2/18/2014	NA	NA	7	Open	NA	NEG	NA
-796	Camp	GPS	Yes	2/18/2014	5/24/2014	5/28/2014	2	Parturition	Poor	NEG	NA
-757	Camp	GPS	Yes	2/18/2014	5/14/2014	NA	7	Died	NA	NEG	NA
-797	Finnegan	GPS	Yes	2/19/2014	6/9/2014	6/14/2014	2	Parturition	Poor	NEG	NA
-650	Dell	GPS	Yes	2/20/2014	5/21/2014	5/22/2014	1	Parturition	Excellent	NEG	NA
-653	Dell	GPS	Yes	2/20/2014	5/8/2014	5/19/2014	2	Parturition	None	POS	NA
-806	Scab	GPS	Yes	2/22/2014	6/9/2014	6/12/2014	2	Parturition	Fair	NEG	NA
-804	Scab	GPS	Yes	2/22/2014	6/25/2014	7/1/2014	2	Parturition	Fair	NEG	NA
-809	Scab	GPS	Yes	2/22/2014	6/7/2014	6/8/2014	2	Parturition	Excellent	NEG	NA
-800	Scab	GPS	Yes	2/22/2014	6/23/2014	6/24/2014	2	Parturition	Excellent	POS	NA
-803	Scab	GPS	Yes	2/22/2014	6/3/2014	6/9/2014	2	Parturition	Poor	NEG	NA
-799	Scab	GPS	Yes	2/22/2014	NA	NA	7	Open	NA	POS	NA
-807	Scab	GPS	Yes	2/22/2014	NA	NA	7	Unknown	NA	NEG	NA
-810	UG	GPS	Yes	2/25/2014	5/28/2014	5/29/2014	2	Parturition	Excellent	NEG	NA
-811	UG	GPS	Yes	2/25/2014	6/9/2014	6/14/2014	2	Parturition	Poor	NEG	NA
-812	UG	GPS	Yes	2/25/2014	6/19/2014	6/20/2014	2	Parturition	Excellent	NEG	NA
-813	UG	GPS	Yes	2/25/2014	6/1/2014	6/2/2014	2	Parturition	Excellent	POS	NA
-823	Finnegan	GPS	Yes	3/5/2014	5/19/2014	5/27/2014	2	Parturition	None	NEG	NA
-824	Finnegan	GPS	Yes	3/5/2014	NA	NA	7	Unknown	Poor	NEG	NA
-825	Forest	GPS	Yes	4/15/2014	NA	NA	7	Unknown	NA	POS	NA
-826	Forest	GPS	Yes	4/15/2014	NA	NA	7	Unknown	NA	NEG	NA
+Elk_ID	Feedground	CollarType	GPSCollar	CaptureDate	Start_Interval	Stop_Interval	TrustRating	VIT_Status	PET	CowSero	VIT_Bruc	Recovered	RecoveryInterval
+029	Soda	None	No	3/5/2007	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+031	Soda	GPS	Yes	2/20/2008	NA	NA	7	Open	NA	NEG	NA	NA	NA
+042	Greys	VHF	No	2/25/2008	NA	NA	7	Unknown	NA	POS	NA	NA	NA
+053	Bench	GPS	Yes	2/18/2007	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+057	Scab	GPS	Yes	2/14/2007	NA	NA	7	Unknown	NA	NEG	NA	1/1/2007	NA
+059	Soda	GPS	Yes	2/19/2007	NA	NA	7	Unknown	NA	POS	NA	1/1/2007	NA
+060	Soda	GPS	Yes	2/19/2007	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+075	Soda	None	No	2/11/2007	NA	NA	7	Unknown	NA	POS	NA	NA	NA
+088	Soda	None	No	3/9/2006	NA	NA	7	Open	NA	NEG	NA	NA	NA
+088	Soda	GPS	Yes	1/12/2009	NA	NA	7	Open	NA	NEG	NA	NA	NA
+091	Dell	VHF	No	1/22/2009	NA	NA	7	Unknown	NA	POS	NA	NA	NA
+096	Dell	GPS	Yes	1/14/2009	5/27/2009	5/29/2009	2	Parturition	Bad	NEG	NEG	NA	NA
+096	Dell	VHF	No	2/7/2012	NA	NA	7	Open	NA	POS	NA	6/2/2009	NA
+128	Greys	GPS	Yes	1/21/2010	2/2/2010	NA	7	Died	NA	POS	NA	2/2/2010	NA
+165	Soda	None	No	2/22/2007	NA	NA	7	Unknown	NA	NEG	NEG	NA	NA
+176	Dell	VHF	No	2/16/2010	NA	NA	7	Open	NA	NEG	NA	NA	NA
+178	Dell	VHF	No	2/16/2010	NA	NA	7	Open	NA	POS	NA	NA	NA
+182	Dell	VHF	No	2/16/2010	NA	NA	7	Open	NA	POS	NA	NA	NA
+199	UGNWR	GPS	Yes	1/26/2010	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+217	HA99	GPS	Yes	3/15/2011	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+218	HA99	GPS	Yes	1/26/2010	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+222	HA99	GPS	Yes	3/15/2011	NA	NA	7	Open	NA	NEG	NA	NA	NA
+285	Bench	None	No	2/26/2006	NA	NA	7	Open	NA	NEG	NA	NA	NA
+291	Bench	None	No	2/14/2006	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+292	Bench	None	No	2/26/2006	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+321	Soda	None	No	2/21/2006	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+322	Soda	None	No	2/28/2006	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+323	Soda	VHF	No	2/22/2007	NA	NA	7	Unknown	NA	POS	NEG	NA	NA
+324	Soda	None	No	3/9/2006	NA	NA	7	Open	NA	NEG	NA	NA	NA
+325	Scab	None	No	1/5/2007	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+326	Scab	None	No	1/5/2007	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+330	Scab	None	No	1/5/2007	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+335	Scab	None	No	1/23/2007	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+344	Scab	None	No	2/23/2007	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+348	Scab	None	No	2/26/2007	5/22/2007	NA	7	Died	NA	NEG	NEG	5/22/2007	NA
+359	Soda	None	No	1/27/2007	NA	NA	7	Open	NA	NEG	NA	NA	NA
+360	Soda	None	No	1/27/2007	NA	NA	7	Open	NA	NEG	NA	NA	NA
+361	Soda	None	No	1/27/2007	NA	NA	7	Open	NA	POS	NA	NA	NA
+370	Soda	None	No	2/11/2007	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+373	Soda	None	No	2/22/2007	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+374	Soda	None	No	2/11/2007	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+375	Soda	None	No	2/4/2007	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+376	Bench	None	No	2/5/2007	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+377	Bench	None	No	2/5/2007	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+378	Bench	None	No	2/5/2007	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+380	Bench	None	No	2/9/2007	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+512	Alkali	GPS	Yes	2/14/2012	2/25/2012	NA	7	Died	NA	POS	NEG	3/12/2012	NA
+516	Horse	GPS	Yes	2/16/2011	NA	NA	7	Open	NA	POS	NA	NA	NA
+518	Horse	GPS	Yes	2/16/2011	NA	NA	7	Unknown	NA	POS	NA	NA	NA
+523	UG	GPS	Yes	2/25/2011	6/21/2011	6/28/2011	2	Parturition	Bad	NEG	NA	NA	NA
+530	McNeel	GPS	Yes	3/13/2011	3/27/2011	NA	7	Died	NA	POS	NEG	3/28/2011	NA
+539	Soda	None	No	3/5/2007	NA	NA	7	Unknown	NA	POS	NA	NA	NA
+542	Forest	GPS	Yes	2/1/2012	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+548	Buffalo	VHF	No	3/1/2006	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+566	Buffalo	GPS	Yes	3/1/2006	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+567	Buffalo	VHF	No	3/1/2006	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+574	Buffalo	VHF	No	1/17/2007	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+579	Buffalo	VHF	No	1/16/2007	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+581	Buffalo	VHF	No	1/17/2007	6/2/2007	6/7/2007	5	Parturition	Bad	NEG	NEG	NA	NA
+583	Buffalo	VHF	No	1/17/2007	NA	NA	7	Unknown	NA	NEG	NEG	NA	NA
+591	Buffalo	VHF	No	1/17/2007	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+593	Buffalo	VHF	No	1/17/2007	1/17/2007	5/22/2007	5	Parturition	Bad	NEG	NA	NA	NA
+649	McNeel	GPS	Yes	2/17/2012	NA	NA	7	Open	NA	POS	NA	NA	NA
+652	McNeel	GPS	Yes	2/17/2012	2/20/2012	NA	7	Died	NA	POS	NA	2/20/2012	NA
+671	Horse	GPS	Yes	2/16/2012	3/2/2012	NA	7	Died	NA	NEG	NA	4/16/2012	NA
+672	Horse	GPS	Yes	2/16/2012	NA	NA	7	Died	NA	NEG	NEG	4/15/2012	NA
+674	McNeel	GPS	Yes	2/22/2012	NA	NA	7	Open	NA	NEG	NA	NA	NA
+699	Forest	GPS	Yes	2/15/2013	NA	NA	7	Open	NA	NEG	NA	NA	NA
+702	Black	GPS	Yes	2/17/2013	NA	NA	7	Unknown	NA	NEG	NA	6/25/2013	NA
+703	Black	GPS	Yes	2/17/2013	NA	NA	7	Unknown	NA	NEG	NA	6/17/2013	NA
+713	Jewett	GPS	Yes	2/19/2013	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+718	Jewett	GPS	Yes	2/19/2013	NA	NA	7	Unknown	NA	POS	NA	NA	NA
+742	Patrol	GPS	Yes	2/25/2013	NA	NA	7	Open	NA	POS	NA	NA	NA
+757	Camp	GPS	Yes	2/18/2014	NA	NA	7	Died	NA	NEG	NA	NA	NA
+784	Dog	GPS	Yes	2/13/2014	6/9/2014	6/15/2014	2	Parturition	Good	POS	NA	NA	NA
+790	Muddy	VHF	No	2/16/2014	NA	NA	7	Open	NA	POS	NA	NA	NA
+792	Muddy	VHF	No	2/16/2014	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+794	Camp	GPS	Yes	2/18/2014	NA	NA	7	Open	NA	NEG	NA	NA	NA
+799	Scab	GPS	Yes	2/22/2014	NA	NA	7	Open	NA	POS	NA	NA	NA
+807	Scab	GPS	Yes	2/22/2014	NA	NA	7	Unknown	NA	NEG	NA	NA	NA
+824	Finnegan	GPS	Yes	3/5/2014	NA	NA	7	Unknown	Poor	NEG	NA	5/10/2014	NA
+825	Forest	GPS	Yes	4/15/2014	NA	NA	7	Malfunction	NA	POS	NA	NA	NA
+826	Forest	GPS	Yes	4/15/2014	NA	NA	7	Malfunction	NA	NEG	NA	NA	NA
+226	HA99	GPS	Yes	1/27/2010	5/30/2010	5/31/2010	1	Parturition	Good	NEG	NA	7/29/2010	59
+097	Dell	VHF	No	1/14/2009	5/26/2009	5/30/2009	2	Parturition	Bad	NEG	NEG	7/15/2009	46
+051	Soda	None	No	1/19/2007	5/19/2007	5/20/2007	1	Parturition	Good	NEG	NA	6/27/2007	38
+687	Patrol	GPS	Yes	3/13/2012	5/28/2012	6/4/2012	4	Parturition	Bad	POS	NA	7/10/2012	36
+341	Scab	None	No	2/20/2007	5/27/2007	5/28/2007	1	Parturition	Good	NEG	NA	6/29/2007	32
+585	Buffalo	VHF	No	1/17/2007	5/23/2007	5/29/2007	5	Parturition	Bad	NEG	NA	6/29/2007	31
+584	Buffalo	VHF	No	1/17/2007	5/23/2007	5/29/2007	5	Parturition	Bad	NEG	NA	6/28/2007	30
+586	Buffalo	GPS	Yes	1/16/2007	5/20/2007	5/29/2007	5	Parturition	Bad	POS	NEG	6/27/2007	29
+463	HA99	Prox	No	1/29/2011	6/5/2011	6/8/2011	2	Parturition	Bad	NEG	NA	7/6/2011	28
+245	Alkali	GPS	Yes	2/14/2012	6/8/2012	6/12/2012	2	Parturition	Bad	NEG	NA	7/9/2012	27
+595	Buffalo	GPS	Yes	1/16/2007	5/23/2007	6/2/2007	5	Parturition	Bad	POS	NA	6/29/2007	27
+596	Buffalo	VHF	No	1/17/2007	5/23/2007	6/2/2007	5	Parturition	Bad	NEG	NA	6/29/2007	27
+160	Soda	None	No	2/28/2006	5/21/2006	5/22/2006	5	Parturition	Bad	NEG	NA	6/16/2006	25
+250	Alkali	GPS	Yes	2/24/2010	5/7/2010	5/20/2010	2	Parturition	Bad	NEG	NA	6/13/2010	24
+340	Scab	None	No	2/14/2007	6/3/2007	6/4/2007	1	Parturition	Good	NEG	NA	6/28/2007	24
+043	Greys	Prox	No	2/16/2009	7/24/2009	8/2/2009	2	Parturition	Bad	POS	NEG	8/21/2009	19
+395	McNeel	GPS	Yes	1/30/2011	5/3/2011	5/4/2011	1	Parturition	Bad	POS	NEG	5/23/2011	19
+519	Horse	GPS	Yes	2/16/2011	5/24/2011	5/25/2011	1	Parturition	Bad	NEG	NA	6/13/2011	19
+527	Franz	GPS	Yes	3/12/2011	3/13/2011	3/14/2011	2	Abortion	Bad	POS	NEG	4/2/2011	19
+576	Buffalo	VHF	No	1/16/2007	6/2/2007	6/7/2007	5	Parturition	Bad	NEG	NA	6/25/2007	18
+028	Greys	GPS	Yes	2/19/2008	5/11/2008	5/13/2008	2	Parturition	Bad	POS	NEG	5/30/2008	17
+318	Scab	None	No	2/12/2006	5/31/2006	6/15/2006	2	Parturition	Bad	NEG	NA	7/2/2006	17
+339	Scab	None	No	2/14/2007	6/3/2007	6/4/2007	1	Parturition	Good	NEG	NA	6/21/2007	17
+553	Buffalo	GPS	Yes	3/1/2006	6/1/2006	6/6/2006	5	Parturition	Bad	NEG	NA	6/22/2006	16
+555	Buffalo	GPS	Yes	3/1/2006	6/1/2006	6/6/2006	5	Parturition	Bad	NEG	NA	6/22/2006	16
+138	Fall	GPS	Yes	1/28/2009	5/24/2009	5/26/2009	2	Parturition	Bad	NEG	NEG	6/10/2009	15
+139	Fall	GPS	Yes	1/28/2009	5/26/2009	6/2/2009	2	Parturition	Bad	NEG	NEG	6/17/2009	15
+365	Soda	None	No	1/27/2007	5/23/2007	5/26/2007	2	Parturition	Bad	NEG	NEG	6/10/2007	15
+355	Soda	None	No	1/27/2007	6/8/2007	6/14/2007	2	Parturition	Bad	NEG	NA	6/28/2007	14
+357	Soda	None	No	1/27/2007	5/29/2007	5/30/2007	1	Parturition	Good	NEG	NEG	6/13/2007	14
+400	Greys	GPS	Yes	2/3/2011	6/5/2011	6/6/2011	1	Parturition	Good	POS	NEG	6/20/2011	14
+572	Buffalo	GPS	Yes	3/1/2006	6/1/2006	6/6/2006	5	Parturition	Bad	POS	NA	6/20/2006	14
+343	Scab	None	No	2/23/2007	5/30/2007	5/31/2007	1	Parturition	Good	NEG	NEG	6/13/2007	13
+383	Dell	VHF	No	1/15/2011	6/4/2011	6/10/2011	2	Parturition	Bad	POS	NEG	6/23/2011	13
+245	Alkali	GPS	Yes	2/24/2010	7/12/2010	7/17/2010	2	Parturition	Bad	NEG	NEG	7/29/2010	12
+283	Bench	None	No	2/20/2006	5/27/2006	5/31/2006	2	Parturition	Bad	NEG	NA	6/12/2006	12
+290	Bench	None	No	2/14/2006	5/10/2006	6/8/2006	2	Parturition	Bad	NEG	NA	6/20/2006	12
+293	Bench	None	No	2/20/2006	5/26/2006	5/31/2006	5	Parturition	Bad	NEG	NA	6/12/2006	12
+305	Bench	None	No	2/26/2006	5/26/2006	5/31/2006	5	Parturition	Bad	NEG	NA	6/12/2006	12
+346	Scab	None	No	2/26/2007	5/23/2007	6/15/2007	2	Parturition	Bad	NEG	NA	6/27/2007	12
+368	Soda	None	No	1/19/2007	6/15/2007	6/21/2007	2	Parturition	Bad	POS	NA	7/3/2007	12
+545	Buffalo	VHF	No	3/1/2006	3/1/2006	5/23/2006	5	Parturition	Bad	NEG	NA	6/4/2006	12
+662	Alkali	GPS	Yes	2/14/2012	3/15/2012	3/16/2012	2	Abortion	Bad	POS	NEG	3/28/2012	12
+031	Soda	None	No	1/19/2007	6/25/2007	6/26/2007	1	Parturition	Good	NEG	NA	7/7/2007	11
+143	Muddy	GPS	Yes	1/29/2009	5/16/2009	5/17/2009	1	Parturition	Good	NEG	NEG	5/28/2009	11
+288	Bench	None	No	3/14/2006	6/18/2006	6/19/2006	5	Parturition	Bad	POS	NA	6/30/2006	11
+302	Bench	None	No	3/14/2006	5/27/2006	5/28/2006	5	Parturition	Bad	NEG	NA	6/8/2006	11
+307	Bench	None	No	2/26/2006	6/3/2006	6/4/2006	5	Parturition	Bad	NEG	NA	6/15/2006	11
+404	Forest	GPS	Yes	2/5/2011	5/26/2011	5/27/2011	1	Parturition	Good	NEG	NA	6/7/2011	11
+729	Muddy	GPS	Yes	2/21/2013	5/22/2013	6/1/2013	2	Parturition	Bad	NEG	NA	6/12/2013	11
+091	Dell	VHF	No	1/21/2011	5/27/2011	6/13/2011	2	Parturition	Bad	POS	POS	6/23/2011	10
+137	Fall	GPS	Yes	1/28/2009	5/27/2009	5/30/2009	2	Parturition	Bad	NEG	NEG	6/9/2009	10
+349	Scab	None	No	3/1/2007	5/31/2007	6/3/2007	2	Parturition	Bad	NEG	NEG	6/13/2007	10
+535	HA99	VHF	No	3/16/2011	5/27/2011	6/10/2011	2	Parturition	Bad	NEG	NA	6/20/2011	10
+577	Buffalo	VHF	No	1/16/2007	1/16/2007	5/22/2007	5	Parturition	Bad	NEG	NA	6/1/2007	10
+588	Buffalo	VHF	No	1/17/2007	1/17/2007	5/22/2007	5	Parturition	Bad	NEG	NA	6/1/2007	10
+589	Buffalo	VHF	No	1/16/2007	6/2/2007	6/7/2007	5	Parturition	Bad	NEG	NA	6/17/2007	10
+592	Buffalo	VHF	No	1/16/2007	6/2/2007	6/7/2007	5	Parturition	Bad	NEG	NA	6/17/2007	10
+594	Buffalo	GPS	Yes	1/16/2007	6/12/2007	6/14/2007	5	Parturition	Bad	POS	NA	6/24/2007	10
+608	Greys	VHF	No	2/3/2012	6/5/2012	6/11/2012	2	Parturition	Bad	NEG	NA	6/21/2012	10
+732	Fall	GPS	Yes	2/24/2013	5/21/2013	5/26/2013	2	Parturition	Bad	NEG	NA	6/5/2013	10
+740	Fall	GPS	Yes	2/24/2013	6/3/2013	6/10/2013	2	Parturition	Bad	NEG	NA	6/20/2013	10
+751	Patrol	GPS	Yes	2/25/2013	5/26/2013	6/2/2013	2	Parturition	Bad	NEG	NA	6/12/2013	10
+159	Soda	None	No	2/28/2006	5/28/2006	5/29/2006	5	Parturition	Bad	NEG	NEG	6/7/2006	9
+295	Bench	None	No	2/20/2006	6/3/2006	6/4/2006	5	Parturition	Bad	NEG	NA	6/13/2006	9
+306	Bench	None	No	2/26/2006	6/1/2006	6/2/2006	5	Parturition	Bad	NEG	NA	6/11/2006	9
+506	Fall	GPS	Yes	2/9/2011	6/7/2011	6/8/2011	2	Parturition	Good	NEG	NA	6/17/2011	9
+600	Buffalo	VHF	No	1/17/2007	1/17/2007	6/1/2007	5	Parturition	Bad	NEG	NA	6/10/2007	9
+607	Greys	VHF	No	2/3/2012	6/9/2012	6/12/2012	2	Parturition	Bad	NEG	NA	6/21/2012	9
+731	Fall	GPS	Yes	2/24/2013	6/3/2013	6/10/2013	2	Parturition	Bad	NEG	NA	6/19/2013	9
+762	Dell	VHF	No	1/31/2013	5/24/2013	5/25/2013	1	Parturition	Good	POS	NA	6/3/2013	9
+783	Dog	GPS	Yes	2/13/2014	6/3/2014	6/8/2014	2	Parturition	Poor	POS	NA	6/17/2014	9
+019	Bench	None	No	2/7/2006	5/29/2006	5/30/2006	2	Parturition	Bad	NEG	NA	6/7/2006	8
+029	Soda	GPS	Yes	1/31/2014	6/18/2014	6/19/2014	2	Parturition	Excellent	NEG	NA	6/27/2014	8
+051	Soda	None	No	2/21/2006	5/27/2006	5/28/2006	5	Parturition	Bad	NEG	NEG	6/5/2006	8
+061	Bench	None	No	3/7/2007	5/31/2007	6/2/2007	2	Parturition	Bad	NA	NEG	6/10/2007	8
+150	UG	GPS	Yes	2/19/2009	6/6/2009	6/8/2009	2	Parturition	Bad	NEG	NEG	6/16/2009	8
+155	Soda	None	No	2/21/2006	5/25/2006	5/26/2006	5	Parturition	Bad	NEG	NEG	6/3/2006	8
+167	Soda	None	No	3/10/2006	5/31/2006	6/10/2006	5	Parturition	Bad	NEG	NA	6/18/2006	8
+181	Dell	VHF	No	2/16/2010	5/24/2010	5/25/2010	1	Parturition	Good	NEG	NA	6/2/2010	8
+222	HA99	GPS	Yes	1/27/2010	6/7/2010	6/8/2010	1	Parturition	Good	NEG	NA	6/16/2010	8
+309	Scab	None	No	2/12/2006	5/31/2006	6/6/2006	2	Parturition	Bad	NEG	NA	6/14/2006	8
+314	Scab	None	No	2/27/2006	6/15/2006	6/23/2006	2	Parturition	Bad	NEG	NA	7/1/2006	8
+354	Scab	None	No	3/7/2007	5/19/2007	5/20/2007	5	Parturition	Bad	NEG	NEG	5/28/2007	8
+368	Soda	GPS	Yes	3/13/2011	6/7/2011	6/8/2011	1	Parturition	Good	NEG	NA	6/16/2011	8
+403	Forest	GPS	Yes	2/5/2011	5/29/2011	5/30/2011	1	Parturition	Good	POS	NEG	6/7/2011	8
+512	Patrol	GPS	Yes	2/14/2011	6/2/2011	6/6/2011	2	Parturition	Bad	NEG	NA	6/14/2011	8
+522	UG	GPS	Yes	2/25/2011	6/4/2011	6/10/2011	2	Parturition	Bad	NEG	NA	6/18/2011	8
+549	Buffalo	VHF	No	3/1/2006	6/1/2006	6/6/2006	5	Parturition	Bad	NEG	NA	6/14/2006	8
+559	Buffalo	VHF	No	3/1/2006	3/1/2006	5/30/2006	7	Unknown	NA	NEG	NA	6/7/2006	8
+571	Buffalo	VHF	No	3/1/2006	3/1/2006	6/1/2006	5	Parturition	Bad	NEG	NA	6/9/2006	8
+766	Greys	VHF	No	2/16/2013	6/5/2013	6/11/2013	2	Parturition	Bad	NEG	NA	6/19/2013	8
+052	Soda	None	No	3/9/2006	4/2/2006	6/7/2006	5	Parturition	Bad	POS	NEG	6/14/2006	7
+052	Soda	None	No	1/15/2007	5/27/2007	5/28/2007	1	Parturition	Good	POS	NEG	6/4/2007	7
+112	Greys	GPS	Yes	2/6/2009	5/30/2009	5/31/2009	1	Parturition	Good	POS	NEG	6/7/2009	7
+133	Greys	GPS	Yes	2/25/2010	5/30/2010	6/6/2010	2	Parturition	Bad	NEG	NEG	6/13/2010	7
+161	Soda	None	No	2/28/2006	5/29/2006	5/30/2006	5	Parturition	Bad	NEG	NEG	6/6/2006	7
+162	Bench	None	No	3/4/2007	5/31/2007	6/2/2007	2	Parturition	Bad	NEG	NEG	6/9/2007	7
+282	Scab	None	No	1/16/2007	6/5/2007	6/6/2007	1	Parturition	Good	NEG	NEG	6/13/2007	7
+294	Bench	None	No	3/14/2006	5/10/2006	6/9/2006	2	Parturition	Bad	NEG	NA	6/16/2006	7
+317	Scab	None	No	2/12/2006	5/31/2006	6/9/2006	2	Parturition	Bad	NEG	NA	6/16/2006	7
+320	Soda	None	No	2/28/2006	4/25/2006	4/26/2006	4	Abortion	Bad	POS	NEG	5/3/2006	7
+345	Scab	None	No	2/26/2007	6/5/2007	6/6/2007	1	Parturition	Good	NEG	NEG	6/13/2007	7
+372	Soda	None	No	2/11/2007	5/31/2007	6/3/2007	2	Parturition	Bad	NEG	NEG	6/10/2007	7
+382	Dell	VHF	No	1/15/2011	6/10/2011	6/11/2011	1	Parturition	Good	NEG	NEG	6/18/2011	7
+391	Dell	VHF	No	1/21/2011	4/14/2011	4/15/2011	4	Abortion	Bad	NEG	POS	4/22/2011	7
+409	Muddy	GPS	Yes	2/7/2011	5/24/2011	5/25/2011	1	Parturition	Good	NEG	NA	6/1/2011	7
+513	Patrol	GPS	Yes	2/14/2011	6/2/2011	6/6/2011	2	Parturition	Bad	NEG	NA	6/13/2011	7
+675	McNeel	GPS	Yes	2/22/2012	5/23/2012	5/24/2012	1	Parturition	Good	POS	NA	5/31/2012	7
+692	McNeel	GPS	Yes	3/15/2012	6/17/2012	6/18/2012	2	Parturition	Good	NEG	NA	6/25/2012	7
+694	Forest	GPS	Yes	2/9/2013	6/2/2013	6/10/2013	2	Parturition	Bad	NEG	NA	6/17/2013	7
+806	Scab	GPS	Yes	2/22/2014	6/9/2014	6/12/2014	2	Parturition	Fair	NEG	NA	6/19/2014	7
+812	UG	GPS	Yes	2/25/2014	6/19/2014	6/20/2014	2	Parturition	Excellent	NEG	NA	6/27/2014	7
+061	Bench	None	No	2/14/2006	5/10/2006	5/31/2006	2	Parturition	Bad	POS	NEG	6/6/2006	6
+136	Fall	GPS	Yes	1/28/2009	5/30/2009	6/5/2009	2	Parturition	Bad	NEG	NEG	6/11/2009	6
+171	Muddy	GPS	Yes	1/25/2010	5/31/2010	6/1/2010	1	Parturition	Good	NEG	NEG	6/7/2010	6
+174	Muddy	GPS	Yes	1/25/2010	5/19/2010	5/20/2010	1	Parturition	Good	NEG	NEG	5/26/2010	6
+183	Jewett	GPS	Yes	2/9/2010	5/24/2010	5/25/2010	1	Parturition	Good	NEG	NEG	5/31/2010	6
+257	Dell	VHF	No	2/23/2010	5/21/2010	5/25/2010	5	Parturition	Bad	NEG	NEG	5/31/2010	6
+284	Bench	None	No	2/20/2006	5/27/2006	5/28/2006	1	Parturition	Bad	POS	NA	6/3/2006	6
+313	Scab	None	No	2/27/2006	5/31/2006	6/6/2006	2	Parturition	Bad	POS	NA	6/12/2006	6
+316	Scab	None	No	2/27/2006	5/20/2006	6/9/2006	2	Parturition	Bad	NEG	NA	6/15/2006	6
+319	Scab	None	No	2/27/2006	5/31/2006	6/23/2006	2	Parturition	Bad	NEG	NA	6/29/2006	6
+327	Scab	None	No	1/5/2007	6/6/2007	6/7/2007	1	Parturition	Good	NEG	NEG	6/13/2007	6
+333	Scab	None	No	1/16/2007	6/10/2007	6/11/2007	1	Parturition	Bad	POS	NEG	6/17/2007	6
+342	Scab	None	No	2/20/2007	6/5/2007	6/6/2007	1	Parturition	Good	NEG	NEG	6/12/2007	6
+366	Soda	None	No	1/15/2007	5/26/2007	5/27/2007	5	Parturition	Bad	NEG	NEG	6/2/2007	6
+371	Soda	None	No	2/11/2007	5/22/2007	5/23/2007	5	Parturition	Bad	NEG	NEG	5/29/2007	6
+381	Franz	GPS	Yes	3/11/2009	5/30/2009	6/1/2009	2	Parturition	Bad	POS	NEG	6/7/2009	6
+393	McNeel	GPS	Yes	1/30/2011	4/8/2011	4/10/2011	2	Abortion	Bad	POS	NEG	4/16/2011	6
+407	Muddy	GPS	Yes	2/7/2011	5/24/2011	5/25/2011	1	Parturition	Good	POS	NEG	5/31/2011	6
+547	Buffalo	VHF	No	3/1/2006	6/1/2006	6/11/2006	5	Unknown	NA	NEG	NA	6/17/2006	6
+563	Buffalo	VHF	No	3/1/2006	3/1/2006	5/22/2006	5	Parturition	Bad	POS	NA	5/28/2006	6
+568	Buffalo	GPS	Yes	3/1/2006	3/1/2006	6/7/2006	5	Parturition	Bad	POS	NA	6/13/2006	6
+691	McNeel	GPS	Yes	3/15/2012	5/23/2012	5/24/2012	5	Parturition	Bad	POS	NA	5/30/2012	6
+723	Muddy	GPS	Yes	2/21/2013	6/12/2013	6/13/2013	1	Parturition	Good	NEG	NA	6/19/2013	6
+737	Fall	GPS	Yes	2/24/2013	7/2/2013	7/9/2013	2	Parturition	Bad	NEG	NA	7/15/2013	6
+793	Muddy	VHF	No	2/16/2014	6/9/2014	6/13/2014	2	Parturition	Fair	NEG	NA	6/19/2014	6
+804	Scab	GPS	Yes	2/22/2014	6/25/2014	7/1/2014	2	Parturition	Fair	NEG	NA	7/7/2014	6
+006	Dell	VHF	No	1/18/2008	6/15/2008	6/20/2008	2	Parturition	Bad	NEG	NEG	6/25/2008	5
+032	Soda	None	No	3/9/2006	6/15/2006	6/19/2006	5	Parturition	Bad	NEG	POS	6/24/2006	5
+041	Scab	None	No	2/12/2006	5/25/2006	5/31/2006	2	Parturition	Bad	NEG	NA	6/5/2006	5
+041	Scab	VHF	No	2/23/2008	5/25/2008	5/27/2008	5	Parturition	Bad	NEG	NEG	6/1/2008	5
+054	Bench	GPS	Yes	2/18/2007	3/7/2007	3/15/2007	2	Abortion	Bad	POS	NA	3/20/2007	5
+075	Soda	Prox	No	2/28/2006	3/3/2006	3/4/2006	2	Abortion	Bad	POS	NA	3/9/2006	5
+094	Dell	GPS	Yes	1/14/2009	5/27/2009	5/28/2009	2	Parturition	Good	NEG	NEG	6/2/2009	5
+106	Finnegan	GPS	Yes	1/9/2009	5/19/2009	5/21/2009	2	Parturition	Bad	NEG	NEG	5/26/2009	5
+147	South	GPS	Yes	2/3/2009	6/1/2009	6/2/2009	1	Parturition	Bad	POS	NEG	6/7/2009	5
+166	Soda	None	No	3/10/2006	5/31/2006	6/7/2006	5	Parturition	Bad	NEG	NA	6/12/2006	5
+174	Muddy	VHF	No	2/21/2011	5/27/2011	6/1/2011	2	Parturition	Good	NEG	NA	6/6/2011	5
+177	Dell	VHF	No	2/16/2010	5/27/2010	5/28/2010	5	Parturition	Bad	NEG	NEG	6/2/2010	5
+186	Jewett	GPS	Yes	2/9/2010	5/25/2010	5/26/2010	1	Parturition	Bad	NEG	NEG	5/31/2010	5
+192	South	GPS	Yes	2/17/2010	5/26/2010	5/27/2010	1	Parturition	Good	NEG	NEG	6/1/2010	5
+202	HA99	GPS	Yes	1/27/2010	5/30/2010	5/31/2010	1	Parturition	Good	POS	NEG	6/5/2010	5
+204	Spring	GPS	Yes	1/28/2010	6/8/2010	6/9/2010	1	Parturition	Good	NEG	NA	6/14/2010	5
+212	HA99	GPS	Yes	1/27/2010	5/7/2010	5/22/2010	2	Parturition	Bad	NEG	NA	5/27/2010	5
+213	HA99	GPS	Yes	3/15/2011	5/31/2011	6/1/2011	1	Parturition	Good	NEG	NA	6/6/2011	5
+220	HA99	GPS	Yes	1/27/2010	1/27/2010	5/23/2010	5	Parturition	Bad	NEG	NA	5/28/2010	5
+220	HA99	GPS	Yes	3/15/2011	6/28/2011	7/12/2011	2	Parturition	Bad	NEG	NA	7/17/2011	5
+223	Spring	GPS	Yes	1/28/2010	6/16/2010	6/20/2010	2	Parturition	Bad	NEG	NA	6/25/2010	5
+224	HA99	GPS	Yes	1/26/2010	5/30/2010	5/31/2010	1	Parturition	Good	NEG	NA	6/5/2010	5
+229	HA99	GPS	Yes	1/27/2010	5/17/2010	5/21/2010	2	Parturition	Bad	NEG	NEG	5/26/2010	5
+281	Bench	None	No	2/7/2006	5/31/2006	6/8/2006	5	Parturition	Bad	NEG	NA	6/13/2006	5
+329	Scab	None	No	1/5/2007	6/8/2007	6/15/2007	2	Parturition	Bad	NEG	NEG	6/20/2007	5
+351	Scab	None	No	3/1/2007	6/10/2007	6/11/2007	1	Parturition	Bad	NEG	NEG	6/16/2007	5
+358	Soda	None	No	1/27/2007	2/27/2007	2/28/2007	2	Abortion	Bad	POS	NEG	3/5/2007	5
+390	Dell	VHF	No	2/7/2012	5/4/2012	5/5/2012	1	Abortion	Good	POS	NEG	5/10/2012	5
+514	Patrol	GPS	Yes	2/14/2011	6/6/2011	6/8/2011	2	Parturition	Bad	NEG	NA	6/13/2011	5
+534	HA99	GPS	Yes	3/15/2011	5/22/2011	5/27/2011	2	Parturition	Bad	NEG	NA	6/1/2011	5
+590	Buffalo	VHF	No	1/16/2007	3/1/2007	5/27/2007	7	Unknown	NA	NEG	NA	6/1/2007	5
+599	Buffalo	VHF	No	1/17/2007	6/2/2007	6/12/2007	5	Parturition	Bad	NEG	NEG	6/17/2007	5
+654	Black	GPS	Yes	2/16/2012	5/23/2012	5/24/2012	1	Parturition	Good	NEG	NA	5/29/2012	5
+667	Alkali	GPS	Yes	2/15/2012	5/23/2012	5/24/2012	1	Parturition	Good	NEG	NA	5/29/2012	5
+673	Horse	GPS	Yes	2/16/2012	6/5/2012	6/7/2012	2	Parturition	Bad	NEG	NA	6/12/2012	5
+679	Jewett	GPS	Yes	3/5/2012	6/11/2012	6/13/2012	2	Parturition	Bad	NEG	NA	6/18/2012	5
+680	Jewett	GPS	Yes	3/5/2012	5/24/2012	5/25/2012	1	Parturition	Good	NEG	NA	5/30/2012	5
+715	Jewett	GPS	Yes	2/19/2013	5/28/2013	5/29/2013	1	Parturition	Good	NEG	NA	6/3/2013	5
+719	Jewett	GPS	Yes	2/19/2013	5/28/2013	5/29/2013	1	Parturition	Good	POS	NEG	6/3/2013	5
+726	Muddy	GPS	Yes	2/21/2013	6/13/2013	6/14/2013	1	Parturition	Good	NEG	NA	6/19/2013	5
+743	Patrol	GPS	Yes	2/25/2013	5/28/2013	5/29/2013	1	Parturition	Good	NEG	NA	6/3/2013	5
+007	Dell	GPS	Yes	1/25/2008	5/22/2008	5/23/2008	1	Parturition	Good	POS	NEG	5/27/2008	4
+017	Bench	GPS	Yes	2/18/2008	5/24/2008	5/25/2008	1	Parturition	Bad	NEG	NEG	5/29/2008	4
+044	Greys	VHF	No	2/25/2008	5/26/2008	5/27/2008	1	Parturition	Good	NEG	NEG	5/31/2008	4
+085	Soda	None	No	3/9/2006	5/31/2006	6/13/2006	5	Parturition	Bad	NEG	POS	6/17/2006	4
+093	Dell	VHF	No	1/14/2009	5/27/2009	5/29/2009	2	Parturition	Bad	POS	NEG	6/2/2009	4
+093	Dell	VHF	No	1/15/2011	5/14/2011	5/15/2011	1	Parturition	Good	POS	NEG	5/19/2011	4
+142	Muddy	GPS	Yes	1/29/2009	6/8/2009	6/9/2009	1	Parturition	Good	NEG	NEG	6/13/2009	4
+146	South	GPS	Yes	2/3/2009	6/1/2009	6/2/2009	1	Parturition	Bad	NEG	NEG	6/6/2009	4
+153	Franz	GPS	Yes	3/11/2009	7/6/2009	7/9/2009	2	Abortion	Bad	POS	NEG	7/13/2009	4
+172	Muddy	GPS	Yes	1/25/2010	6/10/2010	6/11/2010	1	Parturition	Good	NEG	NA	6/15/2010	4
+173	Muddy	GPS	Yes	1/25/2010	6/10/2010	6/11/2010	1	Parturition	Good	NEG	NA	6/15/2010	4
+179	Dell	VHF	No	2/16/2010	4/3/2010	4/4/2010	1	Abortion	Good	POS	POS	4/8/2010	4
+180	Dell	VHF	No	2/16/2010	5/16/2010	5/17/2010	1	Parturition	Good	NEG	NA	5/21/2010	4
+195	HA99	GPS	Yes	3/15/2011	6/2/2011	6/3/2011	1	Parturition	Bad	NEG	NA	6/7/2011	4
+201	UGNWR	GPS	Yes	1/26/2010	6/10/2010	6/20/2010	2	Parturition	Bad	NEG	NA	6/24/2010	4
+209	Spring	GPS	Yes	1/28/2010	5/27/2010	5/28/2010	1	Parturition	Good	NEG	NA	6/1/2010	4
+226	HA99	GPS	Yes	3/15/2011	6/2/2011	6/3/2011	1	Parturition	Bad	NEG	NA	6/7/2011	4
+248	Alkali	GPS	Yes	2/24/2010	5/28/2010	5/29/2010	1	Parturition	Bad	NEG	NEG	6/2/2010	4
+255	Franz	GPS	Yes	3/2/2010	5/27/2010	5/28/2010	5	Parturition	Bad	NEG	NEG	6/1/2010	4
+297	Bench	None	No	2/7/2006	5/31/2006	6/1/2006	5	Parturition	Bad	NEG	NA	6/5/2006	4
+298	Bench	None	No	2/20/2006	5/10/2006	5/18/2006	2	Parturition	Bad	NEG	NEG	5/22/2006	4
+300	Bench	None	No	3/14/2006	5/30/2006	5/31/2006	5	Parturition	Bad	NEG	NA	6/4/2006	4
+304	Bench	None	No	2/26/2006	5/17/2006	5/18/2006	5	Parturition	Bad	NEG	NEG	5/22/2006	4
+385	Dell	VHF	No	1/15/2011	5/22/2011	5/23/2011	5	Parturition	Bad	POS	NEG	5/27/2011	4
+398	Greys	VHF	No	2/3/2011	5/24/2011	5/25/2011	1	Abortion	Good	NEG	NEG	5/29/2011	4
+410	Muddy	GPS	Yes	2/7/2011	5/28/2011	6/3/2011	2	Parturition	Bad	NEG	NA	6/7/2011	4
+520	Fall	GPS	Yes	2/19/2011	6/7/2011	6/8/2011	1	Parturition	Good	NEG	NA	6/12/2011	4
+525	Jewett	GPS	Yes	3/3/2011	6/4/2011	6/10/2011	2	Parturition	Bad	NEG	NA	6/14/2011	4
+532	McNeel	GPS	Yes	3/13/2011	5/26/2011	5/27/2011	1	Parturition	Good	POS	NEG	5/31/2011	4
+546	Buffalo	GPS	Yes	3/1/2006	3/1/2006	6/1/2006	5	Parturition	Bad	NEG	NA	6/5/2006	4
+650	Dell	VHF	No	2/7/2012	5/25/2012	5/26/2012	1	Parturition	Good	POS	NA	5/30/2012	4
+657	Black	GPS	Yes	2/16/2012	6/7/2012	6/8/2012	1	Parturition	Good	NEG	NA	6/12/2012	4
+664	Alkali	GPS	Yes	2/14/2012	5/28/2012	6/9/2012	2	Parturition	Bad	NEG	NA	6/13/2012	4
+666	Alkali	GPS	Yes	2/15/2012	6/4/2012	6/8/2012	2	Parturition	Bad	NEG	NA	6/12/2012	4
+716	Jewett	GPS	Yes	2/19/2013	6/21/2013	6/22/2013	1	Parturition	Good	NEG	NA	6/26/2013	4
+747	Patrol	GPS	Yes	2/25/2013	5/22/2013	5/25/2013	2	Parturition	Bad	POS	POS	5/29/2013	4
+786	Dog	GPS	Yes	2/13/2014	6/20/2014	6/23/2014	2	Parturition	Fair	POS	NA	6/27/2014	4
+800	Scab	GPS	Yes	2/22/2014	6/23/2014	6/24/2014	2	Parturition	Excellent	POS	NA	6/28/2014	4
+809	Scab	GPS	Yes	2/22/2014	6/7/2014	6/8/2014	2	Parturition	Excellent	NEG	NA	6/12/2014	4
+005	Dell	VHF	No	1/18/2008	5/23/2008	5/24/2008	5	Parturition	Bad	NEG	NEG	5/27/2008	3
+022	Greys	VHF	No	2/19/2008	5/27/2008	5/28/2008	1	Parturition	Bad	NEG	NEG	5/31/2008	3
+033	Soda	None	No	1/19/2007	5/12/2007	5/13/2007	5	Abortion	Bad	NEG	NA	5/16/2007	3
+050	Soda	None	No	1/19/2007	5/26/2007	5/27/2007	5	Parturition	Bad	NEG	NEG	5/30/2007	3
+075	Soda	VHF	No	1/22/2011	6/4/2011	6/10/2011	2	Parturition	Bad	POS	NEG	6/13/2011	3
+085	Soda	GPS	Yes	1/15/2009	5/25/2009	5/26/2009	2	Parturition	Bad	POS	NEG	5/29/2009	3
+090	Soda	VHF	No	1/20/2011	6/28/2011	7/12/2011	5	Parturition	Bad	POS	NA	7/15/2011	3
+092	Dell	GPS	Yes	1/14/2009	5/23/2009	5/24/2009	1	Parturition	Good	NEG	NEG	5/27/2009	3
+099	Finnegan	GPS	Yes	1/9/2009	5/24/2009	5/25/2009	2	Parturition	Good	NEG	NEG	5/28/2009	3
+112	Greys	GPS	Yes	1/21/2010	6/5/2010	6/6/2010	1	Parturition	Good	POS	NEG	6/9/2010	3
+149	UG	GPS	Yes	2/19/2009	6/5/2009	6/9/2009	2	Parturition	Bad	NEG	NA	6/12/2009	3
+151	UG	GPS	Yes	2/19/2009	5/29/2009	5/30/2009	1	Parturition	Good	POS	NEG	6/2/2009	3
+158	Soda	None	No	2/28/2006	5/24/2006	5/25/2006	5	Parturition	Bad	NEG	NA	5/28/2006	3
+165	Soda	None	No	3/9/2006	5/31/2006	6/8/2006	5	Parturition	Bad	NEG	NA	6/11/2006	3
+170	Greys	GPS	Yes	1/21/2010	6/22/2010	6/26/2010	2	Parturition	Bad	NEG	NA	6/29/2010	3
+195	HA99	GPS	Yes	1/27/2010	5/23/2010	5/24/2010	1	Parturition	Bad	NEG	NA	5/27/2010	3
+200	UGNWR	GPS	Yes	1/26/2010	5/30/2010	5/31/2010	1	Parturition	Good	NEG	NA	6/3/2010	3
+206	UGNWR	GPS	Yes	1/26/2010	5/28/2010	5/29/2010	1	Parturition	Good	NEG	NEG	6/1/2010	3
+206	UG	GPS	Yes	2/25/2011	6/21/2011	6/28/2011	2	Parturition	Bad	NEG	NA	7/1/2011	3
+216	Spring	GPS	Yes	1/28/2010	5/7/2010	5/25/2010	2	Parturition	Bad	NEG	NEG	5/28/2010	3
+219	Spring	GPS	Yes	1/28/2010	5/7/2010	5/25/2010	2	Parturition	Bad	NEG	NEG	5/28/2010	3
+221	UGNWR	GPS	Yes	1/26/2010	6/7/2010	6/8/2010	1	Parturition	Good	NEG	NA	6/11/2010	3
+251	Dog	GPS	Yes	3/1/2010	5/22/2010	5/23/2010	2	Parturition	Bad	POS	NEG	5/26/2010	3
+254	Franz	GPS	Yes	3/2/2010	6/1/2010	6/2/2010	1	Parturition	Good	POS	POS	6/5/2010	3
+256	Finnegan	GPS	Yes	3/22/2010	6/1/2010	6/2/2010	1	Parturition	Good	NEG	NEG	6/5/2010	3
+287	Bench	None	No	2/26/2006	6/9/2006	6/23/2006	5	Parturition	Bad	NEG	NA	6/26/2006	3
+299	Bench	None	No	2/24/2006	5/23/2006	5/24/2006	5	Parturition	Bad	NEG	NA	5/27/2006	3
+308	Bench	None	No	2/26/2006	5/20/2006	5/21/2006	5	Parturition	Bad	NEG	NA	5/24/2006	3
+311	Scab	None	No	2/27/2006	5/10/2006	5/30/2006	2	Parturition	Bad	NEG	NA	6/2/2006	3
+338	Scab	None	No	1/23/2007	5/20/2007	5/21/2007	5	Parturition	Bad	NEG	NEG	5/24/2007	3
+356	Soda	None	No	1/27/2007	6/5/2007	6/6/2007	1	Parturition	Good	NEG	NEG	6/9/2007	3
+379	Bench	None	No	2/9/2007	4/26/2007	4/27/2007	2	Abortion	Bad	POS	NA	4/30/2007	3
+384	Dell	VHF	No	1/15/2011	5/19/2011	5/20/2011	1	Parturition	Good	POS	NEG	5/23/2011	3
+399	Greys	GPS	Yes	2/3/2011	6/4/2011	6/6/2011	2	Parturition	Bad	POS	NEG	6/9/2011	3
+401	Greys	GPS	Yes	2/3/2011	7/15/2011	7/16/2011	1	Parturition	Good	POS	NA	7/19/2011	3
+402	Forest	GPS	Yes	2/5/2011	6/3/2011	6/4/2011	1	Parturition	Good	NEG	NA	6/7/2011	3
+408	Muddy	GPS	Yes	2/7/2011	6/2/2011	6/3/2011	1	Parturition	Good	NEG	NA	6/6/2011	3
+492	Fall	GPS	Yes	2/9/2011	5/27/2011	6/4/2011	2	Parturition	Bad	NEG	NA	6/7/2011	3
+524	UG	GPS	Yes	2/25/2011	6/4/2011	6/10/2011	2	Parturition	Bad	NEG	NA	6/13/2011	3
+537	HA99	GPS	Yes	3/16/2011	6/28/2011	7/12/2011	2	Parturition	Bad	NEG	NEG	7/15/2011	3
+538	HA99	None	No	3/16/2011	6/12/2011	6/13/2011	1	Parturition	Good	NEG	NA	6/16/2011	3
+554	Buffalo	VHF	No	3/1/2006	3/1/2006	6/5/2006	5	Parturition	Bad	NEG	NA	6/8/2006	3
+562	Buffalo	GPS	Yes	3/1/2006	3/1/2006	5/22/2006	5	Parturition	Bad	NEG	NA	5/25/2006	3
+570	Buffalo	GPS	Yes	3/1/2006	3/1/2006	5/19/2006	5	Parturition	Bad	NEG	NA	5/22/2006	3
+603	Greys	VHF	No	2/3/2012	6/9/2012	6/19/2012	2	Parturition	Bad	NEG	NA	6/22/2012	3
+604	Greys	VHF	No	2/3/2012	2/13/2012	2/14/2012	1	Abortion	Good	NEG	NEG	2/17/2012	3
+605	Greys	VHF	No	2/3/2012	6/1/2012	6/2/2012	1	Parturition	Good	POS	NA	6/5/2012	3
+646	Dell	VHF	No	2/7/2012	5/15/2012	5/20/2012	2	Parturition	Bad	POS	NA	5/23/2012	3
+647	Dell	VHF	No	2/7/2012	6/8/2012	6/9/2012	2	Parturition	Good	POS	NA	6/12/2012	3
+651	Dell	VHF	No	2/7/2012	6/29/2012	6/30/2012	1	Parturition	Good	POS	NA	7/3/2012	3
+653	Dell	VHF	No	2/7/2012	5/26/2012	5/27/2012	1	Parturition	Good	POS	NA	5/30/2012	3
+663	Alkali	GPS	Yes	2/14/2012	6/5/2012	6/11/2012	2	Parturition	Bad	NEG	NEG	6/14/2012	3
+668	Alkali	GPS	Yes	2/15/2012	5/28/2012	6/4/2012	2	Parturition	Bad	NEG	NA	6/7/2012	3
+670	Horse	GPS	Yes	2/16/2012	6/5/2012	6/19/2012	2	Parturition	Bad	POS	NA	6/22/2012	3
+682	Jewett	GPS	Yes	3/5/2012	5/26/2012	5/27/2012	1	Parturition	Good	POS	NA	5/30/2012	3
+695	Forest	GPS	Yes	2/9/2013	5/28/2013	6/1/2013	2	Parturition	Bad	NEG	NA	6/4/2013	3
+705	Black	GPS	Yes	2/17/2013	5/24/2013	5/25/2013	1	Parturition	Good	NEG	NA	5/28/2013	3
+741	Patrol	GPS	Yes	2/25/2013	5/26/2013	6/2/2013	2	Parturition	Bad	NEG	NA	6/5/2013	3
+750	Patrol	GPS	Yes	2/25/2013	6/8/2013	6/9/2013	1	Parturition	Good	NEG	NA	6/12/2013	3
+755	Camp	GPS	Yes	3/5/2013	6/2/2013	6/16/2013	2	Abortion	Bad	NEG	NEG	6/19/2013	3
+756	Camp	GPS	Yes	3/5/2013	5/26/2013	6/2/2013	2	Parturition	Bad	NEG	NA	6/5/2013	3
+756	South	GPS	Yes	2/1/2014	5/16/2014	5/18/2014	2	Parturition	Good	NEG	NA	5/21/2014	3
+763	Dell	VHF	No	1/31/2013	5/19/2013	5/20/2013	1	Parturition	Good	POS	NEG	5/23/2013	3
+774	Black	GPS	Yes	2/4/2014	6/2/2014	6/3/2014	1	Parturition	Excellent	NEG	NA	6/6/2014	3
+777	Bench	GPS	Yes	2/9/2014	6/11/2014	6/12/2014	2	Parturition	Excellent	NEG	NA	6/15/2014	3
+797	Finnegan	GPS	Yes	2/19/2014	6/9/2014	6/14/2014	2	Parturition	Poor	NEG	NA	6/17/2014	3
+001	Dell	VHF	No	1/18/2008	5/28/2008	5/29/2008	2	Parturition	Good	NEG	NEG	5/31/2008	2
+002	Dell	VHF	No	1/18/2008	6/15/2008	6/20/2008	2	Parturition	Bad	POS	NEG	6/22/2008	2
+003	Dell	VHF	No	1/18/2008	5/31/2008	6/4/2008	2	Parturition	Bad	POS	NEG	6/6/2008	2
+020	Bench	GPS	Yes	2/18/2008	5/28/2008	5/29/2008	1	Parturition	Bad	NEG	NEG	5/31/2008	2
+024	Greys	GPS	Yes	2/19/2008	6/1/2008	6/2/2008	1	Parturition	Good	NEG	NEG	6/4/2008	2
+026	Greys	GPS	Yes	2/19/2008	5/25/2008	5/26/2008	1	Parturition	Bad	POS	NEG	5/28/2008	2
+026	Greys	GPS	Yes	1/21/2010	6/1/2010	6/2/2010	1	Parturition	Good	POS	NEG	6/4/2010	2
+027	Greys	GPS	Yes	2/19/2008	6/13/2008	6/14/2008	1	Parturition	Bad	NEG	NEG	6/16/2008	2
+029	Soda	VHF	No	3/13/2011	6/5/2011	6/6/2011	1	Parturition	Good	NEG	NA	6/8/2011	2
+032	Soda	GPS	Yes	2/20/2008	5/28/2008	5/29/2008	1	Parturition	Bad	POS	NEG	5/31/2008	2
+068	Soda	VHF	No	3/13/2011	5/27/2011	6/4/2011	2	Parturition	Bad	NEG	NA	6/6/2011	2
+085	Soda	GPS	Yes	3/13/2011	5/27/2011	6/4/2011	2	Parturition	Bad	POS	NA	6/6/2011	2
+089	Soda	None	No	2/21/2006	5/31/2006	6/8/2006	5	Parturition	Bad	NEG	NA	6/10/2006	2
+090	Soda	GPS	Yes	1/12/2009	5/11/2009	5/26/2009	2	Parturition	Bad	POS	NEG	5/28/2009	2
+093	Dell	VHF	No	2/23/2010	5/28/2010	5/29/2010	1	Parturition	Good	POS	NEG	5/31/2010	2
+100	Finnegan	GPS	Yes	1/9/2009	5/28/2009	5/29/2009	2	Parturition	Good	POS	NEG	5/31/2009	2
+101	Finnegan	GPS	Yes	1/9/2009	6/9/2009	6/15/2009	2	Parturition	Bad	NEG	NEG	6/17/2009	2
+102	Finnegan	GPS	Yes	1/9/2009	5/11/2009	5/26/2009	2	Parturition	Bad	NEG	NEG	5/28/2009	2
+103	Finnegan	GPS	Yes	1/9/2009	5/26/2009	5/30/2009	2	Parturition	Bad	NEG	NEG	6/1/2009	2
+141	Muddy	GPS	Yes	1/29/2009	5/24/2009	5/25/2009	2	Parturition	Bad	NEG	NEG	5/27/2009	2
+144	South	GPS	Yes	2/3/2009	5/11/2009	5/30/2009	2	Parturition	Bad	POS	NEG	6/1/2009	2
+156	Soda	None	No	2/21/2006	5/24/2006	5/25/2006	5	Parturition	Bad	NEG	POS	5/27/2006	2
+163	Soda	None	No	3/9/2006	5/25/2006	5/26/2006	5	Parturition	Bad	NEG	NA	5/28/2006	2
+191	South	GPS	Yes	2/17/2010	5/31/2010	6/1/2010	1	Parturition	Good	POS	NEG	6/3/2010	2
+215	HA99	GPS	Yes	1/26/2010	6/15/2010	6/21/2010	2	Parturition	Bad	NEG	NEG	6/23/2010	2
+228	Spring	GPS	Yes	1/28/2010	5/29/2010	5/30/2010	1	Parturition	Good	NEG	NA	6/1/2010	2
+289	Bench	None	No	2/7/2006	5/31/2006	6/1/2006	5	Parturition	Bad	NEG	NA	6/3/2006	2
+303	Bench	None	No	2/7/2006	2/16/2006	2/17/2006	2	Abortion	Bad	NEG	NA	2/19/2006	2
+334	Scab	None	No	1/23/2007	6/29/2007	6/30/2007	5	Parturition	Bad	NEG	NA	7/2/2007	2
+362	Soda	None	No	1/27/2007	6/7/2007	6/8/2007	1	Parturition	Good	NEG	NEG	6/10/2007	2
+367	Soda	None	No	1/19/2007	5/21/2007	5/22/2007	5	Parturition	Bad	NEG	NEG	5/24/2007	2
+387	Dell	VHF	No	1/21/2011	5/17/2011	5/18/2011	1	Parturition	Good	POS	NEG	5/20/2011	2
+390	Dell	VHF	No	1/21/2011	4/6/2011	4/7/2011	1	Abortion	Good	POS	POS	4/9/2011	2
+392	Dell	VHF	No	1/21/2011	5/1/2011	5/2/2011	1	Abortion	Good	POS	POS	5/4/2011	2
+394	McNeel	GPS	Yes	1/30/2011	5/20/2011	5/21/2011	1	Parturition	Good	POS	NEG	5/23/2011	2
+396	McNeel	GPS	Yes	1/30/2011	6/20/2011	6/21/2011	1	Parturition	Good	NEG	NEG	6/23/2011	2
+397	Greys	GPS	Yes	2/3/2011	5/31/2011	6/1/2011	1	Parturition	Good	POS	NEG	6/3/2011	2
+461	HA99	Prox	No	1/29/2011	6/10/2011	6/14/2011	2	Parturition	Bad	NEG	NA	6/16/2011	2
+493	Fall	GPS	Yes	2/9/2011	6/11/2011	6/13/2011	2	Parturition	Bad	NEG	NA	6/15/2011	2
+517	Horse	GPS	Yes	2/16/2011	5/27/2011	5/28/2011	2	Abortion	Bad	POS	NEG	5/30/2011	2
+536	HA99	GPS	Yes	3/16/2011	6/7/2011	6/8/2011	1	Parturition	Good	NEG	NA	6/10/2011	2
+543	Forest	GPS	Yes	2/1/2012	6/12/2012	6/19/2012	2	Parturition	Bad	POS	NA	6/21/2012	2
+544	Forest	GPS	Yes	2/1/2012	6/2/2012	6/3/2012	1	Parturition	Good	POS	NA	6/5/2012	2
+551	Buffalo	GPS	Yes	3/1/2006	3/1/2006	5/24/2006	5	Parturition	Bad	NEG	NA	5/26/2006	2
+564	Buffalo	GPS	Yes	3/1/2006	3/1/2006	5/23/2006	5	Parturition	Bad	NEG	NA	5/25/2006	2
+573	Buffalo	GPS	Yes	3/1/2006	3/1/2006	5/17/2006	5	Parturition	Bad	POS	NEG	5/19/2006	2
+582	Buffalo	VHF	No	1/16/2007	1/16/2007	5/22/2007	5	Parturition	Bad	NEG	NA	5/24/2007	2
+598	Buffalo	VHF	No	1/17/2007	6/12/2007	6/27/2007	5	Parturition	Bad	NEG	NEG	6/29/2007	2
+648	Dell	VHF	No	2/7/2012	6/20/2012	6/25/2012	2	Parturition	Bad	POS	NA	6/27/2012	2
+660	McNeel	GPS	Yes	2/17/2012	6/21/2012	6/24/2012	2	Parturition	Bad	POS	NA	6/26/2012	2
+661	Alkali	GPS	Yes	2/14/2012	6/4/2012	6/13/2012	2	Parturition	Bad	NEG	NA	6/15/2012	2
+677	Jewett	GPS	Yes	3/5/2012	6/20/2012	6/24/2012	2	Parturition	Bad	NEG	NA	6/26/2012	2
+681	Jewett	GPS	Yes	3/5/2012	6/21/2012	6/24/2012	2	Parturition	Bad	NEG	NA	6/26/2012	2
+683	Jewett	GPS	Yes	3/5/2012	5/27/2012	5/28/2012	1	Parturition	Good	POS	NA	5/30/2012	2
+690	McNeel	GPS	Yes	3/15/2012	6/2/2012	6/3/2012	1	Parturition	Good	POS	NA	6/5/2012	2
+698	Forest	GPS	Yes	2/15/2013	5/17/2013	5/18/2013	1	Abortion	Good	NEG	POS	5/20/2013	2
+701	Forest	GPS	Yes	2/15/2013	6/3/2013	6/4/2013	2	Parturition	Good	POS	NA	6/6/2013	2
+704	Black	GPS	Yes	2/17/2013	6/11/2013	6/16/2013	2	Parturition	Bad	NEG	NA	6/18/2013	2
+707	McNeel	VHF	No	2/17/2013	5/31/2013	6/1/2013	1	Parturition	Good	NEG	NEG	6/3/2013	2
+722	Jewett	GPS	Yes	2/19/2013	5/21/2013	6/2/2013	2	Parturition	Bad	NEG	NA	6/4/2013	2
+725	Muddy	GPS	Yes	2/21/2013	6/16/2013	6/25/2013	2	Parturition	Bad	NEG	NA	6/27/2013	2
+730	Muddy	GPS	Yes	2/21/2013	6/3/2013	6/10/2013	2	Parturition	Bad	NEG	NA	6/12/2013	2
+734	Fall	GPS	Yes	2/24/2013	6/2/2013	6/10/2013	2	Parturition	Bad	NEG	NA	6/12/2013	2
+752	Patrol	GPS	Yes	2/25/2013	5/24/2013	5/25/2013	1	Parturition	Good	POS	NEG	5/27/2013	2
+764	Dell	VHF	No	1/31/2013	6/3/2013	6/4/2013	1	Parturition	Good	POS	POS	6/6/2013	2
+765	Dell	VHF	No	1/31/2013	6/3/2013	6/4/2013	1	Parturition	Good	POS	POS	6/6/2013	2
+767	Greys	VHF	No	2/16/2013	6/5/2013	6/16/2013	2	Parturition	Bad	NEG	NA	6/18/2013	2
+770	Soda	GPS	Yes	1/31/2014	5/29/2014	6/2/2014	2	Parturition	Poor	NEG	NA	6/4/2014	2
+771	Franz	GPS	Yes	2/2/2014	6/3/2014	6/8/2014	2	Parturition	Poor	POS	NA	6/10/2014	2
+776	Black	GPS	Yes	2/4/2014	5/24/2014	5/28/2014	2	Parturition	None	NEG	NA	5/30/2014	2
+780	Bench	GPS	Yes	2/11/2014	6/12/2014	6/13/2014	2	Parturition	Excellent	NEG	NA	6/15/2014	2
+785	Dog	GPS	Yes	2/13/2014	5/29/2014	6/2/2014	2	Parturition	Poor	NEG	NA	6/4/2014	2
+789	Muddy	VHF	No	2/16/2014	5/29/2014	6/2/2014	2	Parturition	Fair	NEG	NA	6/4/2014	2
+811	UG	GPS	Yes	2/25/2014	6/9/2014	6/14/2014	2	Parturition	Poor	NEG	NA	6/16/2014	2
+813	UG	GPS	Yes	2/25/2014	6/1/2014	6/2/2014	2	Parturition	Excellent	POS	NA	6/4/2014	2
+018	Bench	GPS	Yes	2/18/2008	5/27/2008	5/28/2008	1	Parturition	Good	NEG	NEG	5/29/2008	1
+019	Bench	GPS	Yes	2/18/2008	5/30/2008	6/5/2008	2	Parturition	Bad	NEG	NEG	6/6/2008	1
+021	Greys	VHF	No	2/19/2008	6/18/2008	6/21/2008	2	Parturition	Bad	NEG	NEG	6/22/2008	1
+022	Greys	VHF	No	2/16/2009	6/6/2009	6/7/2009	1	Parturition	Good	NEG	NEG	6/8/2009	1
+025	Greys	VHF	No	2/19/2008	6/16/2008	6/17/2008	1	Parturition	Good	POS	NEG	6/18/2008	1
+029	Soda	None	No	2/28/2006	6/20/2006	6/21/2006	5	Parturition	Bad	NEG	NA	6/22/2006	1
+029	Soda	VHF	No	2/20/2008	6/4/2008	6/5/2008	2	Parturition	Good	NEG	NEG	6/6/2008	1
+30	Soda	GPS	Yes	2/20/2008	5/29/2008	5/30/2008	1	Parturition	Good	NEG	NEG	5/31/2008	1
+050	Soda	None	No	2/28/2006	6/16/2006	6/17/2006	5	Parturition	Bad	NEG	NEG	6/18/2006	1
+060	Soda	None	No	3/9/2006	5/31/2006	6/8/2006	5	Parturition	Bad	NEG	NA	6/9/2006	1
+089	Soda	GPS	Yes	1/12/2009	6/14/2009	6/15/2009	1	Parturition	Good	NEG	NEG	6/16/2009	1
+098	Finnegan	GPS	Yes	1/9/2009	5/20/2009	5/26/2009	2	Parturition	Bad	NEG	NEG	5/27/2009	1
+107	Dog	GPS	Yes	2/4/2010	6/4/2010	6/14/2010	2	Parturition	Bad	NEG	NA	6/15/2010	1
+119	Greys	GPS	Yes	2/6/2009	6/11/2009	6/12/2009	1	Parturition	Good	POS	NEG	6/13/2009	1
+121	Greys	GPS	Yes	2/6/2009	5/11/2009	5/26/2009	2	Parturition	Bad	NEG	NEG	5/27/2009	1
+129	Greys	GPS	Yes	1/21/2010	5/9/2010	5/10/2010	1	Abortion	Good	POS	NEG	5/11/2010	1
+145	South	GPS	Yes	2/17/2010	5/25/2010	5/30/2010	2	Parturition	Bad	NEG	NEG	5/31/2010	1
+152	Franz	GPS	Yes	3/11/2009	6/15/2009	6/22/2009	2	Parturition	Bad	NEG	NEG	6/23/2009	1
+154	Franz	GPS	Yes	3/11/2009	5/30/2009	6/5/2009	2	Parturition	Bad	NEG	NEG	6/6/2009	1
+164	Soda	None	No	3/9/2006	5/25/2006	5/26/2006	5	Parturition	Bad	POS	NA	5/27/2006	1
+168	Greys	VHF	No	1/21/2010	6/8/2010	6/9/2010	2	Parturition	Good	POS	NEG	6/10/2010	1
+169	Greys	VHF	No	1/21/2010	6/8/2010	6/9/2010	2	Parturition	Good	POS	NEG	6/10/2010	1
+184	Jewett	GPS	Yes	2/9/2010	6/10/2010	6/14/2010	2	Parturition	Bad	NEG	NA	6/15/2010	1
+188	Franz	GPS	Yes	2/9/2010	5/29/2010	5/30/2010	1	Parturition	Bad	POS	NEG	5/31/2010	1
+189	Franz	GPS	Yes	2/9/2010	6/3/2010	6/4/2010	1	Parturition	Good	POS	NEG	6/5/2010	1
+190	Franz	GPS	Yes	2/9/2010	5/19/2010	5/20/2010	1	Parturition	Good	NEG	NEG	5/21/2010	1
+193	South	GPS	Yes	2/17/2010	5/25/2010	5/30/2010	2	Parturition	Bad	POS	NEG	5/31/2010	1
+194	South	GPS	Yes	2/17/2010	5/30/2010	6/2/2010	2	Parturition	Bad	NEG	NA	6/3/2010	1
+203	Spring	GPS	Yes	1/28/2010	5/25/2010	5/26/2010	1	Parturition	Good	NEG	NEG	5/27/2010	1
+205	Spring	GPS	Yes	1/28/2010	5/30/2010	5/31/2010	1	Parturition	Good	NEG	NA	6/1/2010	1
+207	UGNWR	GPS	Yes	1/26/2010	6/7/2010	6/9/2010	2	Parturition	Bad	NEG	NA	6/10/2010	1
+208	UGNWR	GPS	Yes	1/26/2010	6/9/2010	6/21/2010	2	Parturition	Bad	NEG	NA	6/22/2010	1
+213	HA99	GPS	Yes	1/27/2010	5/28/2010	5/29/2010	1	Parturition	Good	NEG	NA	5/30/2010	1
+214	HA99	GPS	Yes	1/27/2010	5/24/2010	5/25/2010	1	Parturition	Good	NEG	NEG	5/26/2010	1
+224	HA99	GPS	Yes	3/16/2011	6/7/2011	6/8/2011	1	Parturition	Good	NEG	NA	6/9/2011	1
+225	HA99	GPS	Yes	1/27/2010	6/5/2010	6/6/2010	1	Parturition	Good	NEG	NA	6/7/2010	1
+246	Alkali	GPS	Yes	2/24/2010	5/7/2010	5/30/2010	2	Parturition	Bad	NEG	NEG	5/31/2010	1
+249	Alkali	GPS	Yes	2/24/2010	6/13/2010	6/14/2010	1	Parturition	Good	POS	NEG	6/15/2010	1
+258	Dell	VHF	No	2/23/2010	5/24/2010	5/30/2010	5	Parturition	Bad	POS	NEG	5/31/2010	1
+259	Dell	VHF	No	2/23/2010	5/5/2010	5/6/2010	1	Abortion	Good	POS	NEG	5/7/2010	1
+286	Bench	None	No	2/20/2006	5/28/2006	6/5/2006	2	Parturition	Bad	NEG	NA	6/6/2006	1
+296	Bench	None	No	3/14/2006	5/16/2006	5/17/2006	5	Parturition	Bad	NEG	NEG	5/18/2006	1
+301	Bench	None	No	3/14/2006	5/27/2006	5/28/2006	5	Parturition	Bad	NEG	NA	5/29/2006	1
+310	Scab	None	No	2/27/2006	6/1/2006	6/2/2006	5	Parturition	Bad	NEG	NA	6/3/2006	1
+315	Scab	None	No	3/1/2007	5/24/2007	5/29/2007	2	Parturition	Bad	NEG	NEG	5/30/2007	1
+323	Soda	VHF	No	3/13/2011	5/21/2011	5/22/2011	1	Parturition	Good	POS	NEG	5/23/2011	1
+328	Scab	None	No	1/5/2007	5/23/2007	5/24/2007	1	Parturition	Good	POS	NEG	5/25/2007	1
+331	Scab	None	No	1/16/2007	5/24/2007	5/25/2007	5	Parturition	Bad	POS	NA	5/26/2007	1
+332	Scab	None	No	1/16/2007	5/23/2007	6/25/2007	2	Parturition	Bad	POS	NEG	6/26/2007	1
+336	Scab	None	No	1/23/2007	5/30/2007	5/31/2007	5	Parturition	Bad	NEG	NEG	6/1/2007	1
+337	Scab	None	No	1/23/2007	6/8/2007	6/26/2007	2	Parturition	Bad	POS	NEG	6/27/2007	1
+347	Scab	None	No	2/26/2007	5/21/2007	5/22/2007	5	Parturition	Bad	NEG	NA	5/23/2007	1
+363	Soda	None	No	1/27/2007	6/7/2007	6/8/2007	1	Parturition	Good	NEG	NA	6/9/2007	1
+386	Dell	VHF	No	1/15/2011	6/21/2011	6/28/2011	2	Parturition	Bad	NEG	POS	6/29/2011	1
+406	Forest	GPS	Yes	2/5/2011	3/30/2011	3/31/2011	1	Abortion	Good	POS	POS	4/1/2011	1
+480	HA99	GPS	Yes	1/29/2011	6/20/2011	6/21/2011	2	Parturition	Bad	NEG	NA	6/22/2011	1
+515	Patrol	GPS	Yes	2/14/2011	6/8/2011	6/10/2011	2	Parturition	Bad	NEG	NA	6/11/2011	1
+521	Jewett	GPS	Yes	2/24/2011	5/25/2011	5/26/2011	1	Parturition	Bad	NEG	NA	5/27/2011	1
+531	McNeel	VHF	No	3/13/2011	6/5/2011	6/6/2011	1	Parturition	Good	NEG	NA	6/7/2011	1
+540	Forest	GPS	Yes	2/1/2012	5/13/2012	5/14/2012	1	Parturition	Good	NEG	NA	5/15/2012	1
+541	Forest	GPS	Yes	2/1/2012	6/25/2012	7/2/2012	2	Parturition	Bad	NEG	NA	7/3/2012	1
+550	Buffalo	VHF	No	3/1/2006	3/1/2006	5/27/2006	5	Parturition	Bad	NEG	NA	5/28/2006	1
+552	Buffalo	VHF	No	3/1/2006	3/1/2006	5/22/2006	5	Parturition	Bad	POS	NEG	5/23/2006	1
+556	Buffalo	VHF	No	3/1/2006	3/1/2006	6/4/2006	5	Parturition	Bad	NEG	NA	6/5/2006	1
+558	Buffalo	VHF	No	3/1/2006	3/1/2006	5/26/2006	5	Parturition	Bad	NEG	NA	5/27/2006	1
+560	Buffalo	VHF	No	3/1/2006	3/1/2006	5/17/2006	5	Parturition	Bad	NEG	NEG	5/18/2006	1
+569	Buffalo	GPS	Yes	3/1/2006	3/1/2006	6/3/2006	5	Parturition	Bad	NEG	NA	6/4/2006	1
+575	Buffalo	VHF	No	1/17/2007	1/17/2007	5/21/2007	5	Parturition	Bad	NEG	NA	5/22/2007	1
+587	Buffalo	VHF	No	1/16/2007	1/16/2007	5/27/2007	5	Parturition	Bad	NEG	NA	5/28/2007	1
+606	Greys	VHF	No	2/3/2012	6/20/2012	6/21/2012	1	Parturition	Good	POS	NA	6/22/2012	1
+658	Black	GPS	Yes	2/16/2012	5/29/2012	6/4/2012	2	Parturition	Bad	NEG	NA	6/5/2012	1
+669	Horse	GPS	Yes	2/16/2012	6/21/2012	6/25/2012	2	Parturition	Bad	POS	NA	6/26/2012	1
+676	McNeel	GPS	Yes	2/22/2012	6/17/2012	6/18/2012	1	Parturition	Good	NEG	NA	6/19/2012	1
+678	Jewett	GPS	Yes	3/5/2012	6/12/2012	6/17/2012	2	Parturition	Bad	NEG	NA	6/18/2012	1
+688	Jewett	VHF	No	3/14/2012	5/28/2012	5/29/2012	1	Parturition	Good	NEG	NA	5/30/2012	1
+689	McNeel	GPS	Yes	3/15/2012	6/20/2012	6/25/2012	2	Parturition	Bad	POS	NA	6/26/2012	1
+700	Forest	GPS	Yes	2/15/2013	6/6/2013	6/13/2013	2	Parturition	Bad	NEG	NA	6/14/2013	1
+709	McNeel	GPS	Yes	2/17/2013	6/16/2013	6/25/2013	2	Parturition	Bad	POS	NA	6/26/2013	1
+710	McNeel	GPS	Yes	2/17/2013	6/2/2013	6/10/2013	2	Parturition	Bad	NEG	NA	6/11/2013	1
+721	Jewett	GPS	Yes	2/12/2014	6/14/2014	6/15/2014	1	Parturition	Excellent	POS	NA	6/16/2014	1
+757	Camp	GPS	Yes	3/5/2013	6/16/2013	6/25/2013	2	Parturition	Bad	NEG	NA	6/26/2013	1
+759	Dell	VHF	No	1/31/2013	5/26/2013	6/5/2013	5	Parturition	Bad	POS	NEG	6/6/2013	1
+760	Dell	VHF	No	1/31/2013	5/26/2013	6/5/2013	2	Parturition	Bad	POS	NA	6/6/2013	1
+761	Dell	VHF	No	1/31/2013	5/26/2013	6/5/2013	2	Parturition	Bad	POS	NEG	6/6/2013	1
+768	Greys	VHF	No	2/16/2013	6/5/2013	6/16/2013	2	Parturition	Bad	NEG	NA	6/17/2013	1
+769	Greys	VHF	No	2/16/2013	6/4/2013	6/5/2013	2	Parturition	Good	POS	NA	6/6/2013	1
+772	Franz	GPS	Yes	2/2/2014	6/26/2014	7/1/2014	2	Parturition	Poor	POS	NA	7/2/2014	1
+773	Franz	GPS	Yes	2/2/2014	5/29/2014	6/3/2014	NA	Parturition	Poor	NEG	NA	6/4/2014	1
+779	Bench	GPS	Yes	2/9/2014	5/21/2014	5/24/2014	2	Parturition	NA	NEG	NA	5/25/2014	1
+781	Bench	GPS	Yes	2/11/2014	5/23/2014	5/24/2014	1	Parturition	Excellent	NEG	NA	5/25/2014	1
+791	Dog	VHF	No	2/16/2014	5/17/2014	5/18/2014	2	Parturition	Good	NEG	NA	5/19/2014	1
+796	Camp	GPS	Yes	2/18/2014	5/24/2014	5/28/2014	2	Parturition	Poor	NEG	NA	5/29/2014	1
+810	UG	GPS	Yes	2/25/2014	5/28/2014	5/29/2014	2	Parturition	Excellent	NEG	NA	5/30/2014	1
+008	Dell	GPS	Yes	1/25/2008	3/8/2008	3/9/2008	1	Abortion	Bad	POS	POS	3/9/2008	0
+010	Dell	GPS	Yes	1/25/2008	3/16/2008	3/17/2008	1	Abortion	Bad	POS	POS	3/17/2008	0
+031	Soda	None	No	2/28/2006	6/15/2006	6/23/2006	5	Parturition	Bad	NEG	NEG	6/23/2006	0
+033	Soda	None	No	2/21/2006	5/21/2006	5/22/2006	5	Parturition	Bad	NEG	NEG	5/22/2006	0
+041	Scab	None	No	3/1/2007	5/29/2007	5/30/2007	5	Parturition	Bad	NEG	NEG	5/30/2007	0
+043	Greys	GPS	Yes	2/25/2008	3/27/2008	3/28/2008	2	Abortion	Bad	POS	POS	3/28/2008	0
+145	South	GPS	Yes	2/3/2009	6/3/2009	6/5/2009	2	Parturition	Bad	NEG	NEG	6/5/2009	0
+148	UG	GPS	Yes	2/19/2009	5/26/2009	6/7/2009	2	Parturition	Bad	NEG	NEG	6/7/2009	0
+157	Soda	None	No	2/21/2006	5/25/2006	5/26/2006	5	Parturition	Bad	NEG	NA	5/26/2006	0
+182	Dell	VHF	No	1/21/2011	5/27/2011	5/31/2011	2	Parturition	Bad	POS	NEG	5/31/2011	0
+197	Spring	GPS	Yes	1/28/2010	5/30/2010	6/1/2010	2	Parturition	Bad	NEG	NA	6/1/2010	0
+198	HA99	GPS	Yes	1/27/2010	5/29/2010	5/30/2010	2	Parturition	Bad	NEG	NA	5/30/2010	0
+218	HA99	GPS	Yes	3/16/2011	6/21/2011	6/23/2011	2	Parturition	Bad	NEG	NA	6/23/2011	0
+227	UGNWR	GPS	Yes	1/26/2010	5/26/2010	5/27/2010	1	Parturition	Good	NEG	NEG	5/27/2010	0
+257	Dell	VHF	No	1/21/2011	5/26/2011	5/27/2011	1	Parturition	Good	NEG	NA	5/27/2011	0
+312	Scab	None	No	2/12/2006	2/12/2006	4/21/2006	6	Unknown	Bad	NEG	NA	4/21/2006	0
+315	Scab	None	No	2/12/2006	2/12/2006	4/21/2006	6	Unknown	Bad	NEG	NA	4/21/2006	0
+323	Soda	None	No	2/28/2006	4/8/2006	5/10/2006	4	Abortion	Bad	POS	NA	5/10/2006	0
+352	Scab	None	No	3/7/2007	6/15/2007	7/2/2007	2	Parturition	Bad	NEG	NA	7/2/2007	0
+353	Scab	None	No	3/7/2007	5/28/2007	5/29/2007	5	Parturition	Bad	NEG	NEG	5/29/2007	0
+364	Soda	None	No	1/15/2007	7/5/2007	8/9/2007	5	Parturition	Bad	NEG	NA	8/9/2007	0
+369	Soda	None	No	1/19/2007	5/7/2007	5/8/2007	4	Abortion	Bad	POS	NA	5/8/2007	0
+388	Dell	VHF	No	1/21/2011	4/21/2011	4/22/2011	1	Abortion	Good	POS	POS	4/22/2011	0
+389	Dell	VHF	No	1/21/2011	5/27/2011	5/31/2011	2	Parturition	Bad	POS	NEG	5/31/2011	0
+405	Forest	GPS	Yes	2/5/2011	6/21/2011	6/23/2011	2	Parturition	Bad	NEG	NEG	6/23/2011	0
+486	Fall	GPS	Yes	2/9/2011	6/8/2011	6/9/2011	1	Parturition	Good	NEG	NA	6/9/2011	0
+526	Franz	GPS	Yes	3/12/2011	6/4/2011	6/6/2011	2	Parturition	Bad	POS	NEG	6/6/2011	0
+580	Buffalo	VHF	No	1/17/2007	1/17/2007	5/24/2007	5	Parturition	Bad	NEG	NA	5/24/2007	0
+650	Dell	GPS	Yes	2/20/2014	5/21/2014	5/22/2014	1	Parturition	Excellent	NEG	NA	5/22/2014	0
+653	Dell	GPS	Yes	2/20/2014	5/8/2014	5/19/2014	2	Parturition	Good	POS	NA	5/19/2014	0
+659	McNeel	GPS	Yes	2/17/2012	5/27/2012	5/28/2012	1	Parturition	Good	NEG	NA	5/28/2012	0
+708	McNeel	GPS	Yes	2/17/2013	6/2/2013	6/10/2013	2	Parturition	Bad	POS	NEG	6/10/2013	0
+749	Patrol	GPS	Yes	2/25/2013	5/21/2013	6/11/2013	2	Parturition	Bad	NEG	NA	6/11/2013	0
+758	Dell	VHF	No	1/31/2013	5/18/2013	5/19/2013	1	Parturition	Good	POS	NEG	5/19/2013	0
+782	Dog	GPS	Yes	2/13/2014	5/27/2014	5/28/2014	1	Parturition	Excellent	POS	NA	5/28/2014	0
+803	Scab	GPS	Yes	2/22/2014	6/3/2014	6/9/2014	2	Parturition	Poor	NEG	NA	6/9/2014	0
+823	Finnegan	GPS	Yes	3/5/2014	5/19/2014	5/27/2014	2	Parturition	None	NEG	NA	5/27/2014	0
+578	Buffalo	VHF	No	1/17/2007	1/17/2007	5/22/2007	5	Parturition	Bad	NEG	NA	5/22/2007	0
+597	Buffalo	VHF	No	1/16/2007	1/16/2007	5/28/2007	5	Parturition	Bad	NEG	NA	5/28/2007	0

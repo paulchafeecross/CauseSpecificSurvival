@@ -25,16 +25,6 @@ save(mod10k_bcen, file = paste('Result_mod10k_bcen', seroyes, '.RData', sep = ''
 model <- mod10k_bcen
 plot(model)
 
-# 20 knot
-num.knots <- 20
-Z <- Z_foo(num.knots, min(left), max(right))
-data <- list('left', 'right', 'noevent', 'D', 'Z', 'num.knots', 'records')
-params <- c('Haz_b', 'gamma0', 'b', 'sigmab')
-mod20k_bcen <- jags(data, inits = NULL , params, HazSplLog20k_ab, n.chains=3, n.iter=niter)
-save(mod20k_bcen, file = paste('Result_mod20k_bcen', seroyes, '.RData', sep = ''))
-model <- mod20k_bcen
-plot(model)
-
 # 40 knot:  goes to INF values and blows up (probably because one part of the spline is all 1s or 0s (or nothing)
 num.knots <- 40
 Z <- Z_foo(num.knots, min(left), max(right))
@@ -53,6 +43,18 @@ save(icarmod_bcen, file = paste('Result_icar_bcen', seroyes, '.RData', sep = '')
 model <- icarmod_bcen
 plot(model)
 #*******************************************************************************
+
+
+
+# 20 knot
+num.knots <- 20
+Z <- Z_foo(num.knots, min(left), max(right))
+data <- list('left', 'right', 'noevent', 'D', 'Z', 'num.knots', 'records')
+params <- c('Haz_b', 'gamma0', 'b', 'sigmab')
+mod20k_bcen <- jags(data, inits = NULL , params, HazSplLog20k_ab, n.chains=3, n.iter=niter)
+save(mod20k_bcen, file = paste('Result_mod20k_bcen', seroyes, '.RData', sep = ''))
+model <- mod20k_bcen
+plot(model)
 
 
 #*******************************************************************************

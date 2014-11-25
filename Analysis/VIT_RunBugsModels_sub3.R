@@ -7,9 +7,9 @@ source("Z_foo.r") # fxn for calculating Z on the splines
 source("plot_VITresults_fxns.r") # fxns for plotting model results
 source("Write_VITSplineInterval.r") # code for the BUGS models
 
-seroyes <- 1
-if(seroyes == 1){load('VIT_Data2014_Full_POS.RData')}
-if(seroyes != 1){load('VIT_Data2014_Full.RData')}
+seroyes <- 0
+if(seroyes == 1){load('VIT_Data2014_Sub3_POS.RData')}
+if(seroyes != 1){load('VIT_Data2014_Sub3.RData')}
 
 #*******************************************************************************
 # RUN STATISTICAL MODELS
@@ -24,7 +24,7 @@ data <- list('left', 'right', 'noevent', 'D', 'Z', 'num.knots', 'records', 'b.ty
              'event.day', 'n.events')
 params <- c('Haz_b', 'Haz_a', 'Haz_l', 'prob.ab', 'gamma0','beta', 'sigmab', 'b', 'alpha', "K")
 mod10k <- jags(data, inits=NULL , params, HazSplLog10k, n.chains=3, n.iter=niter)
-save(mod10k, file = paste('Result_mod10k', seroyes, '.RData', sep = ''))
+save(mod10k, file = paste('Result_mod10k_sub3_', seroyes, '.RData', sep = ''))
 model <- mod10k 
 plot(model)
 print(model, digits = 3)
@@ -38,7 +38,7 @@ Z <- Z_foo(num.knots, min(left), max(right))
 data <- list('left', 'right', 'noevent', 'D', 'Z', 'num.knots', 'records', 'b.type', 
              'event.day', 'n.events')
 mod40k <- jags(data, inits = NULL, params, HazSplLog40k, n.chains=3, n.iter=niter)
-save(mod40k, file = paste('Result_mod40k', seroyes, '.RData', sep = ''))
+save(mod40k, file = paste('Result_mod40k_sub3_', seroyes, '.RData', sep = ''))
 model <- mod40k 
 plot(model)
 plot_VITmodel(model)
@@ -52,25 +52,9 @@ data <- list('left', 'right', 'noevent', 'D', 'records', 'b.type',
              'event.day', 'n.events')
 params <- c('Haz_b', 'Haz_a', 'Haz_l', 'prob.ab', 'gamma0','beta', 'sd.rho', 'rho', 'alpha', "K")
 icarmod <- jags(data, inits = NULL, params, icar_partjag, n.chains=3, n.iter=niter)
-save(icarmod, file = paste('Result_icar', seroyes, '.RData', sep = ''))
+save(icarmod, file = paste('Result_icar_sub3_', seroyes, '.RData', sep = ''))
 model <- icarmod 
 plot(model)
-#*******************************************************************************
-
-#*******************************************************************************
-#20 KNOTS
-#*******************************************************************************
-num.knots <- 20
-Z <- Z_foo(num.knots, min(left), max(right))
-data <- list('left', 'right', 'noevent', 'D', 'Z', 'num.knots', 'records', 'b.type', 
-             'event.day', 'n.events')
-
-mod20k <- jags(data, inits = jags.inits, params, HazSplLog20k, n.chains=3, n.iter=niter)
-save(mod20k, file = paste('Result_mod20k', seroyes, '.RData', sep = ''))
-model <- mod20k 
-plot(model)
-plot_VITmodel(model)
-print(model, digits = 3)
 #*******************************************************************************
 
 #*******************************************************************************
@@ -79,32 +63,29 @@ print(model, digits = 3)
 rm(list = ls())
 seroyes <- 1
 if(seroyes == 1){
-  load('VIT_Data2013_Full_POS.RData')
-  load("Result_mod10k1.RData")
-  load("Result_mod20k1.RData")
-  load("Result_mod40k1.RData")
-  load("Result_icar1.RData")
+  load('VIT_Data2014_Sub3_POS.RData')
+  load("Result_mod10k_sub3_1.RData")
+  load("Result_mod40k_sub3_1.RData")
+  load("Result_icar_sub3_1.RData")
   
 }
 if(seroyes != 1){
-  load('VIT_Data2013_Full.RData')
-  load("Result_mod10k0.RData")
-  load("Result_mod20k0.RData")
-  load("Result_mod40k0.RData")
-  load("Result_icar0.RData")
+  load('VIT_Data2014_Sub3.RData')
+  load("Result_mod10k_sub3_0.RData")
+  load("Result_mod40k_sub3_0.RData")
+  load("Result_icar_sub3_0.RData")
 }
 source("plot_VITresults_fxns.r") # fxns for plotting model results
 start.offset <- min(Data$CapDOY)
 
 #10knots
 plot(mod10k)
-print(mod10k, digits = 3)
 sort(mod10k$BUGSoutput$summary[,8])
 
 #seems like this has trouble converging for prob.ab in March-April.  Let's look at the different MCMC chains
-chain1 <- apply(mod10k$BUGSoutput$sims.array[,1,646:(646+D-1)], 2, stats::quantile, c(0.025,.5, 0.0975))
-chain2 <- apply(mod10k$BUGSoutput$sims.array[,2,646:(646+D-1)], 2, stats::quantile, c(0.025,.5, 0.0975))
-chain3 <- apply(mod10k$BUGSoutput$sims.array[,3,646:(646+D-1)], 2, stats::quantile, c(0.025,.5, 0.0975))
+chain1 <- apply(mod10k$BUGSoutput$sims.array[,1,595:(595+D-1)], 2, stats::quantile, c(0.025,.5, 0.0975))
+chain2 <- apply(mod10k$BUGSoutput$sims.array[,2,595:(595+D-1)], 2, stats::quantile, c(0.025,.5, 0.0975))
+chain3 <- apply(mod10k$BUGSoutput$sims.array[,3,595:(595+D-1)], 2, stats::quantile, c(0.025,.5, 0.0975))
 plot(chain1[2,], col = "blue", type = "l")
 lines(chain1[1,], col = "blue", lty = 2)
 lines(chain1[3,], col = "blue", lty = 2)
@@ -116,28 +97,17 @@ lines(chain3[1,], col = "green", lty = 2)
 lines(chain3[3,], col = "green", lty = 2)
 # so although the R-metric indicates a lack of convergence I think the inference is fine
 
-
-#20knots
-plot(mod20k)
-print(mod20k, digits = 3)
-sort(mod20k$BUGSoutput$summary[,8])
 #40knots
 plot(mod40k)
-print(mod40k, digits = 3)
 sort(mod40k$BUGSoutput$summary[,8])
 
 #icar
 plot(icarmod)
-print(icarmod)
 sort(icarmod$BUGSoutput$summary[1:(D*3),8])
 
 # comparison of abortion hazards
 par(mfrow = c(2,2), mar = c(2,3,1,1), cex = 1, mgp = c(1.5,.25,0))
 plot_hazAb(mod10k, "10knot", start.offset, 2, Ylim = c(0, 0.008), 
-           Ylab = "Cumulative daily abortion hazard",
-           Xlim = as.Date(c('2013/01/15', '2013/07/01')), 
-           legendflag=FALSE, FmoTixs = T)
-plot_hazAb(mod20k, "20knot", start.offset, 2, Ylim = c(0, 0.008), 
            Ylab = "Cumulative daily abortion hazard",
            Xlim = as.Date(c('2013/01/15', '2013/07/01')), 
            legendflag=FALSE, FmoTixs = T)
@@ -192,8 +162,6 @@ plot_baseline(icarmod, "ICAR", start.offset, 2, Ylim = c(0, 0.02),
 plot_Pabort(icarmod, "", start.offset, 2,  Xlim = as.Date(c('2013/02/01', '2013/07/01')),
             legendflag=FALSE)
 
-
-
 # PLOT prob of abortion
 par(mfrow = c(1,1), mar = c(2,3,1,1), cex = 1, mgp = c(1.5,.25,0))
 plot_Pabort(model, "", start.offset, 2,  Xlim = as.Date(c('2013/02/01', '2013/07/01')),
@@ -204,4 +172,3 @@ source('VITplot_interval2.R')
 par(mfrow = c(1,1), mar = c(2,3,1,1), cex = 1, mgp = c(1.5,.25,0))
 VITplot_interval2(DataPOS, 2) 
 text(as.Date("2013/01/01"), 137, "A)", pos = 4, cex = 1)
-

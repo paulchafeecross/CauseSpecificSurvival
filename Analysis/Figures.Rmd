@@ -10,7 +10,7 @@ opts_chunk$set(dev=c('png'), dpi = 400, echo = FALSE, message = FALSE, cache = F
 
 **Figure 1.** Female elk captures and reproductive event locations from the study area in the southern region of the Greater Yellowstone Ecosystem. 
     
-**Figure 2**. Timelines of brucellosis seropositive elk reproductive events from the vaginal implant transmitters (VITs, A) and a histogram of fetuses opportunistically recovered from feedgrounds during 1968 to 2014 (B). In A, grey lines extend from the capture date to the time interval of the reproductive event. Red and blue lines indicate time intervals when VITs were expelled due to abortions or normal birth events, respectively. 
+**Figure 2**. Timelines of brucellosis seropositive elk reproductive events from the vaginal implant transmitters (VITs, A) and a histogram of opportunisitically recovered fetuses on feedgrounds from 1968 to 2014 (B). In A, grey lines extend from the capture date to the time interval of the reproductive event. Red and blue lines indicate time intervals when VITs were expelled due to abortions or normal birth events, respectively. 
 
 **Figure 3**. Daily hazard of an abortion for female elk exposed to *Brucella abortus* given she is still pregnant using the 40-knot spline model. Live births were either censored (A) or included in the full model where the total hazard was partitioned between two cause-specific event types (B, abortions and live births). Grey and black solid lines are the posterior mean and medians, respectively. Dotted lines are the posterior 95% credible intervals.   
     

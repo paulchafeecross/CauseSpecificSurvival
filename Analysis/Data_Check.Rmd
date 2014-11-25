@@ -25,10 +25,17 @@ Total # of elk in the original dataset = `r dim(Data)[1]`.
 ```{r subset}
 # first remove the individuals that were not pregnant or were unknown events. 
 Data <- subset(Data, Data$VIT_Status != "Open" )
-Data <- subset(Data, Data$VIT_Status != "Unknown" )
+Data <- subset(Data, Data$VIT_Status != "Unknown")
+Data <- subset(Data, Data$VIT_Status != "Malfunction")
+
 Data$VIT_Status <- as.factor(as.character(Data$VIT_Status)) #relevel the factor
 
 DataPOS <- Data[Data$CowSero == "POS", ]
+
+summary(Data$EndDOY)
+
+# remove the few records of unknown date intervals 
+Data <- subset(Data, is.na(Data$EndDOY) == F)
 
 days <- seq(min(Data$CapDOY), max(Data$EndDOY))
 ```
@@ -94,3 +101,30 @@ points(as.Date('01/01/2013', '%d/%m/%Y') + yday(ab_pos$Stop_Interval),
        rep(0, dim(ab_pos)[1]))
 ```
 
+Plot a boxplot of the time intervals between VIT heard in and recovery.  
+```{r vit-interval-box, echo = F}
+library(ggplot2)
+Data$Interval <- Data$EndDOY-Data$StartDOY
+ggplot(data = subset(Data, Data$VIT_Status != "Died" & is.na(Data$CowSero)==F), 
+       aes(VIT_Status, y = Interval, fill = CowSero)) + geom_boxplot()
+```
+This tends to emphasis the outliers. 
+
+Look at the histogram.  
+```{r vit-interval-hist, echo=FALSE}
+ggplot(data = subset(Data, Data$VIT_Status != "Died" & is.na(Data$CowSero)==F), 
+       aes(x = Interval)) + geom_histogram() + facet_grid(. ~ CowSero)
+```
+
+What do the percentiles look like:  
+```{r percentiles}
+quantile(Data$Interval, probs = seq(0,1,.05))
+```
+
+So, about half the intervals are 3days or less. What does this dataset look like:
+```{r sub-3}
+DataSub3 <- subset(Data, Data$Interval <= 3)
+(table1 <- table(DataSub3$CowSero, DataSub3$VIT_Status))
+```
+
+Hmm, for the seropositives we still have 20 abortions and 67 live births to work with (this increases the overall abortion probability to 24% rather than 16%). 
