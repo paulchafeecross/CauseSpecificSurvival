@@ -7,7 +7,7 @@ source("Z_foo.r") # fxn for calculating Z on the splines
 source("plot_VITresults_fxns.r") # fxns for plotting model results
 source("Write_VITSplineInterval.r") # code for the BUGS models
 
-seroyes <- 1
+seroyes <- 0
 if(seroyes == 1){load('VIT_Data2014_Full_POS.RData')}
 if(seroyes != 1){load('VIT_Data2014_Full.RData')}
 

@@ -170,5 +170,5 @@ plot_Pabort(model, "", start.offset, 2,  Xlim = as.Date(c('2013/02/01', '2013/07
 # Plot the data
 source('VITplot_interval2.R')
 par(mfrow = c(1,1), mar = c(2,3,1,1), cex = 1, mgp = c(1.5,.25,0))
-VITplot_interval2(DataPOS, 2) 
+VITplot_interval2(Data, 2) 
 text(as.Date("2013/01/01"), 137, "A)", pos = 4, cex = 1)

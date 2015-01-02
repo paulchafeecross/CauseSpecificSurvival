@@ -1,7 +1,7 @@
 ---
 output: word_document
 ---
-August 22, 2014    
+November 26, 2014    
 Paul C. Cross  
 2327 University Way, Suite 2  
 Bozeman MT 59715  
