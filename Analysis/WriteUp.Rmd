@@ -1,7 +1,7 @@
 ---
 output: word_document
 ---
-November 26, 2014    
+Jan 5, 2015    
 Paul C. Cross  
 2327 University Way, Suite 2  
 Bozeman MT 59715  
@@ -12,7 +12,7 @@ RH: Cross et al. Cause-specific hazards
 
 **Estimating the phenology of elk brucellosis transmission with hierarchical models of cause-specific and baseline hazards**  
 
-PAUL C. CROSS, *U.S. Geological Survey, Northern Rocky Mountain Science Center, Bozeman MT, 59715 USA*
+PAUL C. CROSS, *U.S. Geological Survey, Northern Rocky Mountain Science Center, Bozeman MT, 59715 USA*  
 ERIC J. MAICHAK, *Wyoming Game and Fish Department, Pinedale WY, 82941 USA*  
 JARED D. ROGERSON, *Wyoming Game and Fish Department, Pinedale WY, 82941 USA*  
 KATHRYN M. IRVINE, *U.S. Geological Survey, Northern Rocky Mountain Science Center, Bozeman MT, 59715 USA*  
@@ -20,8 +20,6 @@ JENNIFER JONES, *U.S. Geological Survey, Northern Rocky Mountain Science Center,
 DENNIS M. HEISEY, *U.S. Geological Survey, National Wildlife Health Center, Madison WI, 53711 USA*  
 WILLIAM H. EDWARDS, *Wyoming Game and Fish Department, Laramie WY, 82070 USA*  
 BRANDON. M. SCURLOCK, *Wyoming Game and Fish Department, Pinedale WY, 82941 USA*    
-
-*Peer Review disclaimer*: This draft manuscript is distributed solely for purposes of scientific peer review. Its content is deliberative and predecisional, so it must not be disclosed or released by reviewers. Because the manuscript has not yet been approved for publication by the U.S. Geological Survey (USGS), it does not represent any official USGS finding or policy.
 \newpage
 
 **ABSTRACT**
@@ -54,17 +52,17 @@ We monitored elk across the western Wyoming area of the Greater Yellowstone Ecos
 
 The conditional survival function from day *r* to *s* can be estimated as  
 
-$$S(s|r) = exp \left(- \int_r^s h(u)du \right) \approx exp \left(- \sum_{k=r}^s exp(\gamma_k) \right)$$ 
+[1]$$S(s|r) = exp \left(- \int_r^s h(u)du \right) \approx exp \left(- \sum_{k=r}^s exp(\gamma_k) \right)$$ 
 
 where $h(u)$ is the instantaneous mortality hazard and $\gamma_k$ is the log cumulative hazard on day *k* assuming a piecewise constant hazard [@Heisey2010]. Few datasets will support the independent estimation of daily hazards. To resolve this issue we 'borrow strength' from neighboring days on the assumption that the underlying biological hazard is not too different from one day to the next. We used two approaches for smoothing the daily hazards. First we used a first-order conditional autoregressive (CAR) approach whereby $\gamma_k = \gamma_0 + \theta_k$ and $\theta_k \sim Normal(\theta_{k-1}, \sigma^2)$. Here $\sigma^2$ controls the relative smoothness and is also estimated from the data. On sparse datasets, the CAR model can be slow to converge, so we also used a penalized spline approach of Crainiceau *et al* [-@Crainiceanu2005] as a comparison which had better mixing properties on MCMC chains. We chose 10 and 40 knots for the penalized spline to create relatively stiffer or more flexible models, respectively.   
 
 Let $h_c(t)$ be the cause-specific hazard of cause *c* and 
 
-$$S_c(t) = exp \left(-\int_0^t h_c(u)du \right)$$
+[2]$$S_c(t) = exp \left(-\int_0^t h_c(u)du \right)$$
 
 and $h(t)=\sum_1^C h_c(t)$, where *C* is the total number of possible causes of death. Note that although overall survival $S(t) = \prod_{c=1}^C S_c(t)$, $S_c(t)$ itself does not have a meaningful biological interpretation and the cumulative cause-specific mortality $M_c(t)$ does not equal $1-S_c(t)$ [@Heisey2006]. Instead 
 
-$$M_c(t) = \int_0^t h_c(u)S(u)du$$
+[3]$$M_c(t) = \int_0^t h_c(u)S(u)du$$
 
 which accounts for the censoring due to other causes of mortality. With a hierarchical modeling approach, we can partition $h(t)$ into its constituent parts. For the case with two mortality types (e.g., natural and anthropogenic), we could use logistic regression to estimate the covariates associated with mortality being more likely to be of one cause than another or how partitioning of the hazard changes through time. Multinomial regressions may be appropriate for scenarios with three or more mortality types. We develop this approach below using data on elk reproductive events that are due to two different causes. We then illustrate how this combined data likelihood, which accounts for the mutually exclusive nature of event types, can change our conclusions compared to an approach where one of the event types is censored.  
 
@@ -90,10 +88,9 @@ We assessed *Brucella* status using the card test, plate agglutination, rivanol 
 Let $y_{ij}$ represent the data on reproductive events (still pregnant = 1, no longer pregnant = 0) of individual *i* for data record *j* (Fig. 2). Time intervals start at $r_{ij}$ and end at $s_{ij}$. Individuals have only one record if they were censored due to death, collar or equipment malfunction, or if the reproductive event occurred between the capture date and the first recorded follow-up.  
 
 We can then model each reproductive event as a conditionally independent Bernoulli trial such that  
-$$y_{ij} \sim Bern \left(exp \left(- \sum_{k=r_{ij}}^{s_{ij}} exp(\gamma_k) \right) \right)$$,  
+[4]$$y_{ij} \sim Bern \left(exp \left(- \sum_{k=r_{ij}}^{s_{ij}} exp(\gamma_k) \right) \right)$$,  
 where $\gamma_k$ is the log of the cumulative hazard of any reproductive event for time period *k*. Let $z_i$ represent the data on the type of reproductive event (i.e., the two competing risks; 0 = live birth, 1 = abortion). We estimated the probability that an event was an abortion using a generalized logistic function that allowed for a lower asymptote: $z_i \sim Bern \left(p_i \right)$, and  
-$$p_i = 1 + \frac{\kappa-1}{1+exp\left(- \alpha -\beta \left(s_{ij} | y_{ij}=1 \right)\right)}$$ 
-
+[5]$$p_i = 1 + \frac{\kappa-1}{1+exp\left(- \alpha -\beta \left(s_{ij} | y_{ij}=1 \right)\right)}$$ 
 where $p_i$ is the probability of an abortion for individual *i* given the event occurred by day of year *s*. The lower asymptote, $\kappa$, allowed for there to be a small chance of an abortion event even late in the year after many births have occurred. Elk are seasonal breeders so reproductive failures are likely to occur earlier in the year than live births; $\alpha$ and $\beta$ determine how quickly reproductive events transition from reproductive failures to births (for model code see Appendix S1). We also explored models without a lower asymptote that were simple logistic regressions of the probability of abortion (data not shown).  
 
 The joint data likelihood was $L\left(y_{ij}, z_i | s_{ij}, r_{ij}, \gamma_k, \alpha, \beta, \kappa \right) = L\left(y_{ij}|s_{ij}, r_{ij}, \gamma_k) L(z_i| y_{ij}, s_{ij}, \alpha, \beta, \kappa \right)$. We estimated the posterior distribution of model parameters using Bayesian estimation via Markov chain Monte Carlo (MCMC) and Just Another Gibbs Sampler [JAGS, @Plummer2003] launched from R version 3.1 [@RDevelopmentCoreTeam2014]. We used the following prior distributions: $\alpha \sim U(50, 200)$, $\beta \sim U(0, 2)$, $\kappa \sim U(0, 0.5)$, $\gamma_0 \sim N(0, 10^6)$, which assumes that reproductive failures tend to occur before births with respect to day of year, but are otherwise relatively non-informative. For the CAR smoothing we assumed $\theta_1 \sim N(0, 10^6)$, $\theta_{k=2:K} \sim N(\theta_{k-1}, \sigma^2)$, $\sigma \sim U(0,10)$, which are also relatively uninformative. 

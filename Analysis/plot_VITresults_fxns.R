@@ -264,7 +264,6 @@ plot_birth_ft <- function(model, MainLab, offset, LWD, Ylim, Xlim, legendflag, Y
   }
 }
 
-
 # Plot the total density
 plot_total_ft <- function(model, MainLab, offset, LWD, Ylim, Xlim, legendflag, Ylab, FmoTixs){
   if(missing(MainLab)) {MainLab <- " "}
@@ -310,7 +309,6 @@ plot_total_ft <- function(model, MainLab, offset, LWD, Ylim, Xlim, legendflag, Y
            col = c("grey", "black", "grey", "grey"), bty = "n")
   }
 }
-
 
 # all of them together as function
 plot_VITmodel <- function(model, offset, LWD, legendflag){

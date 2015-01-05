@@ -1,5 +1,5 @@
 ---
-output: html_document
+output: word_document
 ---
 **Table 1**. Comparison of the timing of elk abortions across models with different smoothing functions for the total hazard of a reproductive event. In all cases, the sub-model of the probability of an abortion relative to a live birth was a logistic regression.        
 

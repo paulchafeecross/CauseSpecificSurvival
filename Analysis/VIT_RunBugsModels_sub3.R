@@ -148,17 +148,17 @@ plot_birth_ft(model, "", start.offset, 2, Ylim = c(0, 0.06),
               legendflag=FALSE, FmoTixs = T)
 text(as.Date("2013/01/26"), 0.04, "D)", pos = 4, cex = 1)
 
-# Plot baselines
+# Plot total densities
 par(mfrow = c(2,2), mar = c(2,3.5,1,1), cex = 1, mgp = c(2,.5,0))
-plot_baseline(mod10k, "10 knots", start.offset, 2, Ylim = c(0, 0.02),   
+plot_total_ft(mod10k, "10 knots", start.offset, 2, Ylim = c(0, 0.05),   
               Xlim = as.Date(c('2013/02/01', '2013/07/01')), 
-              legendflag==F, Ylab = "total hazard")
-plot_baseline(mod40k, "40 knots", start.offset, 2, Ylim = c(0, 0.02),   
+              legendflag==F, Ylab = "total density")
+plot_total_ft(mod40k, "40 knots", start.offset, 2, Ylim = c(0, 0.05),   
               Xlim = as.Date(c('2013/02/01', '2013/07/01')), 
-              legendflag==F, Ylab = "total hazard")
-plot_baseline(icarmod, "ICAR", start.offset, 2, Ylim = c(0, 0.02),   
+              legendflag==F, Ylab = "total density")
+plot_total_ft(icarmod, "ICAR", start.offset, 2, Ylim = c(0, 0.05),   
               Xlim = as.Date(c('2013/02/01', '2013/07/01')), 
-              legendflag==F, Ylab = "total hazard")
+              legendflag==F, Ylab = "total density")
 plot_Pabort(icarmod, "", start.offset, 2,  Xlim = as.Date(c('2013/02/01', '2013/07/01')),
             legendflag=FALSE)
 
