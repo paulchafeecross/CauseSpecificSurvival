@@ -78,10 +78,22 @@ Data <- subset(Data, Data$VIT_Status != "Open" ) # remove non-pregnants
 Data <- subset(Data, Data$VIT_Status != "Unknown" ) # remove unknowns
 Data <- subset(Data, is.na(Data$StartDOY) != T )
 
+
+# maximum possible time out
+max.time <- Data$RecoveryInterval + Data$interval2
+
+############### Subset to 3 days##################
 # must be within 3 days of it coming out
 Data <- subset(Data, Data$RecoveryInterval <= 3 )
 # must be within 3 days of it being known in to known out 
 Data <- subset(Data, Data$interval2 <= 3 )
+
+# maximum possible time out
+max.time2 <- Data$RecoveryInterval + Data$interval2
+
+# what proportion of the records are within x days of recovery.
+quantile(max.time, probs = seq(0,1,.05), na.rm = T)
+quantile(max.time2, probs = seq(0,1,.05))
 
 Data$VIT_Status <- as.factor(as.character(Data$VIT_Status)) #relevel the factor
 summary(Data$VIT_Status)

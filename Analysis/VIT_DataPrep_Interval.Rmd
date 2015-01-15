@@ -99,6 +99,21 @@ VITplot_interval2(tmp, 2)
 rm(tmp)
 ```
 
+Let's look at the time to VIT recovery
+```{r vitrecovery}
+# interval when the events are known to occur
+quantile(Data$interval2, probs = seq(0,1,.05), na.rm = T)
+# interval between when the VIT is known to be out and it was recovered on the ground
+quantile(Data$RecoveryInterval, probs = seq(0,1,.05), na.rm = T)
+# maximum possible time out
+max.time <- Data$RecoveryInterval + Data$interval2
+quantile(max.time, probs = seq(0,1,.05), na.rm = T)
+par(mfrow = c(1,2))
+hist(Data$interval2)
+hist(Data$RecoveryInterval)
+
+```
+
 Prepare the data for BUGS models
 -------------------------------------------------------------------------------
 Create two different datasets:  

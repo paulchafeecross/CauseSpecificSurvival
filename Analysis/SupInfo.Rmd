@@ -182,7 +182,7 @@ Hazard spline model that is not partitioned by event type (10knots)
   
 ```
   # Priors
-  gamma0  ~ dnorm(0, 1.0E-6)
+  phi0  ~ dnorm(0, 1.0E-6)
   sigmab ~ dunif(0,3)
   taub <- pow(sigmab, -2)
   for (l in 1:num.knots){b[l]  ~ dnorm(0,taub)}
@@ -191,7 +191,7 @@ Hazard spline model that is not partitioned by event type (10knots)
   for (j in 1:records) {
     for (k in left[j]:(right[j]-1)) {
       # unit cumulative hazard
-      UCH[j,k] <- exp(gamma0 + mre110[k])
+      UCH[j,k] <- exp(phi0 + mre110[k])
     }   	
     
     SLR[j] <- exp(-sum(UCH[j,left[j]:(right[j]-1)])) # total prob of not having an event 
@@ -202,7 +202,7 @@ Hazard spline model that is not partitioned by event type (10knots)
 
 # Calculate the baseline hazard
   for (i in 1:D) {
-    Haz_b[i] <- exp(gamma0 + mre110[i]) # baseline hazard
+    Haz_b[i] <- exp(phi0 + mre110[i]) # baseline hazard
     # Spline part
     mre110[i] <- b[1]*Z[i,1]+b[2]*Z[i,2]+b[3]*Z[i,3]+b[4]*Z[i,4]+b[5]*Z[i,5]+
       b[6]*Z[i,6]+b[7]*Z[i,7]+b[8]*Z[i,8]+b[9]*Z[i,9]+b[10]*Z[i,10]
@@ -216,7 +216,7 @@ Hazard spline model that is partitioned by event type (10knots)
 # Priors
 sigmab ~ dunif(0,3)
 taub <- pow(sigmab, -2)
-gamma0  ~ dnorm(0, 1.0E-6)
+phi0  ~ dnorm(0, 1.0E-6)
 beta    ~ dunif(0,2) # slope for the probability of an abortion
 alpha   ~ dunif(50, 200) # offset for the transition from abortion to birth
 K ~ dunif(0,0.5) # lower asymptote for the prob. of an abortion
@@ -224,7 +224,7 @@ for (l in 1:num.knots){b[l]  ~ dnorm(0,taub)}
 
 #Derived parameters
 for (i in 1:D) {
-  Haz_b[i] <- exp(gamma0 + mre110[i]) # baseline hazard
+  Haz_b[i] <- exp(phi0 + mre110[i]) # baseline hazard
 
   mre110[i] <- b[1]*Z[i,1]+b[2]*Z[i,2]+b[3]*Z[i,3]+b[4]*Z[i,4]+b[5]*Z[i,5]+
   b[6]*Z[i,6]+b[7]*Z[i,7]+b[8]*Z[i,8]+b[9]*Z[i,9]+b[10]*Z[i,10]
@@ -236,7 +236,7 @@ for (i in 1:D) {
 
 # Likelihood for the total hazard
 for (j in 1:records) {
-  for (k in left[j]:(right[j]-1)) {UCH[j,k] <- exp(gamma0 + mre110[k])}   	
+  for (k in left[j]:(right[j]-1)) {UCH[j,k] <- exp(phi0 + mre110[k])}   	
     SLR[j] <- exp(-sum(UCH[j,left[j]:(right[j]-1)])) # total prob of not having an event 
     noevent[j] ~ dbern(SLR[j])      
 }
@@ -263,7 +263,7 @@ Conditional autoregressive model with event-type partitioning
 -----------------------------------------------------
 ```
   # Priors
-  gamma0  ~ dnorm(0, 1.0E-6)
+  phi0  ~ dnorm(0, 1.0E-6)
   beta    ~ dunif(0,2) # slope for the probability of an abortion
   alpha   ~ dunif(50, 200) # offset for the transition from abortion to birth
   K ~ dunif(0,0.5) # lower asymptote for the prob. of an abortion
@@ -274,7 +274,7 @@ Conditional autoregressive model with event-type partitioning
     
   #Derived quantities
   for (i in 1:D) {
-    Haz_b[i] <- exp(gamma0 + rho[i]) # overall baseline
+    Haz_b[i] <- exp(phi0 + rho[i]) # overall baseline
     prob.ab[i] <-  1 + (K - 1) / (1 + exp(-beta*(i - alpha))) # probability of abortion 
     Haz_a[i] <- prob.ab[i] * Haz_b[i]     # abortion hazard
     Haz_l[i] <- (1-prob.ab[i]) * Haz_b[i] # live birth hazard
@@ -283,7 +283,7 @@ Conditional autoregressive model with event-type partitioning
   # Likelihood
   for (j in 1:records) {
     for (k in left[j]:(right[j]-1)) {
-      UCH[j,k] <- exp(gamma0 + rho[k]) # unit hazard over the interval
+      UCH[j,k] <- exp(phi0 + rho[k]) # unit hazard over the interval
     }     
     SLR[j] <- exp(-sum(UCH[j,left[j]:(right[j]-1)]))# total prob of not having an event 
     noevent[j] ~ dbern(SLR[j])      
