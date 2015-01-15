@@ -20,31 +20,32 @@ Data$StartDOY <- yday(Data$Start_Interval) # day when the VIT is first possibly 
 Data$EndDOY <- yday(Data$Stop_Interval) # last day the event (birth or abortion) could have happened
 ```
 
-Total # of elk in the original dataset = `r dim(Data)[1]`. 
-  
+Total # of elk years/captures in the original dataset = `r dim(Data)[1]`.
+ 
+Table of Vit Status by mothers serostatus:  
+```{r table1, echo=FALSE}
+(table(Data$CowSero))
+(table(Data$VIT_Status))
+```
+ 
+ 
 ```{r subset}
 # first remove the individuals that were not pregnant or were unknown events. 
 Data <- subset(Data, Data$VIT_Status != "Open" )
 Data <- subset(Data, Data$VIT_Status != "Unknown")
 Data <- subset(Data, Data$VIT_Status != "Malfunction")
-
-Data$VIT_Status <- as.factor(as.character(Data$VIT_Status)) #relevel the factor
-
-DataPOS <- Data[Data$CowSero == "POS", ]
-
-summary(Data$EndDOY)
-
 # remove the few records of unknown date intervals 
 Data <- subset(Data, is.na(Data$EndDOY) == F)
-
-days <- seq(min(Data$CapDOY), max(Data$EndDOY))
+summary(Data$EndDOY)
+Data$VIT_Status <- as.factor(as.character(Data$VIT_Status)) #relevel the factor
+DataPOS <- subset(Data, Data$CowSero == "POS")
 ```
 
 Total # of elk in the analyzed dataset = `r dim(Data)[1]`.  
 Total # of seropositive elk in the analyzed dataset = `r dim(DataPOS)[1]`. 
   
 Table of Abortions by mothers status:  
-```{r table1, echo=FALSE}
+```{r table2, echo=FALSE}
 (table1 <- table(Data$CowSero, Data$VIT_Status))
 ```
   
@@ -73,6 +74,8 @@ first_ab_end <- sort(yday(first_ab_end))[1]
   
 Plot the sampling intensity over day of year.  
 ```{r plot-intensity, echo = F}
+days <- seq(min(Data$CapDOY), max(Data$EndDOY))
+
 # calculate the # online per day
 N <- rep(NA, length(days))
 for (i in 1:length(days)){
