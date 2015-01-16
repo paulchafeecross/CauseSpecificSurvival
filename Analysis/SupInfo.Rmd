@@ -112,7 +112,7 @@ text(as.Date("2013/01/11"), 0.04, "D)", pos = 4, cex = 1)
 
 \newpage
 
-**Table S2**. Comparison of the timing of elk abortions across models when using all pregnant elk (n = `r length(unique(Data$Elk_ID))`). Models had different smoothing functions for the total hazard of a reproductive event, but the sub-model of the probability of an abortion relative to a live birth was a logistic regression in all cases.        
+**Table S2**. Comparison of the timing of elk abortions across models when using all pregnant elk. Models had different smoothing functions for the total hazard of a reproductive event, but the sub-model of the probability of an abortion relative to a live birth was a logistic regression in all cases.        
   
 ```{r SupInfoCTable, echo = FALSE}
 rm(list = ls())

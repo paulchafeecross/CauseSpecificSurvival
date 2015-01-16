@@ -71,6 +71,8 @@ first_ab_end <- sort(yday(first_ab_end))[1]
 ```
 `r as.Date("2013/01/01")+first_ab_beg` and `r as.Date("2013/01/01")+first_ab_end`, and the last abortion was between `r as.Date("2013/01/01")+last_ab_beg` and `r as.Date("2013/01/01")+ last_ab_end`. Note: ignore the year here, just use the day of the year. 
 
+# 
+
   
 Plot the sampling intensity over day of year.  
 ```{r plot-intensity, echo = F}
