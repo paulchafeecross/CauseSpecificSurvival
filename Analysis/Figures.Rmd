@@ -1,14 +1,15 @@
 ---
-output: word_document
+output: html_document
 ---
 Figure Legends
 =====================================================
 ```{r setup, echo = FALSE}
 library(knitr)
 opts_chunk$set(dev=c('png'), dpi = 400, echo = FALSE, message = FALSE, cache = F, fig.cap= "", fig.lp="")
+setwd("~/BitBucket/VIT2014/Analysis")
 ```
 
-**Figure 1.** Female elk captures and reproductive event locations from the study area in the southern region of the Greater Yellowstone Ecosystem. 
+**Figure 1.** Probable abortion and live birth locations from elk with vaginal implant transmitters in the southern region of the Greater Yellowstone Ecosystem. 
     
 **Figure 2**. Timelines of brucellosis seropositive elk reproductive events from the vaginal implant transmitters (VITs, A) and a histogram of opportunisitically recovered fetuses on feedgrounds from 1968 to 2014 (B). In A, grey lines extend from the capture date to the time interval of the reproductive event. Red and blue lines indicate time intervals when VITs were expelled due to abortions or normal birth events, respectively. 
 
@@ -24,12 +25,9 @@ Figures
 =====================================================
 
 ![Fig1][1]  
-**Figure 1.** Elk captures and reproductive event locations from the study area in the southern region of the Greater Yellowstone Ecosystem. Pregnant females that died or whose reproductive event could not be identified as an abortion or live birth were censored or removed from the analysis, respectively. 
-
 \newpage
 
 ```{r Fig2, fig.width = 3.34, fig.height = 5}
-setwd("~/BitBucket/VIT2014/Analysis")
 rm(list = ls())
 library(lubridate)
 load('VIT_Data2014_Full_POS.RData')
@@ -55,8 +53,6 @@ axis(1, at = c( 1, 32, 60, 91, 121, 152, 182),
 text(1, 13, "B)", pos = 4, cex = 1)
 ```
     
-**Figure 2**. Raw data of brucellosis seropositive elk reproductive events from the vaginal implant transmitters (VITs, A) and a histogram of fetuses opportunistically recovered from feedgrounds during 1968 to 2014 (B). In A, grey lines extend from the capture date to the time interval of the reproductive event. Red and blue lines indicate time intervals when VITs were expelled due to abortions or normal birth events, respectively. 
-
 \newpage  
 
 ```{r Fig3, fig.width = 3.34, fig.height = 6}
@@ -82,8 +78,6 @@ plot_hazAb(mod40k, MainLab = " ", start.offset, 2,  Ylim = c(0,0.008),
 text(as.Date("2013/01/11"), 0.008, "B) Full model", pos = 4, cex = 1)
 ```
 
-**Figure 3**. Daily hazard of an abortion for female elk exposed to *Brucella abortus* given she is still pregnant using the 40-knot spline model. Live births were either censored (A) or included in the full model where the total hazard was partitioned between two cause-specific event types (B, abortions and live births). Grey and black solid lines are the posterior mean and medians, respectively. Dotted lines are the posterior 95% credible intervals.      
-
 \newpage  
 
 ```{r Fig4, fig.width = 3.34, fig.height = 2.5}
@@ -92,9 +86,7 @@ plot_Pabort(mod40k, "", start.offset, 2,  Xlim = as.Date(c('2013/01/15',
                                                            '2013/07/01')),
             legendflag=FALSE)
 ```
-  
-**Figure 4**. The probability that an elk reproductive event was an abortion using the 40-knot spline model of the total hazard. Grey and black solid lines are the posterior mean and medians. Dotted lines are the posterior 95% credible intervals. 
-   
+
 \newpage  
 
 ```{r Fig5, fig.height = 8, fig.width = 7.08}
@@ -135,8 +127,6 @@ plot_birth_ft(mod40k, "", start.offset, 2, Ylim = c(0, 0.04),
 text(as.Date("2013/01/11"), 0.04, "D)", pos = 4, cex = 1)
 
 ```
-  
-**Figure 5**. Elk reproductive event hazards (A and C) and event densities (B and D) as a function of day of year using the 40-knot spline model. Hazards are conditional on the elk still being pregnant. Grey and black solid lines are the posterior mean and medians. Dotted lines are the posterior 95% credible intervals.
 \newpage  
 
 [1]: figure/Fig1.png

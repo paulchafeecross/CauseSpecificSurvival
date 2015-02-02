@@ -1,8 +1,7 @@
 ---
 output: word_document
 ---
-**Table 1**. Comparison of the timing of elk abortions across models with different smoothing functions for the total hazard of a reproductive event. In all cases, the sub-model of the probability of an abortion relative to a live birth was a logistic regression.        
-
+**Table 1**. Timing of probable abortions and live births for adult seropositive elk in the southern Greater Yellowstone Ecosystem. Three different models were used to estimate the nonlinear hazard of a reproductive event (10 knot spline, 40 knot spline, and a conditional autoregressive (CAR) model). 
 ```{r Table1-comp, echo = FALSE}
 setwd("~/BitBucket/VIT2014/Analysis")
 load('Result_icar1.RData')
