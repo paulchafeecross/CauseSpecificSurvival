@@ -1,11 +1,12 @@
 ---
 output: html_document
+
 ---
 Figure Legends
 =====================================================
 ```{r setup, echo = FALSE}
 library(knitr)
-opts_chunk$set(dev=c('png'), dpi = 400, echo = FALSE, message = FALSE, cache = F, fig.cap= "", fig.lp="")
+opts_chunk$set(dev=c('png'), dpi = 400, echo = FALSE, message = FALSE, cache = F, fig.cap= "", fig.lp="", fig.path = 'figure_rmd/')
 setwd("~/BitBucket/VIT2014/Analysis")
 ```
 
@@ -24,7 +25,7 @@ setwd("~/BitBucket/VIT2014/Analysis")
 Figures
 =====================================================
 
-![Fig1][1]  
+#![Fig1][1]  
 \newpage
 
 ```{r Fig2, fig.width = 3.34, fig.height = 5}
@@ -129,5 +130,5 @@ text(as.Date("2013/01/11"), 0.04, "D)", pos = 4, cex = 1)
 ```
 \newpage  
 
-[1]: figure/Fig1.png
+#[1]: figure/Fig1.png
   

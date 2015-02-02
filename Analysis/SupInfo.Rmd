@@ -1,5 +1,5 @@
 ---
-output: word_document
+output: html_document
 ---
 
 Supplementary Material:
@@ -9,7 +9,7 @@ Cross, PC, E Maichak, J Rogerson, KM Irvine, J Jones, D Heisey, WH Edwards, BM S
 
 ```{r setupSupInfo, echo = FALSE}
 library(knitr)
-opts_chunk$set(dev = "png", dpi = 400, echo = FALSE, message = FALSE)
+opts_chunk$set(dev = "png", dpi = 400, echo = FALSE, message = FALSE, fig.path = 'figure_rmd/')
 ```
 
 ```{r FigS1, fig.height = 7, fig.width = 5, echo = FALSE, fig.cap= "", fig.lp=""}
@@ -182,7 +182,7 @@ pD: Estimate of model complexity
 
 \newpage  
 
-**Appendix S1:** Model code.  
+**Model code**  
 Hazard spline model that is not partitioned by event type (10knots)
 -----------------------------------------------------
   
@@ -305,7 +305,9 @@ Conditional autoregressive model with event-type partitioning
 
 **Table S2**. Raw data on the presumed pregnant elk captured from 2006 through 2013. Start and stop dates refer to the dates when the reproductive events occurred. Brucella status of the pregnant female was determined from serological tests interpreted according the USDA methods and rules for cervids. 
 
-```{r rawdata, echo = FALSE, results='asis'}
+```{r TableS2, fig.height = 7, fig.width = 5, echo = FALSE, fig.cap= "", fig.lp=""}
+rm(list = ls())
+setwd("~/BitBucket/VIT2014/Analysis")
 library(knitr)
 library(lubridate)
 RawData <- read.table("VIT_Data2014.txt", sep="", header=T) #load in data
@@ -313,7 +315,7 @@ RawData <- RawData[order(RawData$CaptureDate), c(1,2,5,6,7,9,11, 13)]
 names(RawData) <- c("ElkID", "Feedground", "Captured", "Event.Start", "Event.End", "Event.Type", "Mom.Brucella", "Recovered")
 
 #recode some of the elk lingo
-levels(RawData$Status) <- c("Abortion", "Death", "NotPregnant", "Birth", "*")
+levels(RawData$Event.Type) <- c("Abortion", "Death", "Malfunction", "NotPregnant", "Birth", "*")
 
 #reformat the dates
 RawData[,3] <- as.character(mdy(RawData[,3]))
@@ -330,6 +332,8 @@ tmp <- which(is.na(RawData[,5]) == T)
 RawData[tmp, 5] <- "*"
 tmp <- which(is.na(RawData[,7]) == T)
 RawData[tmp, 7] <- "*"
+tmp <- which(is.na(RawData[,8]) == T)
+RawData[tmp, 8] <- "*"
 row.names(RawData) <- 1:nrow(RawData)
 kable(RawData, format='markdown', row.names = NA)
 ```
