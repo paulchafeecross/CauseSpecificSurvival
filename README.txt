@@ -1,4 +1,4 @@
-Estimating the phenology of elk brucellosis transmission with hierarchical models of cause-specific and baseline hazards**  
+Estimating the phenology of elk brucellosis transmission with hierarchical models of cause-specific and baseline hazards
 ===============
 Authors:
 PAUL C. CROSS, *U.S. Geological Survey, Northern Rocky Mountain Science Center, Bozeman MT, 59715 USA*  
@@ -24,8 +24,4 @@ Details:
 -Other txt files are the models written for Jags  
 -Most code is run from the R with scripts and functions, models are then passed to Jags for the MCMC.   
 -Manuscript files are written in Rmarkdown.   
--There are a few files for download that are .RData which are either MCMC results (avoiding the need to re-run these models) or Data files where the data have been tidied up or subset for the statistical model runs. 
-
-
-
-
+-There are a few files for download that are .RData which are either MCMC results (avoiding the need to re-run these models) or Data files where the data have been tidied up or subset for the statistical model runs.
