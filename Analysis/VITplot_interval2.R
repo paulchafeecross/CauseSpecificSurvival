@@ -17,7 +17,7 @@ VITplot_interval2 <- function(Data, LWD){
   # axis labels
   m <- as.Date(c('01/01/2013', '01/02/2013', "01/03/2013", "01/04/2013",
                  "01/05/2013", "01/06/2013", "01/07/2013"), '%d/%m/%Y')
-  labs <- c("Jan 1", "Feb 1", "Mar 1", "Apr 1", "May 1", "Jun 1", "Jul 1")
+  labs <- c("1 Jan", "1 Feb", "1 Mar", "1 Apr", "1 May", "1 Jun", "1 Jul")
     
   plot(Data$CapDOY, Data$ElkYrID2, xaxt = "n", type = 'n', 
        xlim = c(min(Data$CapDOY), max(Data$EndDOY, na.rm = T)), 

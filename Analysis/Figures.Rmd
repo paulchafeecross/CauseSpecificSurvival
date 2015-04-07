@@ -6,7 +6,7 @@ Figure Legends
 =====================================================
 ```{r setup, echo = FALSE}
 library(knitr)
-opts_chunk$set(dev=c('tiff'), dpi = 200, echo = FALSE, message = FALSE, cache = F, fig.cap= "", fig.lp="", fig.path = 'figure_rmd/')
+opts_chunk$set(dev=c('tiff'), dpi = 300, echo = FALSE, message = FALSE, cache = F, fig.cap= "", fig.lp="", fig.path = 'figure_rmd/')
 setwd("~/BitBucket/VIT2014/Analysis")
 ```
 
@@ -50,7 +50,7 @@ Fetus <- subset(Fetus, is.na(Fetus$Date2) == F) # remove the NAs
 hist(Fetus$DOY, breaks = 10, ylim = c(0,14), xlim = c(1, max(DataPOS$EndDOY)), main = '', xlab = "", xaxt = "n", col = 'grey', 
      ylab = "Number of fetuses", tck = 0.02)
 axis(1, at = c( 1, 32, 60, 91, 121, 152, 182), 
-     labels = c("Jan 1", "Feb 1", "Mar 1", "Apr 1", "May 1", "Jun 1", "Jul 1"), tck = 0.02)
+     labels = c("1 Jan", "1 Feb", "1 Mar", "1 Apr", "1 May", "1 Jun", "1 Jul"), tck = 0.02)
 text(1, 13, "B)", pos = 4, cex = 1)
 ```
     

@@ -32,7 +32,7 @@ plot_baseline <- function(model, MainLab, offset, LWD, Ylim, Xlim, legendflag, Y
   if(missing(FmoTixs)) {axis(1, tck = 0.02)}
   else {
     if(FmoTixs == TRUE){
-      labs <- c("Jan 1", "Feb 1", "Mar 1", "Apr 1", "May 1", "Jun 1", "Jul 1")
+      labs <- c("1 Jan", "1 Feb", "1 Mar", "1 Apr", "1 May", "1 Jun", "1 Jul")
       m <- as.Date(c('01/01/2013', '01/02/2013', "01/03/2013", "01/04/2013","01/05/2013",
                      "01/06/2013", "01/07/2013"), '%d/%m/%Y')
       axis(1, at = m, labels = labs, tck = 0.02)
@@ -70,7 +70,7 @@ plot_Pabort <- function(model, MainLab, offset, LWD, Ylim, Xlim, legendflag, Yla
   # axis labels
   m <- as.Date(c('01/01/2013', '01/02/2013', "01/03/2013", "01/04/2013","01/05/2013",
                  "01/06/2013", "01/07/2013"), '%d/%m/%Y')
-  labs <- c("Jan 1", "Feb 1", "Mar 1", "Apr 1", "May 1", "Jun 1", "Jul 1")
+  labs <- c("1 Jan", "1 Feb", "1 Mar", "1 Apr", "1 May", "1 Jun", "1 Jul")
   
   pmean <-  model$BUGSoutput$mean$prob.ab
   plot(t, pmean, xlab = '', ylab = Ylab, type = 'l', col = 'grey', lwd = 2, 
@@ -114,7 +114,7 @@ plot_hazLB <- function(model, MainLab, offset, LWD, Ylim, Xlim, legendflag, Ylab
   if(missing(FmoTixs)) {axis(1, tck = 0.02)}
     else {
       if(FmoTixs == TRUE){
-        labs <- c("Jan 1", "Feb 1", "Mar 1", "Apr 1", "May 1", "Jun 1", "Jul 1")
+        labs <- c("1 Jan", "1 Feb", "1 Mar", "1 Apr", "1 May", "1 Jun", "1 Jul")
         m <- as.Date(c('01/01/2013', '01/02/2013', "01/03/2013", "01/04/2013","01/05/2013",
                        "01/06/2013", "01/07/2013"), '%d/%m/%Y')
         axis(1, at = m, labels = labs, tck = 0.02)
@@ -156,7 +156,7 @@ plot_hazAb <- function(model, MainLab, offset, LWD, Ylim, Xlim, legendflag, Ylab
   if(missing(FmoTixs)) {axis(1, tck = 0.02)}
   else {
     if(FmoTixs == TRUE){
-      labs <- c("Jan 1", "Feb 1", "Mar 1", "Apr 1", "May 1", "Jun 1", "Jul 1")
+      labs <- c("1 Jan", "1 Feb", "1 Mar", " 1 Apr", "1 May", "1 Jun", "1 Jul")
       m <- as.Date(c('01/01/2013', '01/02/2013', "01/03/2013", "01/04/2013","01/05/2013",
                      "01/06/2013", "01/07/2013"), '%d/%m/%Y')
       axis(1, at = m, labels = labs, tck = 0.02)
@@ -203,7 +203,7 @@ plot_abort_ft <- function(model, MainLab, offset, LWD, Ylim, Xlim, legendflag, Y
   if(missing(FmoTixs)) {axis(1, tck = 0.02)}
   else {
     if(FmoTixs == TRUE){
-      labs <- c("Jan 1", "Feb 1", "Mar 1", "Apr 1", "May 1", "Jun 1", "Jul 1")
+      labs <- c("1 Jan", "1 Feb", "1 Mar", "1 Apr", "1 May", "1 Jun", "1 Jul")
       m <- as.Date(c('01/01/2013', '01/02/2013', "01/03/2013", "01/04/2013","01/05/2013",
                      "01/06/2013", "01/07/2013"), '%d/%m/%Y')
       axis(1, at = m, labels = labs, tck = 0.02)
@@ -250,7 +250,7 @@ plot_birth_ft <- function(model, MainLab, offset, LWD, Ylim, Xlim, legendflag, Y
   if(missing(FmoTixs)) {axis(1, tck = 0.02)}
   else {
     if(FmoTixs == TRUE){
-      labs <- c("Jan 1", "Feb 1", "Mar 1", "Apr 1", "May 1", "Jun 1", "Jul 1")
+      labs <- c("1 Jan", "1 Feb", "1 Mar", "1 Apr", "1 May", "1 Jun", "1 Jul")
       m <- as.Date(c('01/01/2013', '01/02/2013', "01/03/2013", "01/04/2013","01/05/2013",
                      "01/06/2013", "01/07/2013"), '%d/%m/%Y')
       axis(1, at = m, labels = labs, tck = 0.02)
@@ -296,7 +296,7 @@ plot_total_ft <- function(model, MainLab, offset, LWD, Ylim, Xlim, legendflag, Y
   if(missing(FmoTixs)) {axis(1, tck = 0.02)}
   else {
     if(FmoTixs == TRUE){
-      labs <- c("Jan 1", "Feb 1", "Mar 1", "Apr 1", "May 1", "Jun 1", "Jul 1")
+      labs <- c("1 Jan", "1 Feb", "1 Mar", "1 Apr", "1 May", "1 Jun", "1 Jul")
       m <- as.Date(c('01/01/2013', '01/02/2013', "01/03/2013", "01/04/2013","01/05/2013",
                      "01/06/2013", "01/07/2013"), '%d/%m/%Y')
       axis(1, at = m, labels = labs, tck = 0.02)
